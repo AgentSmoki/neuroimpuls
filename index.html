@@ -5,9 +5,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Neuroimpulse</title>
   <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
   <header class="hero">
+    <div class="hero-overlay"></div>
     <div class="container">
       <h1>Для собственников крупных компаний, которым устали терять по 50 млн в месяц из-за отсутствия контроля</h1>
       <p>Запишитесь на экскурсию в Neuroimpulse и узнайте, как мы внедряем систему искусственного интеллекта, которая 24/7 следит за соблюдением регламентов и предотвращает финансовые потери</p>
@@ -15,8 +17,6 @@
     </div>
   </header>
   <main>
-
-
     <!-- Наши кейсы -->
     <section class="cases">
       <div class="container">
@@ -24,153 +24,205 @@
         <p class="cases-subtitle">Мы работаем только с лидерами рынка в выбранных нишах и предлагаем эксклюзивные решения</p>
         <div class="case-list">
           <div class="case">
+            <div class="case-icon"><i class="fas fa-chart-line"></i></div>
             <strong>Кейс 1:</strong><br><br>
             <b>Ландаль — ворота, рольставни, сэндвич-панели</b>
             <ul>
-              <li>Проблема: высокие затраты на привлечение клиентов, неэффективная обработка заявок</li>
-              <li>Решение: внедрение виртуального сотрудника для круглосуточной квалификации лидов</li>
-              <li>Результат: рост конверсии на 20%, снижение стоимости заявки с 8000₽ до 1600₽</li>
+              <li><i class="fas fa-exclamation-circle"></i> Проблема: высокие затраты на привлечение клиентов, неэффективная обработка заявок</li>
+              <li><i class="fas fa-lightbulb"></i> Решение: внедрение виртуального сотрудника для круглосуточной квалификации лидов</li>
+              <li><i class="fas fa-chart-bar"></i> Результат: рост конверсии на 20%, снижение стоимости заявки с 8000₽ до 1600₽</li>
             </ul>
           </div>
           <div class="case">
+            <div class="case-icon"><i class="fas fa-store"></i></div>
             <strong>Кейс 2:</strong><br><br>
             <b>UPPETIT — розничная сеть</b>
             <ul>
-              <li>Проблема: постоянные потери времени на технические вопросы продавцов</li>
-              <li>Решение: виртуальный технический консультант с базой знаний</li>
-              <li>Результат: экономия 120 тысяч в месяц на техподдержке, решение 80% вопросов без людей</li>
+              <li><i class="fas fa-exclamation-circle"></i> Проблема: постоянные потери времени на технические вопросы продавцов</li>
+              <li><i class="fas fa-lightbulb"></i> Решение: виртуальный технический консультант с базой знаний</li>
+              <li><i class="fas fa-chart-bar"></i> Результат: экономия 120 тысяч в месяц на техподдержке, решение 80% вопросов без людей</li>
             </ul>
           </div>
           <div class="case">
+            <div class="case-icon"><i class="fas fa-balance-scale"></i></div>
             <strong>Кейс 3:</strong><br><br>
             <b>[Название] — юридическая компания</b>
             <ul>
-              <li>Проблема: высокие затраты времени юристов на первичные консультации</li>
-              <li>Решение: виртуальный консультант для проведения первичного анализа</li>
-              <li>Результат: освобождение высокооплачиваемых специалистов для профильной работы, возможность масштабирования без увеличения штата</li>
+              <li><i class="fas fa-exclamation-circle"></i> Проблема: высокие затраты времени юристов на первичные консультации</li>
+              <li><i class="fas fa-lightbulb"></i> Решение: виртуальный консультант для проведения первичного анализа</li>
+              <li><i class="fas fa-chart-bar"></i> Результат: освобождение высокооплачиваемых специалистов для профильной работы, возможность масштабирования без увеличения штата</li>
             </ul>
           </div>
         </div>
       </div>
     </section>
-
 
     <!-- О нас -->
     <section class="about">
       <div class="container">
         <div class="about-content desktop-only">
-          <div class="about-text">
-            <h2>Мы превращаем искусственный интеллект в инструмент для бизнеса</h2>
-            <img src="image/bogdan.JPG" alt="Фото Богдана" class="about-photo mobile-bg-hide">
-            <p><b>Я основал Neuroimpulse с целью помочь компаниям исключить риск человеческого фактора из критически важных бизнес-процессов.</b></p>
-            <p><b>Мы специализируемся на трех ключевых направлениях:</b></p>
-            <ul>
-              <li>Общепит и ресторанный бизнес</li>
-              <li>Сектор недвижимости и строительства</li>
-              <li>Цветочный бизнес</li>
-            </ul>
-            <p><b>В каждом из этих направлений мы создаем эксклюзивные решения, которые становятся конкурентным преимуществом наших клиентов.</b></p>
-            <p><b>Наша команда — это визионеры и практики. Мы не просто говорим о технологиях, мы внедрили их в собственные процессы и знаем, как сделать так, чтобы они работали на ваш бизнес.</b></p>
-            <p>6+ лет опыта в разработке<br>80+ реализованных проектов<br>1000+ часов сэкономлено клиентам</p>
+          <div class="about-photo-col">
+            <img src="image/bogdan.JPG" alt="Фото Богдана" class="about-photo">
           </div>
-        </div>
-        <div class="about-bg-mobile">
-          <div class="about-overlay-mobile">
+          <div class="about-text-col">
             <h2>Мы превращаем искусственный интеллект в инструмент для бизнеса</h2>
-            <p><b>Я основал Neuroimpulse с целью помочь компаниям исключить риск человеческого фактора из критически важных бизнес-процессов.</b></p>
-            <p><b>Мы специализируемся на трех ключевых направлениях:</b></p>
-            <ul>
-              <li>Общепит и ресторанный бизнес</li>
-              <li>Сектор недвижимости и строительства</li>
-              <li>Цветочный бизнес</li>
-            </ul>
-            <p><b>В каждом из этих направлений мы создаем эксклюзивные решения, которые становятся конкурентным преимуществом наших клиентов.</b></p>
-            <p><b>Наша команда — это визионеры и практики. Мы не просто говорим о технологиях, мы внедрили их в собственные процессы и знаем, как сделать так, чтобы они работали на ваш бизнес.</b></p>
-            <p>6+ лет опыта в разработке<br>80+ реализованных проектов<br>1000+ часов сэкономлено клиентам</p>
+            <p class="about-founder"><b>Я основал Neuroimpulse с целью помочь компаниям исключить риск человеческого фактора из критически важных бизнес-процессов.</b></p>
+            <div class="about-stats">
+              <div class="stat-item">
+                <i class="fas fa-code-branch"></i>
+                <div>
+                  <div class="stat-num">6+ лет</div>
+                  <div class="stat-label">опыта в разработке</div>
+                </div>
+              </div>
+              <div class="stat-item">
+                <i class="fas fa-project-diagram"></i>
+                <div>
+                  <div class="stat-num">80+</div>
+                  <div class="stat-label">реализованных проектов</div>
+                </div>
+              </div>
+              <div class="stat-item">
+                <i class="fas fa-clock"></i>
+                <div>
+                  <div class="stat-num">1000+</div>
+                  <div class="stat-label">часов сэкономлено клиентам</div>
+                </div>
+              </div>
+            </div>
+            <div class="about-directions">
+              <div class="directions-title">Мы специализируемся на трёх ключевых направлениях:</div>
+              <ul class="specialization-list">
+                <li><i class="fas fa-utensils"></i> Общепит и ресторанный бизнес</li>
+                <li><i class="fas fa-building"></i> Сектор недвижимости и строительства</li>
+                <li><i class="fas fa-seedling"></i> Цветочный бизнес</li>
+              </ul>
+            </div>
           </div>
         </div>
       </div>
     </section>
-
 
     <!-- Почему сейчас? -->
     <section class="why-now">
       <div class="container">
         <div class="why-now-text">
           <h2>Почему внедение ИИ-решений вам нужно именно сейчас</h2>
-          <p>По данным Anthropic (создателей Claude — одной из самых мощных нейросетей в мире), технология, которую мы используем сегодня, станет массово доступна только в 2026 году.
-
-            <br><br>Пока ваши конкуренты ждут, когда технология станет доступной для всех, вы можете получить преимущество уже сейчас.
-            
-            <br><br>Станьте первым в своей нише, кто внедрит систему искусственного интеллекта для полного контроля бизнес-процессов и исключения человеческого фактора.
-            
-            </p>
+          <p>По данным Anthropic (создателей Claude — одной из самых мощных нейросетей в мире), технология, которую мы используем сегодня, станет массово доступна только в 2026 году.</p>
+          <p>Пока ваши конкуренты ждут, когда технология станет доступной для всех, вы можете получить преимущество уже сейчас.</p>
+          <p>Станьте первым в своей нише, кто внедрит систему искусственного интеллекта для полного контроля бизнес-процессов и исключения человеческого фактора.</p>
         </div>
         <div class="why-now-photos">
           <div class="why-now-photo-wrap">
-            <img src="image/первым1.PNG" alt="Первым 1" class="why-now-photo">
+            <img src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="AI Technology" class="why-now-photo">
+            <div class="why-now-caption">Искусственный интеллект уже сегодня</div>
           </div>
           <div class="why-now-photo-wrap">
-            <img src="image/первым2.PNG" alt="Первым 2" class="why-now-photo">
+            <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Business Growth" class="why-now-photo">
+            <div class="why-now-caption">Будущее бизнеса</div>
           </div>
         </div>
       </div>
     </section>
 
-
-    <!-- Что вы узнаете, посетив экскурсию в Neuroimpulse -->
+    <!-- Что вы узнаете -->
     <section class="learn">
       <div class="container">
         <h2>Что вы узнаете, посетив экскурсию в Neuroimpulse</h2>
-        <ul>
-          <li>Как мы сократили расходы нашим клиентам на 286 тысяч в месяц, заменив менеджеров искусственным интеллектом</li>
-          <li>Как с помощью ИИ создать систему, которая 24/7 контролирует соблюдение всех регламентов компании</li>
-          <li>Как искусственный интеллект анализирует визуальные данные и выявляет отклонения от стандартов качества</li>
-          <li>Почему в 2025 году искусственный интеллект эффективнее любого аудитора и в 10 раз дешевле</li>
-          <li>Как компании из топ-10 своих ниш уже используют наши технологии для безопасности бизнеса</li>
+        <ul class="learn-list">
+          <li><i class="fas fa-money-bill-wave"></i> Как мы сократили расходы нашим клиентам на 286 тысяч в месяц, заменив менеджеров искусственным интеллектом</li>
+          <li><i class="fas fa-shield-alt"></i> Как с помощью ИИ создать систему, которая 24/7 контролирует соблюдение всех регламентов компании</li>
+          <li><i class="fas fa-eye"></i> Как искусственный интеллект анализирует визуальные данные и выявляет отклонения от стандартов качества</li>
+          <li><i class="fas fa-chart-line"></i> Почему в 2025 году искусственный интеллект эффективнее любого аудитора и в 10 раз дешевле</li>
+          <li><i class="fas fa-crown"></i> Как компании из топ-10 своих ниш уже используют наши технологии для безопасности бизнеса</li>
         </ul>
         <button class="cta"><span>Внедряем!</span></button>
       </div>
     </section>
 
-
     <!-- Процесс создания -->
     <section class="process">
       <div class="container">
         <h2>Как мы внедряем искусственный интеллект в ваш бизнес</h2>
-        <p><b>Шаги процесса:</b></p>
-        <ol>
-          <li><b>Знакомство и экскурсия</b> Показываем, как работают наши технологии на реальных примерах. Вы видите результат до начала работы.</li>
-          <li><b>Подписание договора</b> Готовим эксклюзивный договор с гарантиями результата и четкими сроками внедрения.</li>
-          <li><b>Оплата аванса</b> Вы вносите предоплату 50% от стоимости проекта, чтобы закрепить эксклюзивные условия.</li>
-          <li><b>Прототипирование</b> Создаем прототип системы на основе ваших регламентов и бизнес-процессов.</li>
-          <li><b>Совместное тестирование</b> Ваша команда тестирует систему и вносит корректировки до полного соответствия требованиям.</li>
-          <li><b>Интеграция</b> Внедряем систему в ваши ключевые бизнес-процессы, обучаем персонал и настраиваем аналитику.</li>
-        </ol>
+        <div class="process-steps">
+          <div class="process-step">
+            <div class="step-icon"><i class="fas fa-handshake"></i></div>
+            <div class="step-content">
+              <h3>Знакомство и экскурсия</h3>
+              <p>Показываем, как работают наши технологии на реальных примерах. Вы видите результат до начала работы.</p>
+            </div>
+          </div>
+          <div class="process-step">
+            <div class="step-icon"><i class="fas fa-file-contract"></i></div>
+            <div class="step-content">
+              <h3>Подписание договора</h3>
+              <p>Готовим эксклюзивный договор с гарантиями результата и четкими сроками внедрения.</p>
+            </div>
+          </div>
+          <div class="process-step">
+            <div class="step-icon"><i class="fas fa-credit-card"></i></div>
+            <div class="step-content">
+              <h3>Оплата аванса</h3>
+              <p>Вы вносите предоплату 50% от стоимости проекта, чтобы закрепить эксклюзивные условия.</p>
+            </div>
+          </div>
+          <div class="process-step">
+            <div class="step-icon"><i class="fas fa-pencil-ruler"></i></div>
+            <div class="step-content">
+              <h3>Прототипирование</h3>
+              <p>Создаем прототип системы на основе ваших регламентов и бизнес-процессов.</p>
+            </div>
+          </div>
+          <div class="process-step">
+            <div class="step-icon"><i class="fas fa-vial"></i></div>
+            <div class="step-content">
+              <h3>Совместное тестирование</h3>
+              <p>Ваша команда тестирует систему и вносит корректировки до полного соответствия требованиям.</p>
+            </div>
+          </div>
+          <div class="process-step">
+            <div class="step-icon"><i class="fas fa-cogs"></i></div>
+            <div class="step-content">
+              <h3>Интеграция</h3>
+              <p>Внедряем систему в ваши ключевые бизнес-процессы, обучаем персонал и настраиваем аналитику.</p>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
+
+    <!-- Экскурсия -->
     <section class="excursion">
       <div class="container">
         <h2>Готовы увидеть, как ИИ может защитить ваш бизнес?</h2>
         <p><b>Запишитесь на экскурсию в Neuroimpulse и увидите, как работает система контроля качества на базе искусственного интеллекта.</b></p>
         <p><b>Мы проведем вас по нашему офису, покажем все процессы и ответим на ваши вопросы.</b></p>
         <p>Экскурсия займет всего 40 минут, но может сэкономить вам миллионы рублей ежемесячно.</p>
-        <p><em>[Фото Богдана — профессиональное фото в непринужденной обстановке]</em></p>
-        <p><b>Богдан [Фамилия]</b><br>Основатель Neuroimpulse</p>
+        <div class="founder-card">
+          <img src="image/bogdan.JPG" alt="Фото Богдана" class="founder-photo">
+          <div class="founder-info">
+            <p><b>Богдан [Фамилия]</b><br>Основатель Neuroimpulse</p>
+          </div>
+        </div>
         <form id="excursion-form" class="excursion-form">
           <div class="form-group">
+            <i class="fas fa-user"></i>
             <input type="text" name="name" placeholder="Ваше имя" required>
           </div>
           <div class="form-group">
+            <i class="fas fa-phone"></i>
             <input type="tel" name="phone" placeholder="Ваш телефон" required>
           </div>
           <div class="form-group">
+            <i class="fas fa-envelope"></i>
             <input type="email" name="email" placeholder="Ваш email" required>
           </div>
           <div class="form-group">
+            <i class="fas fa-building"></i>
             <input type="text" name="company" placeholder="Название компании" required>
           </div>
           <div class="form-group">
+            <i class="fas fa-comment"></i>
             <textarea name="comment" placeholder="Комментарий (необязательно)"></textarea>
           </div>
           <button type="submit" class="cta"><span>ЗАПИСАТЬСЯ НА ЭКСКУРСИЮ</span></button>
@@ -182,16 +234,20 @@
   <footer>
     <div class="container">
       <div class="footer-content">
-        <div>
-          <strong>Контакты:</strong><br>
-          ООО "Нейроимпульс"<br>
-          neuroimpulse.ru<br>
-          info@neuroimpulse.ru<br>
-          +7 (XXX) XXX-XX-XX
+        <div class="footer-section">
+          <h3>Контакты</h3>
+          <p>ООО "Нейроимпульс"</p>
+          <p>neuroimpulse.ru</p>
+          <p>info@neuroimpulse.ru</p>
+          <p>+7 (XXX) XXX-XX-XX</p>
         </div>
-        <div>
-          <strong>Ссылки:</strong><br>
-          <span>Telegram, YouTube и др.</span>
+        <div class="footer-section">
+          <h3>Социальные сети</h3>
+          <div class="social-links">
+            <a href="#" class="social-link"><i class="fab fa-telegram"></i></a>
+            <a href="#" class="social-link"><i class="fab fa-youtube"></i></a>
+            <a href="#" class="social-link"><i class="fab fa-linkedin"></i></a>
+          </div>
         </div>
       </div>
       <div class="footer-bottom">
