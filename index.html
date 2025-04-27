@@ -5,20 +5,21 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Neuroimpulse</title>
   <link rel="stylesheet" href="styles.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
-  <header class="hero">
+  <header class="hero hero-with-photo">
     <div class="theme-toggle" style="position:absolute;top:24px;right:32px;z-index:10;">
       <button id="themeSwitcher" aria-label="Сменить тему" style="background:rgba(0,0,0,0.15);border:none;border-radius:24px;padding:8px 18px;font-size:1.1rem;color:#fff;cursor:pointer;display:flex;align-items:center;gap:8px;transition:background 0.2s;">
         <span id="themeIcon">🌙</span> <span id="themeText">Тёмная тема</span>
       </button>
     </div>
     <div class="hero-overlay"></div>
-    <div class="container">
-      <h1>Для собственников крупных компаний, которым устали терять по 50 млн в месяц из-за отсутствия контроля</h1>
-      <p>Запишитесь на экскурсию в Neuroimpulse и узнайте, как мы внедряем систему искусственного интеллекта, которая 24/7 следит за соблюдением регламентов и предотвращает финансовые потери</p>
-      <button class="cta"><span>Записаться на экскурсию</span></button>
+    <div class="hero-content">
+      <div class="hero-text">
+        <h1>Для собственников крупных компаний, которым устали терять по 50 млн в месяц из-за отсутствия контроля</h1>
+        <p>Запишитесь на экскурсию в Neuroimpulse и узнайте, как мы внедряем систему искусственного интеллекта, которая 24/7 следит за соблюдением регламентов и предотвращает финансовые потери</p>
+        <button class="cta"><span>Записаться на экскурсию</span></button>
+      </div>
     </div>
   </header>
   <main>
@@ -29,33 +30,39 @@
         <p class="cases-subtitle">Мы работаем только с лидерами рынка в выбранных нишах и предлагаем эксклюзивные решения</p>
         <div class="case-list">
           <div class="case">
-            <div class="case-icon"><i class="fas fa-chart-line"></i></div>
+            <div class="case-icon">
+              <img src="image/landal__logo.png" alt="Логотип компании" width="40" height="40" style="object-fit:cover;border-radius:50%;background:none;">
+            </div>
             <strong>Кейс 1:</strong><br><br>
             <b>Landal — ворота, рольставни, сэндвич-панели</b>
             <ul>
-              <li><i class="fas fa-exclamation-circle"></i> Проблема: высокие затраты на привлечение клиентов, неэффективная обработка заявок</li>
-              <li><i class="fas fa-lightbulb"></i> Решение: внедрение виртуального сотрудника для круглосуточной квалификации лидов</li>
-              <li><i class="fas fa-chart-bar"></i> Результат: рост конверсии на 20%, снижение стоимости заявки с 8000₽ до 1600₽</li>
+              <li>Проблема: высокие затраты на привлечение клиентов, неэффективная обработка заявок</li>
+              <li>Решение: внедрение виртуального сотрудника для круглосуточной квалификации лидов</li>
+              <li>Результат: рост конверсии на 20%, снижение стоимости заявки с 8000₽ до 1600₽</li>
             </ul>
           </div>
           <div class="case">
-            <div class="case-icon"><i class="fas fa-store"></i></div>
+            <div class="case-icon">
+              <img src="image/upetit__logo.jpg" alt="Логотип компании" width="40" height="40" style="object-fit:cover;border-radius:50%;background:none;">
+            </div>
             <strong>Кейс 2:</strong><br><br>
             <b>UPPETIT — розничная сеть</b>
             <ul>
-              <li><i class="fas fa-exclamation-circle"></i> Проблема: постоянные потери времени на технические вопросы продавцов</li>
-              <li><i class="fas fa-lightbulb"></i> Решение: виртуальный технический консультант с базой знаний</li>
-              <li><i class="fas fa-chart-bar"></i> Результат: экономия 120 тысяч в месяц на техподдержке, решение 80% вопросов без людей</li>
+              <li>Проблема: постоянные потери времени на технические вопросы продавцов</li>
+              <li>Решение: виртуальный технический консультант с базой знаний</li>
+              <li>Результат: экономия 120 тысяч в месяц на техподдержке, решение 80% вопросов без людей</li>
             </ul>
           </div>
           <div class="case">
-            <div class="case-icon"><i class="fas fa-balance-scale"></i></div>
+            <div class="case-icon">
+              <img src="image/glushkov__logo.png" alt="Логотип компании" width="40" height="40" style="object-fit:cover;border-radius:50%;background:none;">
+            </div>
             <strong>Кейс 3:</strong><br><br>
             <b>Федор Глушков — юридическая компания</b>
             <ul>
-              <li><i class="fas fa-exclamation-circle"></i> Проблема: высокие затраты времени юристов на первичные консультации</li>
-              <li><i class="fas fa-lightbulb"></i> Решение: виртуальный консультант для проведения первичного анализа</li>
-              <li><i class="fas fa-chart-bar"></i> Результат: освобождение высокооплачиваемых специалистов для профильной работы, возможность масштабирования без увеличения штата</li>
+              <li>Проблема: высокие затраты времени юристов на первичные консультации</li>
+              <li>Решение: виртуальный консультант для проведения первичного анализа</li>
+              <li>Результат: освобождение высокооплачиваемых специалистов для профильной работы, возможность масштабирования без увеличения штата</li>
             </ul>
           </div>
         </div>
@@ -75,21 +82,18 @@
             <p class="about-founder"><b>Я основал Neuroimpulse с целью помочь компаниям исключить риск человеческого фактора из критически важных бизнес-процессов.</b></p>
             <div class="about-stats">
               <div class="stat-item">
-                <i class="fas fa-code-branch"></i>
                 <div>
                   <div class="stat-num">6+ лет</div>
                   <div class="stat-label">опыта в разработке</div>
                 </div>
               </div>  
               <div class="stat-item">
-                <i class="fas fa-project-diagram"></i>
                 <div>
                   <div class="stat-num">80+</div>
                   <div class="stat-label">реализованных проектов</div>
                 </div>
               </div>
               <div class="stat-item">
-                <i class="fas fa-clock"></i>
                 <div>
                   <div class="stat-num">1000+</div>
                   <div class="stat-label">часов сэкономлено клиентам</div>
@@ -99,9 +103,9 @@
             <div class="about-directions">
               <div class="directions-title">Мы специализируемся на трёх ключевых направлениях:</div>
               <ul class="specialization-list">
-                <li><i class="fas fa-utensils"></i> Общепит и ресторанный бизнес</li>
-                <li><i class="fas fa-building"></i> Сектор недвижимости и строительства</li>
-                <li><i class="fas fa-concierge-bell"></i> Услуги</li>
+                <li>Общепит и ресторанный бизнес</li>
+                <li>Сектор недвижимости и строительства</li>
+                <li>Услуги</li>
               </ul>
             </div>
           </div>
@@ -114,18 +118,17 @@
       <div class="container">
         <div class="why-now-text">
           <h2>Почему внедение ИИ-решений вам нужно именно сейчас</h2>
-          <p>По данным Anthropic (создателей Claude — одной из самых мощных нейросетей в мире), технология, которую мы используем сегодня, станет массово доступна только в 2026 году.</p>
-          <p>Пока ваши конкуренты ждут, когда технология станет доступной для всех, вы можете получить преимущество уже сейчас.</p>
-          <p>Станьте первым в своей нише, кто внедрит систему искусственного интеллекта для полного контроля бизнес-процессов и исключения человеческого фактора.</p>
+          <p>По данным Anthropic (создателей Claude — одной из самых мощных нейросетей в мире), технология, которую мы используем сегодня, станет массово доступна только в 2026 году.
+          <br><br>Пока ваши конкуренты ждут, когда технология станет доступной для всех, вы можете получить преимущество уже сейчас.
+          <br><br>Станьте первым в своей нише, кто внедрит систему искусственного интеллекта для полного контроля бизнес-процессов и исключения человеческого фактора.</p>
         </div>
         <div class="why-now-photos">
           <div class="why-now-photo-wrap">
-            <img src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="AI Technology" class="why-now-photo">
-            <div class="why-now-caption">Искусственный интеллект уже сегодня</div>
+            <img src="image/первым1.PNG" alt="AI Technology" class="why-now-photo">
+            
           </div>
           <div class="why-now-photo-wrap">
-            <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Business Growth" class="why-now-photo">
-            <div class="why-now-caption">Будущее бизнеса</div>
+            <img src="image/первым2.PNG" alt="Business Growth" class="why-now-photo">
           </div>
         </div>
       </div>
@@ -136,11 +139,11 @@
       <div class="container">
         <h2>Что вы узнаете, посетив экскурсию в Neuroimpulse</h2>
         <ul class="learn-list">
-          <li><i class="fas fa-money-bill-wave"></i> Как мы сократили расходы нашим клиентам на 286 тысяч в месяц, заменив менеджеров искусственным интеллектом</li>
-          <li><i class="fas fa-shield-alt"></i> Как с помощью ИИ создать систему, которая 24/7 контролирует соблюдение всех регламентов компании</li>
-          <li><i class="fas fa-eye"></i> Как искусственный интеллект анализирует визуальные данные и выявляет отклонения от стандартов качества</li>
-          <li><i class="fas fa-chart-line"></i> Почему в 2025 году искусственный интеллект эффективнее любого аудитора и в 10 раз дешевле</li>
-          <li><i class="fas fa-crown"></i> Как компании из топ-10 своих ниш уже используют наши технологии для безопасности бизнеса</li>
+          <li><svg class="metallic-svg" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" stroke-width="2" stroke="url(#metal-gradient)" fill="none" stroke-linecap="round" stroke-linejoin="round"><defs><linearGradient id="metal-gradient" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#f5f6fa"/><stop offset="30%" stop-color="#bfc0c0"/><stop offset="60%" stop-color="#888b92"/><stop offset="100%" stop-color="#f5f6fa"/></linearGradient></defs><rect x="3" y="5" width="18" height="14" rx="2" stroke="url(#metal-gradient)"/><path d="M12 10v4" stroke="url(#metal-gradient)"/><path d="M9 13h6" stroke="url(#metal-gradient)"/></svg> Как мы сократили расходы нашим клиентам на 286 тысяч в месяц, заменив менеджеров искусственным интеллектом</li>
+          <li><svg class="metallic-svg" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" stroke-width="2" stroke="url(#metal-gradient)" fill="none" stroke-linecap="round" stroke-linejoin="round"><defs><linearGradient id="metal-gradient" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#f5f6fa"/><stop offset="30%" stop-color="#bfc0c0"/><stop offset="60%" stop-color="#888b92"/><stop offset="100%" stop-color="#f5f6fa"/></linearGradient></defs><path d="M12 21l-8-4.5V7.5L12 3l8 4.5v9l-8 4.5z" stroke="url(#metal-gradient)"/><path d="M12 12v.01" stroke="url(#metal-gradient)"/><path d="M12 16v.01" stroke="url(#metal-gradient)"/></svg> Как с помощью ИИ создать систему, которая 24/7 контролирует соблюдение всех регламентов компании</li>
+          <li><svg class="metallic-svg" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" stroke-width="2" stroke="url(#metal-gradient)" fill="none" stroke-linecap="round" stroke-linejoin="round"><defs><linearGradient id="metal-gradient" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#f5f6fa"/><stop offset="30%" stop-color="#bfc0c0"/><stop offset="60%" stop-color="#888b92"/><stop offset="100%" stop-color="#f5f6fa"/></linearGradient></defs><circle cx="12" cy="12" r="9" stroke="url(#metal-gradient)"/><circle cx="12" cy="12" r="4" stroke="url(#metal-gradient)"/></svg> Как искусственный интеллект анализирует визуальные данные и выявляет отклонения от стандартов качества</li>
+          <li><svg class="metallic-svg" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" stroke-width="2" stroke="url(#metal-gradient)" fill="none" stroke-linecap="round" stroke-linejoin="round"><defs><linearGradient id="metal-gradient" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#f5f6fa"/><stop offset="30%" stop-color="#bfc0c0"/><stop offset="60%" stop-color="#888b92"/><stop offset="100%" stop-color="#f5f6fa"/></linearGradient></defs><path d="M3 17l6-6 4 4 8-8" stroke="url(#metal-gradient)"/><path d="M14 7h7v7" stroke="url(#metal-gradient)"/></svg> Почему в 2025 году искусственный интеллект эффективнее любого аудитора и в 10 раз дешевле</li>
+          <li><svg class="metallic-svg" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" stroke-width="2" stroke="url(#metal-gradient)" fill="none" stroke-linecap="round" stroke-linejoin="round"><defs><linearGradient id="metal-gradient" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#f5f6fa"/><stop offset="30%" stop-color="#bfc0c0"/><stop offset="60%" stop-color="#888b92"/><stop offset="100%" stop-color="#f5f6fa"/></linearGradient></defs><path d="M12 17.75l-6.172 3.245 1.179-6.873L2 9.885l6.908-1.004L12 2.5l3.092 6.381L22 9.885l-5.007 4.237 1.179 6.873z" stroke="url(#metal-gradient)"/></svg> Как компании из топ-10 своих ниш уже используют наши технологии для безопасности бизнеса</li>
         </ul>
         <button class="cta"><span>Внедряем!</span></button>
       </div>
@@ -153,63 +156,62 @@
         <div class="process-steps stack-process">
           <div class="process-step collapsible">
             <div class="step-header">
-              <div class="step-icon"><i class="fas fa-handshake"></i></div>
+              <svg class="metallic-svg" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="url(#metal-gradient)" fill="none" stroke-linecap="round" stroke-linejoin="round"><defs><linearGradient id="metal-gradient" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#f5f6fa"/><stop offset="30%" stop-color="#bfc0c0"/><stop offset="60%" stop-color="#888b92"/><stop offset="100%" stop-color="#f5f6fa"/></linearGradient></defs><path d="M8 9l4 6 4-6" stroke="url(#metal-gradient)"/></svg>
               <div class="step-title">Знакомство и экскурсия</div>
               <button class="step-toggle" aria-label="Подробнее"><span class="arrow">▼</span></button>
             </div>
-            <div class="step-details">
-              Показываем, как работают наши технологии на реальных примерах. Вы видите результат до начала работы.
-            </div>
+            <div class="step-details">Показываем, как работают наши технологии на реальных примерах. Вы видите результат до начала работы.</div>
           </div>
           <div class="process-step collapsible">
             <div class="step-header">
-              <div class="step-icon"><i class="fas fa-file-contract"></i></div>
+              <svg class="metallic-svg" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="url(#metal-gradient)" fill="none" stroke-linecap="round" stroke-linejoin="round"><defs><linearGradient id="metal-gradient" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#f5f6fa"/><stop offset="30%" stop-color="#bfc0c0"/><stop offset="60%" stop-color="#888b92"/><stop offset="100%" stop-color="#f5f6fa"/></linearGradient></defs><rect x="4" y="4" width="16" height="16" rx="2" stroke="url(#metal-gradient)"/><path d="M8 8h8v8H8z" stroke="url(#metal-gradient)"/></svg>
               <div class="step-title">Подписание договора</div>
               <button class="step-toggle" aria-label="Подробнее"><span class="arrow">▼</span></button>
             </div>
-            <div class="step-details">
-              Готовим эксклюзивный договор с гарантиями результата и четкими сроками внедрения.
-            </div>
+            <div class="step-details">Готовим эксклюзивный договор с гарантиями результата и четкими сроками внедрения.</div>
           </div>
           <div class="process-step collapsible">
             <div class="step-header">
-              <div class="step-icon"><i class="fas fa-credit-card"></i></div>
+              <svg class="metallic-svg" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="url(#metal-gradient)" fill="none" stroke-linecap="round" stroke-linejoin="round"><defs><linearGradient id="metal-gradient" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#f5f6fa"/><stop offset="30%" stop-color="#bfc0c0"/><stop offset="60%" stop-color="#888b92"/><stop offset="100%" stop-color="#f5f6fa"/></linearGradient></defs><rect x="3" y="7" width="18" height="10" rx="2" stroke="url(#metal-gradient)"/><path d="M7 7v10" stroke="url(#metal-gradient)"/><path d="M17 7v10" stroke="url(#metal-gradient)"/></svg>
               <div class="step-title">Оплата аванса</div>
               <button class="step-toggle" aria-label="Подробнее"><span class="arrow">▼</span></button>
             </div>
-            <div class="step-details">
-              Вы вносите предоплату 50% от стоимости проекта, чтобы закрепить эксклюзивные условия.
-            </div>
+            <div class="step-details">Вы вносите предоплату 50% от стоимости проекта, чтобы закрепить эксклюзивные условия.</div>
           </div>
           <div class="process-step collapsible">
             <div class="step-header">
-              <div class="step-icon"><i class="fas fa-pencil-ruler"></i></div>
+              <svg class="metallic-svg" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="url(#metal-gradient)" fill="none" stroke-linecap="round" stroke-linejoin="round"><defs><linearGradient id="metal-gradient" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#f5f6fa"/><stop offset="30%" stop-color="#bfc0c0"/><stop offset="60%" stop-color="#888b92"/><stop offset="100%" stop-color="#f5f6fa"/></linearGradient></defs><rect x="6" y="6" width="12" height="12" rx="2" stroke="url(#metal-gradient)"/><path d="M9 9h6v6H9z" stroke="url(#metal-gradient)"/></svg>
               <div class="step-title">Прототипирование</div>
               <button class="step-toggle" aria-label="Подробнее"><span class="arrow">▼</span></button>
             </div>
-            <div class="step-details">
-              Создаем прототип системы на основе ваших регламентов и бизнес-процессов.
-            </div>
+            <div class="step-details">Создаем прототип системы на основе ваших регламентов и бизнес-процессов.</div>
           </div>
           <div class="process-step collapsible">
             <div class="step-header">
-              <div class="step-icon"><i class="fas fa-vial"></i></div>
+              <svg class="metallic-svg" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="url(#metal-gradient)" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                <defs>
+                  <linearGradient id="metal-gradient" x1="0" y1="0" x2="1" y2="1">
+                    <stop offset="0%" stop-color="#f5f6fa"/>
+                    <stop offset="30%" stop-color="#bfc0c0"/>
+                    <stop offset="60%" stop-color="#888b92"/>
+                    <stop offset="100%" stop-color="#f5f6fa"/>
+                  </linearGradient>
+                </defs>
+                <path stroke="url(#metal-gradient)" d="M9 3v6l-3.5 7a4 4 0 0 0 7 3h0a4 4 0 0 0 7-3L15 9V3" />
+                <line x1="9" y1="17" x2="15" y2="17" stroke="url(#metal-gradient)" />
+              </svg>
               <div class="step-title">Совместное тестирование</div>
               <button class="step-toggle" aria-label="Подробнее"><span class="arrow">▼</span></button>
             </div>
-            <div class="step-details">
-              Ваша команда тестирует систему и вносит корректировки до полного соответствия требованиям.
-            </div>
+            <div class="step-details">Ваша команда тестирует систему и вносит корректировки до полного соответствия требованиям.</div>
           </div>
           <div class="process-step collapsible">
             <div class="step-header">
-              <div class="step-icon"><i class="fas fa-cogs"></i></div>
+              <svg class="metallic-svg" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="url(#metal-gradient)" fill="none" stroke-linecap="round" stroke-linejoin="round"><defs><linearGradient id="metal-gradient" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#f5f6fa"/><stop offset="30%" stop-color="#bfc0c0"/><stop offset="60%" stop-color="#888b92"/><stop offset="100%" stop-color="#f5f6fa"/></linearGradient></defs><circle cx="12" cy="12" r="10" stroke="url(#metal-gradient)"/><path d="M12 8v4l3 3" stroke="url(#metal-gradient)"/></svg>
               <div class="step-title">Интеграция</div>
               <button class="step-toggle" aria-label="Подробнее"><span class="arrow">▼</span></button>
             </div>
-            <div class="step-details">
-              Внедряем систему в ваши ключевые бизнес-процессы, обучаем персонал и настраиваем аналитику.
-            </div>
+            <div class="step-details">Внедряем систему в ваши ключевые бизнес-процессы, обучаем персонал и настраиваем аналитику.</div>
           </div>
         </div>
       </div>
@@ -230,25 +232,14 @@
         </div>
         <form id="excursion-form" class="excursion-form">
           <div class="form-group">
-            <i class="fas fa-user"></i>
             <input type="text" name="name" placeholder="Ваше имя" required>
           </div>
           <div class="form-group">
-            <i class="fas fa-phone"></i>
             <input type="tel" name="phone" placeholder="Ваш телефон" required>
           </div>
           <div class="form-group">
-            <i class="fas fa-envelope"></i>
             <input type="email" name="email" placeholder="Ваш Ник в Telegram" required>
           </div>
-          <!--<div class="form-group">
-            <i class="fas fa-building"></i>
-            <input type="text" name="company" placeholder="Название компании" required>
-          </div>
-          <div class="form-group">
-            <i class="fas fa-comment"></i>
-            <textarea name="comment" placeholder="Комментарий (необязательно)"></textarea>
-          </div>-->
           <button type="submit" class="cta"><span>НАЗНАЧИТЬ ДАТУ ДЛЯ ЭКСКУРСИИ</span></button>
         </form>
         <p class="excursion-note">Мы работаем только с избранными компаниями в каждой нише.<br>Количество мест ограничено.</p>
