@@ -176,7 +176,7 @@ header.hero {
 .cta:hover {
   background: var(--secondary-color);
   color: #fff;
-  box-shadow: 0 6px 40px 0 #ff80ab44;
+  box-shadow: 0 8px 48px 0 #00e6e6aa;
 }
 
 /* Container */
@@ -498,13 +498,13 @@ h3 {
   display: flex;
   flex-direction: column;
   gap: 18px;
-  max-width: 520px;
+  max-width: 1200px;
   margin: 0 auto;
 }
 
 .process-step {
   background: var(--card-bg);
-  border-radius: 0;
+  border-radius: 16px;
   box-shadow: var(--shadow);
   border: none;
   padding: 0;
@@ -512,6 +512,8 @@ h3 {
   overflow: hidden;
   transition: box-shadow 0.2s;
   position: relative;
+  width: 100%;
+  min-width: 0;
 }
 
 .process-step .step-header {
@@ -921,16 +923,12 @@ body.light-theme .hero h1 {
   text-shadow: none;
 }
 body.light-theme .hero p {
-  color: #7b1fa2;
+  color: #1a2333;
   opacity: 1;
   font-size: 1.35rem;
   line-height: 1.5;
-  margin-left: 0;
-  margin-right: 0;
-  background: none;
-  border-radius: 0;
-  padding: 0;
-  box-shadow: none;
+  font-weight: 600;
+  text-shadow: 0 2px 8px #fff, 0 1px 0 #e0e7ef;
 }
 body.light-theme .cta {
   background: var(--primary-color);
@@ -940,4 +938,5 @@ body.light-theme .cta {
 body.light-theme .cta:hover {
   background: var(--secondary-color);
   color: #fff;
+  box-shadow: 0 8px 48px 0 #00bcd4aa;
 } 
