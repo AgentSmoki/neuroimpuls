@@ -928,7 +928,7 @@ body.light-theme .hero p {
   font-size: 1.35rem;
   line-height: 1.5;
   font-weight: 600;
-  text-shadow: 0 2px 8px #fff, 0 1px 0 #e0e7ef;
+  text-shadow: 0 1px 4px #000a, 0 0 2px #0007;
 }
 body.light-theme .cta {
   background: var(--primary-color);
