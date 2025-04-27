@@ -9,6 +9,11 @@
 </head>
 <body>
   <header class="hero">
+    <div class="theme-toggle" style="position:absolute;top:24px;right:32px;z-index:10;">
+      <button id="themeSwitcher" aria-label="Сменить тему" style="background:rgba(0,0,0,0.15);border:none;border-radius:24px;padding:8px 18px;font-size:1.1rem;color:#fff;cursor:pointer;display:flex;align-items:center;gap:8px;transition:background 0.2s;">
+        <span id="themeIcon">🌙</span> <span id="themeText">Тёмная тема</span>
+      </button>
+    </div>
     <div class="hero-overlay"></div>
     <div class="container">
       <h1>Для собственников крупных компаний, которым устали терять по 50 млн в месяц из-за отсутствия контроля</h1>
@@ -215,17 +220,17 @@
           </div>
           <div class="form-group">
             <i class="fas fa-envelope"></i>
-            <input type="email" name="email" placeholder="Ваш email" required>
+            <input type="email" name="email" placeholder="Ваш Ник в Telegram" required>
           </div>
-          <div class="form-group">
+          <!--<div class="form-group">
             <i class="fas fa-building"></i>
             <input type="text" name="company" placeholder="Название компании" required>
           </div>
           <div class="form-group">
             <i class="fas fa-comment"></i>
             <textarea name="comment" placeholder="Комментарий (необязательно)"></textarea>
-          </div>
-          <button type="submit" class="cta"><span>ЗАПИСАТЬСЯ НА ЭКСКУРСИЮ</span></button>
+          </div>-->
+          <button type="submit" class="cta"><span>НАЗНАЧИТЬ ДАТУ ДЛЯ ЭКСКУРСИИ</span></button>
         </form>
         <p class="excursion-note">Мы работаем только с избранными компаниями в каждой нише.<br>Количество мест ограничено.</p>
       </div>
@@ -257,5 +262,27 @@
     </div>
   </footer>
   <script src="script.js"></script>
+  <script>
+    // Переключение темы
+    const themeSwitcher = document.getElementById('themeSwitcher');
+    const themeIcon = document.getElementById('themeIcon');
+    const themeText = document.getElementById('themeText');
+    function setTheme(light) {
+      if (light) {
+        document.body.classList.add('light-theme');
+        themeIcon.textContent = '☀️';
+        themeText.textContent = 'Светлая тема';
+      } else {
+        document.body.classList.remove('light-theme');
+        themeIcon.textContent = '🌙';
+        themeText.textContent = 'Тёмная тема';
+      }
+    }
+    let isLight = false;
+    themeSwitcher.onclick = function() {
+      isLight = !isLight;
+      setTheme(isLight);
+    };
+  </script>
 </body>
 </html> 
