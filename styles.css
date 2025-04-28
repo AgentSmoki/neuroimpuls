@@ -197,7 +197,7 @@ header.hero {
 
 /* Sections */
 section {
-  padding: 80px 0;
+  padding: 40px 0;
   background: transparent;
   margin: 0;
   position: relative;
@@ -446,10 +446,18 @@ h3 {
 
 .why-now-photo-wrap {
   height: 540px;
+  width: 370px;
   display: flex;
   border-radius: 16px;
   overflow: hidden;
   box-shadow: var(--shadow);
+  margin-left: auto;
+  margin-right: -80px;
+  margin-top: 80px;
+}
+.why-now-photo-wrap:last-child {
+  
+  margin-right: -250px;
 }
 
 .why-now-photo {
