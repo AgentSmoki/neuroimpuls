@@ -28,4 +28,34 @@ if (form) {
     alert('Спасибо за заявку! Мы свяжемся с вами в ближайшее время.');
     form.reset();
   });
-} 
+}
+
+// Видеокружок с Богданом (открытие модального окна)
+document.addEventListener('DOMContentLoaded', function() {
+  var videoCircle = document.getElementById('videoCircle');
+  var videoModal = document.getElementById('videoModal');
+  var videoModalBackdrop = document.getElementById('videoModalBackdrop');
+  var closeVideoModal = document.getElementById('closeVideoModal');
+  var video = document.getElementById('videoInvite');
+
+  function openModal() {
+    videoModal.classList.add('active');
+    video.currentTime = 0;
+    video.play();
+    document.body.style.overflow = 'hidden';
+  }
+  function closeModal() {
+    videoModal.classList.remove('active');
+    video.pause();
+    document.body.style.overflow = '';
+  }
+  videoCircle.addEventListener('click', openModal);
+  videoCircle.addEventListener('keydown', function(e) {
+    if (e.key === 'Enter' || e.key === ' ') openModal();
+  });
+  closeVideoModal.addEventListener('click', closeModal);
+  videoModalBackdrop.addEventListener('click', closeModal);
+  document.addEventListener('keydown', function(e) {
+    if (videoModal.classList.contains('active') && e.key === 'Escape') closeModal();
+  });
+});
