@@ -59,3 +59,33 @@ document.addEventListener('DOMContentLoaded', function() {
     if (videoModal.classList.contains('active') && e.key === 'Escape') closeModal();
   });
 });
+
+// Видеокружок как в Telegram
+const tgVideo = document.getElementById('tgVideo');
+const tgVideoCircle = document.getElementById('tgVideoCircle');
+const tgPlayIcon = document.getElementById('tgPlayIcon');
+const tgVideoOverlay = document.getElementById('tgVideoOverlay');
+
+if (tgVideo && tgVideoCircle) {
+  // Стартовое состояние: play-иконка видна, overlay виден, видео не играет
+  tgPlayIcon.style.display = 'block';
+  tgVideoOverlay.style.display = 'block';
+  tgVideo.pause();
+  tgVideo.currentTime = 0;
+
+  tgVideoCircle.addEventListener('click', () => {
+    if (tgVideo.paused || tgVideo.ended) {
+      tgPlayIcon.style.display = 'none';
+      tgVideoOverlay.style.display = 'none';
+      tgVideo.currentTime = 0;
+      tgVideo.muted = false;
+      tgVideo.play();
+    }
+  });
+
+  tgVideo.addEventListener('ended', () => {
+    tgPlayIcon.style.display = 'block';
+    tgVideoOverlay.style.display = 'block';
+    tgVideo.muted = true;
+  });
+}

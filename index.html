@@ -204,8 +204,8 @@
                     <stop offset="100%" stop-color="#f5f6fa"/>
                   </linearGradient>
                 </defs>
-                <path stroke="url(#metal-gradient)" d="M9 3v6l-3.5 7a4 4 0 0 0 7 3h0a4 4 0 0 0 7-3L15 9V3" />
-                <line x1="9" y1="17" x2="15" y2="17" stroke="url(#metal-gradient)" />
+                <path d="M21 13.5a1.5 1.5 0 0 1-3 0V13h-2.5a1.5 1.5 0 0 1 0-3H18v-.5a1.5 1.5 0 0 1 3 0V10h.5a1.5 1.5 0 0 1 0 3H21zM3 10.5a1.5 1.5 0 0 1 3 0V11h2.5a1.5 1.5 0 0 1 0 3H6v.5a1.5 1.5 0 0 1-3 0V14H2.5a1.5 1.5 0 0 1 0-3H3z" stroke="url(#metal-gradient)"/>
+                <rect x="7" y="7" width="10" height="10" rx="2" stroke="url(#metal-gradient)"/>
               </svg>
               <div class="step-title">Совместное тестирование</div>
               <button class="step-toggle" aria-label="Подробнее"><span class="arrow">▼</span></button>
@@ -229,30 +229,20 @@
       <div class="container">
         <h2>Личное приглашение от основателя Neuroimpulse</h2>
         <div class="video-invite-content">
-          <div class="video-circle" id="videoCircle" tabindex="0" aria-label="Смотреть видео приглашение">
-            <img src="image/bogdan-video-preview.png" alt="Богдан" class="video-circle-img">
-            <span class="video-play-icon">▶</span>
+          <div class="video-circle" id="tgVideoCircle" tabindex="0" aria-label="Смотреть видео приглашение">
+            <video
+              id="tgVideo"
+              src="image/bogdan-invite.mp4"
+              muted
+              playsinline
+              style="width:100%;height:100%;object-fit:cover;border-radius:50%;display:block;"
+            ></video>
+            <span class="video-play-icon" id="tgPlayIcon" style="display:none;">▶</span>
+            <div class="video-overlay" id="tgVideoOverlay" style="display:none;"></div>
           </div>
-          <div class="video-invite-text">
-            <p style="font-weight:600;">Текст для видеокружка (записывает Богдан):</p>
-            <blockquote style="font-style:italic; margin: 12px 0;">
-              Привет! Я Богдан, основатель Neuroimpulse. Как часто вы узнаёте, что ваша компания потеряла миллионы из-за несоблюдения регламентов? Каждый месяц? Каждую неделю? Мы решили эту проблему с помощью искусственного интеллекта. Могу показать, как именно это работает на живых примерах. Записывайтесь на экскурсию — это всего 40 минут, которые могут сэкономить вам миллионы рублей в месяц.
-            </blockquote>
-          </div>
+          <div class="video-invite-caption">Видео-приглашение от Богдана</div>
         </div>
         <button class="cta" id="videoInviteBtn">Записаться на экскурсию</button>
-      </div>
-
-      <!-- Модальное окно с видео -->
-      <div class="video-modal" id="videoModal" tabindex="-1">
-        <div class="video-modal-backdrop" id="videoModalBackdrop"></div>
-        <div class="video-modal-content">
-          <video id="videoInvite" controls poster="image/bogdan-video-preview.png" style="border-radius:50%;width:320px;height:320px;object-fit:cover;background:#000;">
-            <source src="image/bogdan-invite.mp4" type="video/mp4">
-            Ваш браузер не поддерживает видео.
-          </video>
-          <button class="cta" id="closeVideoModal" style="margin-top:24px;">Закрыть</button>
-        </div>
       </div>
     </section>
 
@@ -263,12 +253,12 @@
         <p><b>Запишитесь на экскурсию в Neuroimpulse и увидите, как работает система контроля качества на базе искусственного интеллекта.</b></p>
         <p><b>Мы проведем вас по нашему офису, покажем все процессы и ответим на ваши вопросы.</b></p>
         <p>Экскурсия займет всего 40 минут, но может сэкономить вам миллионы рублей ежемесячно.</p>
-        <div class="founder-card">
+        <!--<div class="founder-card">
           <img src="image/bogdan.JPG" alt="Фото Богдана" class="founder-photo">
           <div class="founder-info">
             <p><b>Богдан </b><br>Основатель Neuroimpulse</p>
           </div>
-        </div>
+        </div>-->
         <form id="excursion-form" class="excursion-form">
           <div class="form-group">
             <input type="text" name="name" placeholder="Ваше имя" required>
@@ -281,7 +271,7 @@
           </div>
           <button type="submit" class="cta"><span>НАЗНАЧИТЬ ДАТУ ДЛЯ ЭКСКУРСИИ</span></button>
         </form>
-        <p class="excursion-note">Мы работаем только с избранными компаниями в каждой нише.<br>Количество мест ограничено.</p>
+        <p class="excursion-note">Мы выбираем только 1 компанию в одной нише для технологического ускорения и захвата рынка</p>
       </div>
     </section>
   </main>
