@@ -270,9 +270,9 @@
           <div class="form-group">
             <input type="email" name="email" placeholder="Ваш Ник в Telegram" required>
           </div>
-          <button type="submit" class="cta"><span>НАЗНАЧИТЬ ДАТУ ДЛЯ ЭКСКУРСИИ</span></button>
+          <button type="submit" class="cta"><span>Записаться</span></button>
         </form>
-        <p class="excursion-note">Мы выбираем только 1 компанию в одной нише для технологического ускорения и захвата рынка</p>
+        <p class="excursion-note">Покажем как работают наши виртуальные сотрудники,<br>Экономя до 100 часов в неделю на ФОТ</p>
       </div>
     </section>
   </main>
@@ -335,33 +335,67 @@
       setTheme(isLight);
     };
 
-    // Анимация раскрытия подробностей шага
+    // Функция определения мобильного устройства
     function isMobile() {
       return window.innerWidth <= 900;
     }
+
+    // Закрытие всех шагов процесса
     function closeAllSteps() {
       document.querySelectorAll('.process-step').forEach(step => {
         step.classList.remove('open');
       });
     }
+
+    // Настройка обработчиков для шагов процесса
     document.querySelectorAll('.process-step').forEach(step => {
       const header = step.querySelector('.step-header');
       const toggle = step.querySelector('.step-toggle');
+      
+      // Обработчик для мобильных устройств по нажатию на кнопку
       if (toggle) {
-        toggle.onclick = function(e) {
+        toggle.addEventListener('click', function(e) {
           e.stopPropagation();
           if (isMobile()) {
-            step.classList.toggle('open');
+            const wasOpen = step.classList.contains('open');
+            closeAllSteps();
+            if (!wasOpen) {
+              step.classList.add('open');
+            }
           }
-        };
+        });
       }
+      
+      // Обработчик для всего хедера на мобильных
+      header.addEventListener('click', function(e) {
+        if (isMobile()) {
+          const wasOpen = step.classList.contains('open');
+          closeAllSteps();
+          if (!wasOpen) {
+            step.classList.add('open');
+          }
+        }
+      });
+      
       // Для десктопа — по ховеру
-      step.onmouseenter = function() {
-        if (!isMobile()) step.classList.add('open');
-      };
-      step.onmouseleave = function() {
-        if (!isMobile()) step.classList.remove('open');
-      };
+      step.addEventListener('mouseenter', function() {
+        if (!isMobile()) {
+          step.classList.add('open');
+        }
+      });
+      
+      step.addEventListener('mouseleave', function() {
+        if (!isMobile()) {
+          step.classList.remove('open');
+        }
+      });
+    });
+
+    // Переинициализация при изменении размера окна
+    window.addEventListener('resize', function() {
+      if (!isMobile()) {
+        closeAllSteps();
+      }
     });
   </script>
 </body>
