@@ -67,25 +67,28 @@ const tgPlayIcon = document.getElementById('tgPlayIcon');
 const tgVideoOverlay = document.getElementById('tgVideoOverlay');
 
 if (tgVideo && tgVideoCircle) {
-  // Стартовое состояние: play-иконка видна, overlay виден, видео не играет
-  tgPlayIcon.style.display = 'block';
-  tgVideoOverlay.style.display = 'block';
-  tgVideo.pause();
-  tgVideo.currentTime = 0;
+  // Настройка видео для автоматического воспроизведения без звука
+  tgVideo.muted = true;
+  tgVideo.loop = true;
+  tgVideo.play();
+
+  // Скрываем иконку воспроизведения и оверлей, так как видео всегда играет
+  tgPlayIcon.style.display = 'none';
+  tgVideoOverlay.style.display = 'none';
 
   tgVideoCircle.addEventListener('click', () => {
-    if (tgVideo.paused || tgVideo.ended) {
-      tgPlayIcon.style.display = 'none';
-      tgVideoOverlay.style.display = 'none';
-      tgVideo.currentTime = 0;
-      tgVideo.muted = false;
-      tgVideo.play();
-    }
-  });
+    // Воспроизводим видео один раз со звуком
+    tgVideo.muted = false;
+    tgVideo.loop = false;
+    tgVideo.currentTime = 0;
+    tgVideo.play();
 
-  tgVideo.addEventListener('ended', () => {
-    tgPlayIcon.style.display = 'block';
-    tgVideoOverlay.style.display = 'block';
-    tgVideo.muted = true;
+    // После окончания видео возвращаемся к цикличному воспроизведению без звука
+    tgVideo.addEventListener('ended', function handler() {
+      tgVideo.muted = true;
+      tgVideo.loop = true;
+      tgVideo.play();
+      tgVideo.removeEventListener('ended', handler);
+    }, { once: true });
   });
 }
