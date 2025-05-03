@@ -15,6 +15,9 @@
                 <span id="designIcon">🎨</span> <span id="designText">Что то на умном</span>
             </button>
         </div>
+        <button class="mobile-nav-toggle" id="mobileNavToggle" aria-label="Открыть меню">
+            <i class="fas fa-bars"></i>
+        </button>
         <nav class="business-nav">
             <a href="../sb/index.html" class="active">Главная</a>
             <a href="../lb/index.html">Крупный бизнес</a>
@@ -26,9 +29,8 @@
         <div class="smart-design">
             <section class="hero hero-with-photo">
                 <div class="hero-overlay"></div>
-                <div class="hero-background">
-                    <img src="https://images.unsplash.com/photo-1677442136019-21780ecad995" alt="AI Technology Background" class="hero-bg-image">
-                    <div class="hero-particles"></div>
+                <div class="hero-background" style="max-height: 600px">
+                    <img src="https://images.unsplash.com/photo-1677442136019-21780ecad995" alt="AI Technology Background" class="hero-bg-image" style="height: 600px; object-fit: cover; opacity: 0.2;">
                 </div>
                 <div class="hero-content">
                     <div class="hero-glass">
@@ -53,15 +55,7 @@
                                 <span class="stat-label">Работает без выходных</span>
                             </div>
                         </div>
-                        <div class="founder-block">
-                            <div class="founder-info">
-                                <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e" alt="Богдан Neuroimpulse" class="founder-avatar">
-                                <div class="founder-details">
-                                    <b>Богдан Neuroimpulse</b>
-                                    <span class="founder-role">Эксперт по AI-автоматизации бизнеса</span>
-                                </div>
-                            </div>
-                        </div>
+                            
                     </div>
                 </div>
             </section>
@@ -176,8 +170,8 @@
                             <p>В 2025 году один виртуальный сотрудник заменяет до 6 человек в задачах поддержки, продаж и контроля качества.</p>
                             <p>Результат моей работы — не просто автоматизация, а полная трансформация бизнес-модели с фокусом на качество, скорость и экономическую эффективность.</p>
                         </div>
-                        <div class="cta-image">
-                            <img src="https://images.unsplash.com/photo-1551434678-e076c223a692" alt="Business Automation" class="cta-img">
+                        <div class="cta-image" style="max-height: 300px;">
+                            <img src="https://images.unsplash.com/photo-1551434678-e076c223a692" alt="Business Automation" class="cta-img" style="max-height: 300px; object-fit: cover;">
                         </div>
                     </div>
                     <button class="cta cta-primary">ЗАБРОНИРОВАТЬ ЭКСКУРСИЮ</button>
@@ -205,7 +199,7 @@
                         <h2>ОТ ПРОБЛЕМЫ К РЕШЕНИЮ ЗА 14 ДНЕЙ</h2>
                         <p class="section-subtitle">5 шагов к выходу из операционки</p>
                     </div>
-                    <ol class="steps-list">
+                    <ul class="steps-list">
                         <li data-step="1">
                             <div class="step-icon">
                                 <i class="fas fa-search"></i>
@@ -213,6 +207,15 @@
                             <div class="step-content">
                                 <b>ЭКСКУРСИЯ И ДИАГНОСТИКА (1 день)</b>
                                 <p>Показываю работу технологии на живых примерах и выявляем болевые точки в вашем бизнесе.</p>
+                            </div>
+                        </li>
+                        <li data-step="4">
+                            <div class="step-icon">
+                                <i class="fas fa-file-contract"></i>
+                            </div>
+                            <div class="step-content">
+                                <b>ПОДПИСЫВАЕМ ДОГОВОР (2-3 дня)</b>
+                                <p>Обсуждаем все юридические моменты, NDA, проводим оплату.</p>
                             </div>
                         </li>
                         <li data-step="2">
@@ -233,15 +236,6 @@
                                 <p>Подключаем виртуального сотрудника ко всем каналам и дообучаем модель для максимальной эффективности.</p>
                             </div>
                         </li>
-                        <li data-step="4">
-                            <div class="step-icon">
-                                <i class="fas fa-file-contract"></i>
-                            </div>
-                            <div class="step-content">
-                                <b>ПОДПИСЫВАЕМ ДОГОВОР (2-3 дня)</b>
-                                <p>Обсуждаем все юридические моменты, NDA, проводим оплату.</p>
-                            </div>
-                        </li>
                         <li data-step="5">
                             <div class="step-icon">
                                 <i class="fas fa-chart-line"></i>
@@ -251,7 +245,7 @@
                                 <p>Расширяем функционал на другие отделы и увеличиваем экономию до 150-200% от первоначальных показателей.</p>
                             </div>
                         </li>
-                    </ol>
+                    </ul>
                 </div>
             </section>
 
@@ -333,7 +327,7 @@
             <section class="founder-quote-section">
                 <div class="container">
                     <div class="founder-block">
-                        <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e" alt="Богдан Neuroimpulse" class="founder-avatar">
+                        <img src="../image/bogdan.jpg" alt="Богдан Neuroimpulse" class="founder-avatar">
                         <div class="founder-info">
                             <b>Богдан Neuroimpulse</b>
                             <span class="founder-role">Telegram | YouTube</span>
@@ -342,6 +336,119 @@
                     <blockquote class="case-quote">
                         <p>"После внедрения виртуального консультанта мы сократили стоимость привлечения клиента с 8000₽ до 1600₽ с таргета Вконтакте и полностью автоматизировали первичную квалификацию лидов"<br><span class="quote-author">— Олег, Директор по маркетингу "Landal"</span></p>
                     </blockquote>
+                </div>
+            </section>
+
+            <!-- Benefits Block -->
+            <section class="benefits-section">
+                <div class="container">
+                    <div class="section-header">
+                        <span class="section-badge">Почему выбирают нас</span>
+                        <h2>Преимущества AI-автоматизации для бизнеса</h2>
+                    </div>
+                    <div class="benefits-grid">
+                        <div class="benefit-card">
+                            <i class="fas fa-bolt"></i>
+                            <h3>Молниеносная скорость</h3>
+                            <p>Внедрение решений за 14 дней и быстрый рост эффективности.</p>
+                        </div>
+                        <div class="benefit-card">
+                            <i class="fas fa-chart-line"></i>
+                            <h3>Экономия бюджета</h3>
+                            <p>Снижение стоимости лида и расходов на персонал до 45%.</p>
+                        </div>
+                        <div class="benefit-card">
+                            <i class="fas fa-user-shield"></i>
+                            <h3>Гарантия результата</h3>
+                            <p>Персональная дорожная карта и поддержка на каждом этапе.</p>
+                        </div>
+                        <div class="benefit-card">
+                            <i class="fas fa-robot"></i>
+                            <h3>Виртуальные сотрудники</h3>
+                            <p>Работают 24/7, не болеют и не требуют отпуска.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Case Studies Block -->
+            <section class="cases-section">
+                <div class="container">
+                    <div class="section-header">
+                        <span class="section-badge">Кейсы</span>
+                        <h2>Реальные результаты наших клиентов</h2>
+                    </div>
+                    <div class="cases-grid">
+                        <div class="case-card">
+                            <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb" alt="Landal Case" class="case-img" style="max-height: 180px; object-fit: cover;">
+                            <div class="case-content">
+                                <h3>Landal: -50% к стоимости лида</h3>
+                                <p>AI снизил стоимость квалифицированного лида с 800₽ до 400₽.</p>
+                            </div>
+                        </div>
+                        <div class="case-card">
+                            <img src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6" alt="Retail Case" class="case-img" style="max-height: 180px; object-fit: cover;">
+                            <div class="case-content">
+                                <h3>Розничная сеть: -80% проблем</h3>
+                                <p>Виртуальная техподдержка решила 80% проблем в 50 точках, ускорив решения на 90%.</p>
+                            </div>
+                        </div>
+                        <div class="case-card">
+                            <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c" alt="Law Case" class="case-img" style="max-height: 180px; object-fit: cover;">
+                            <div class="case-content">
+                                <h3>Юрфирма: +34% к прибыли</h3>
+                                <p>Автоматизация консультаций высвободила юристов и обеспечила поддержку 24/7.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+
+            <!-- Founder Section -->
+            <section class="founder-section">
+                <div class="container founder-container">
+                    <img src="../image/bogdan.jpg" alt="Богдан Neuroimpulse" class="founder-avatar-large" style="width: 120px; height: 120px; object-fit: cover;">
+                    <div class="founder-info-large">
+                        <h3>Богдан Neuroimpulse</h3>
+                        <span class="founder-role">Эксперт по AI-автоматизации бизнеса</span>
+                        <blockquote>"Я помогаю предпринимателям выйти из операционки и увеличить прибыль с помощью AI. Мой опыт — это десятки успешных кейсов и миллионы рублей, заработанные клиентами."</blockquote>
+                    </div>
+                </div>
+            </section>
+
+            <!-- FAQ Block -->
+            <section class="faq-section">
+                <div class="container">
+                    <div class="section-header">
+                        <span class="section-badge">FAQ</span>
+                        <h2>Часто задаваемые вопросы</h2>
+                    </div>
+                    <div class="faq-list">
+                        <div class="faq-item">
+                            <h4>Сколько времени занимает внедрение?</h4>
+                            <p>Обычно 2-4 недели с момента диагностики до запуска.</p>
+                        </div>
+                        <div class="faq-item">
+                            <h4>Какие гарантии результата?</h4>
+                            <p>Гарантируем сокращение расходов и рост эффективности, прописываем KPI в договоре.</p>
+                        </div>
+                        <div class="faq-item">
+                            <h4>Можно ли посмотреть демо?</h4>
+                            <p>Да, покажем реальные кейсы и дадим доступ к демо-ботам.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Final CTA -->
+            <section class="final-cta-section">
+                <div class="container">
+                    <div class="final-cta-block">
+                        <h2>Готовы вывести бизнес на новый уровень?</h2>
+                        <p>Запишитесь на бесплатную консультацию и получите персональную стратегию автоматизации.</p>
+                        <button class="cta cta-primary cta-large">ЗАПИСАТЬСЯ НА КОНСУЛЬТАЦИЮ</button>
+                    </div>
                 </div>
             </section>
         </div>
@@ -364,6 +471,8 @@
             const designText = document.getElementById('designText');
             const smartDiv = document.querySelector('.smart-design');
             const simpleDiv = document.querySelector('.simple-design');
+            const mobileNavToggle = document.getElementById('mobileNavToggle');
+            const businessNav = document.querySelector('.business-nav');
 
             let isSmart = localStorage.getItem('isSmartDesign') !== 'false';
 
@@ -387,6 +496,57 @@
             designSwitcher.addEventListener('click', function() {
                 isSmart = !isSmart;
                 setDesign(isSmart);
+            });
+
+            // Function to toggle mobile navigation
+            function toggleMobileNav() {
+                businessNav.classList.toggle('active');
+                
+                // Toggle icon between bars and times
+                const icon = mobileNavToggle.querySelector('i');
+                if (icon.classList.contains('fa-bars')) {
+                    icon.classList.remove('fa-bars');
+                    icon.classList.add('fa-times');
+                } else {
+                    icon.classList.add('fa-bars');
+                    icon.classList.remove('fa-times');
+                }
+                
+                // Prevent body scrolling when menu is open
+                document.body.style.overflow = 
+                    businessNav.classList.contains('active') ? 'hidden' : '';
+            }
+
+            // Mobile navigation toggle
+            mobileNavToggle.addEventListener('click', function(e) {
+                e.stopPropagation();
+                toggleMobileNav();
+            });
+
+            // Close mobile menu when clicking on a link
+            document.querySelectorAll('.business-nav a').forEach(link => {
+                link.addEventListener('click', function() {
+                    if (window.innerWidth <= 768) {
+                        toggleMobileNav();
+                    }
+                });
+            });
+
+            // Close mobile menu when clicking outside
+            document.addEventListener('click', function(e) {
+                if (window.innerWidth <= 768 && 
+                    !businessNav.contains(e.target) && 
+                    !mobileNavToggle.contains(e.target) && 
+                    businessNav.classList.contains('active')) {
+                    toggleMobileNav();
+                }
+            });
+            
+            // Close mobile menu on window resize (if switching to desktop)
+            window.addEventListener('resize', function() {
+                if (window.innerWidth > 768 && businessNav.classList.contains('active')) {
+                    toggleMobileNav();
+                }
             });
         });
     </script>
