@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Neuroimpulse - Главная</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="../header-styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+</head>
+<body>
+    <div class="business-header">
+        <div class="theme-toggle">
+            <button id="themeSwitcher" aria-label="Сменить тему">
+                <span id="themeIcon">🌙</span> <span id="themeText">Тёмная тема</span>
+            </button>
+        </div>
+        <nav class="business-nav">
+            <a href="../sb/index.html" class="active">Главная</a>
+            <a href="../lb/index.html">Крупный бизнес</a>
+        </nav>
+    </div>
+    <header class="hero hero-with-photo">
+        <div class="hero-content">
+            
+            
+        </div>
+    </header>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <h3>Страница в данный момент в разработке, загляните позже)</h3>
+    <script>
+        // Переключение темы
+        document.addEventListener('DOMContentLoaded', function() {
+            const themeSwitcher = document.getElementById('themeSwitcher');
+            const themeIcon = document.getElementById('themeIcon');
+            const themeText = document.getElementById('themeText');
+            
+            // Проверяем сохраненную тему
+            let isLight = localStorage.getItem('isLightTheme') === 'true';
+            
+            function setTheme(light) {
+                if (light) {
+                    document.body.classList.add('light-theme');
+                    themeIcon.textContent = '☀️';
+                    themeText.textContent = 'Светлая тема';
+                } else {
+                    document.body.classList.remove('light-theme');
+                    themeIcon.textContent = '🌙';
+                    themeText.textContent = 'Тёмная тема';
+                }
+                // Сохраняем выбор темы
+                localStorage.setItem('isLightTheme', light);
+            }
+            
+            // Устанавливаем начальную тему
+            setTheme(isLight);
+            
+            // Обработчик клика
+            themeSwitcher.addEventListener('click', function() {
+                isLight = !isLight;
+                setTheme(isLight);
+            });
+        });
+    </script>
+</body>
+</html>

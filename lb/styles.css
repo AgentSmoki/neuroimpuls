@@ -129,11 +129,8 @@ header.hero {
   left: 0;
   right: 0;
   bottom: 0;
-  background:
-    linear-gradient(90deg, #181c23 0%, rgba(24,28,35,0.85) 30%, rgba(24,28,35,0.0) 65%),
-    url('../image/bogdan2.JPG') center top/100% auto no-repeat;
+  background: linear-gradient(90deg, #181c23 0%, rgba(24,28,35,0.85) 30%, rgba(24,28,35,0.0) 65%);
   opacity: 1;
-  filter: brightness(0.95) contrast(1.1);
   z-index: 0;
 }
 
@@ -261,10 +258,16 @@ h3 {
 }
 
 .case-icon {
-  font-size: 2.4rem;
+  font-size: 4rem;
   color: var(--primary-color);
-  margin-bottom: 24px;
+  margin-bottom: 32px;
   text-align: center;
+}
+
+.case-icon img {
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
 }
 
 .case strong {
@@ -898,9 +901,7 @@ footer {
     padding-right: 24px;
   }
   .hero-overlay {
-    background:
-      linear-gradient(90deg, #181c23 0%, rgba(24,28,35,0.85) 30%, rgba(24,28,35,0.0) 65%),
-      url('../image/bogdan.JPG') center top/100% auto no-repeat;
+    background: linear-gradient(90deg, #181c23 0%, rgba(24,28,35,0.85) 30%, rgba(24,28,35,0.0) 65%);
   }
   .hero h1, .hero p {
     margin-left: 0;
@@ -951,9 +952,7 @@ footer {
 
 @media (max-width: 768px) {
   .hero-overlay {
-    background:
-      linear-gradient(90deg, #181c23 0%, rgba(24,28,35,0.85) 30%, rgba(24,28,35,0.0) 65%),
-      url('../image/bogdan.JPG') center top/100% auto no-repeat;
+    background: linear-gradient(90deg, #181c23 0%, rgba(24,28,35,0.85) 30%, rgba(24,28,35,0.0) 65%);
   }
   .hero h1, .hero p {
     margin-left: 0;
@@ -991,9 +990,7 @@ footer {
 
 @media (max-width: 768px) {
   .hero-overlay {
-    background:
-      linear-gradient(90deg, #181c23 0%, rgba(24,28,35,0.85) 30%, rgba(24,28,35,0.0) 65%),
-      url('../image/bogdan.JPG') center top/100% auto no-repeat;
+    background: linear-gradient(90deg, #181c23 0%, rgba(24,28,35,0.85) 30%, rgba(24,28,35,0.0) 65%);
   }
   .hero h1, .hero p {
     margin-left: 0;
@@ -1062,8 +1059,12 @@ footer {
     padding: 16px;
   }
   .case-icon {
-    font-size: 1.6rem;
-    margin-bottom: 12px;
+    font-size: 3rem;
+    margin-bottom: 24px;
+  }
+  .case-icon img {
+    width: 60px;
+    height: 60px;
   }
   .case strong {
     font-size: 0.9rem;
@@ -1239,9 +1240,7 @@ footer {
     height: auto;
   }
   .hero-overlay {
-    background:
-      linear-gradient(90deg, #181c23 0%, rgba(24,28,35,0.85) 30%, rgba(24,28,35,0.0) 65%),
-      url('../image/bogdan.JPG') center top/100% auto no-repeat;
+    background: linear-gradient(90deg, #181c23 0%, rgba(24,28,35,0.85) 30%, rgba(24,28,35,0.0) 65%);
   }
 }
 
@@ -1381,9 +1380,7 @@ footer {
   }
 
   .hero-overlay {
-    background:
-      linear-gradient(90deg, #181c23 0%, rgba(24,28,35,0.85) 30%, rgba(24,28,35,0.0) 65%),
-      url('../image/bogdan.JPG') center top/100% auto no-repeat;
+    background: linear-gradient(90deg, #181c23 0%, rgba(24,28,35,0.85) 30%, rgba(24,28,35,0.0) 65%);
   }
 }
 
@@ -1494,20 +1491,25 @@ body.light-theme header.hero {
 }
 
 body.light-theme .hero-overlay {
-  background:
-    linear-gradient(90deg, #181c23 0%, rgba(24,28,35,0.85) 30%, rgba(24,28,35,0.0) 65%),
-    url('../image/bogdan2.JPG') center top/100% auto no-repeat;
+  background: linear-gradient(90deg, #181c23 0%, rgba(24,28,35,0.85) 30%, rgba(24,28,35,0.0) 65%);
   opacity: 1;
-  filter: brightness(0.95) contrast(1.1);
 }
 
 body.light-theme .hero-glass {
-  background: rgba(255, 255, 255, 0.9);
-  color: var(--text-color);
-  box-shadow: 0 8px 48px 0 #00bcd422, 0 0 32px 0 #fff4 inset;
-  border: 1.5px solid rgba(180,200,255,0.18);
+  background: #fff;
+  color: #181c23;
+  box-shadow: 0 8px 48px 0 #00bcd422, 0 0 32px 0 #0001 inset;
+  border: 1.5px solid rgba(180,200,255,0.10);
   backdrop-filter: blur(16px);
   border-radius: 40px;
+  padding: 64px 48px 72px 48px;
+  margin-right: 0;
+  animation: fadeInUp 1s cubic-bezier(.4,0,.2,1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
 }
 
 body.light-theme .hero-glass h1 {
@@ -1516,7 +1518,7 @@ body.light-theme .hero-glass h1 {
   margin-bottom: 32px;
   letter-spacing: -0.02em;
   color: #181c23;
-  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+  text-shadow: 0 2px 4px rgba(0,0,0,0.08);
   line-height: 1.01;
   text-align: center;
 }
@@ -1702,7 +1704,7 @@ body.light-theme .video-invite-caption {
 .hero-photo {
   width: 520px;
   max-width: none;
-  filter: drop-shadow(0 8px 48px #00e6e6cc) drop-shadow(0 0 32px #fff4);
+  filter: none;
   border-radius: 24px;
   background: none;
 }
@@ -1722,6 +1724,7 @@ body.light-theme .video-invite-caption {
   }
   .hero-photo {
     width: 320px;
+    filter: none;
   }
   .hero-glass {
     padding: 24px 8vw 32px 8vw;
@@ -2004,9 +2007,7 @@ body.light-theme .video-invite-caption {
   }
 
   .hero-overlay {
-    background:
-      linear-gradient(90deg, #181c23 0%, rgba(24,28,35,0.85) 30%, rgba(24,28,35,0.0) 65%),
-      url('../image/bogdan.JPG') center top/100% auto no-repeat;
+    background: linear-gradient(90deg, #181c23 0%, rgba(24,28,35,0.85) 30%, rgba(24,28,35,0.0) 65%);
   }
 }
 
@@ -2055,7 +2056,13 @@ body.light-theme .video-invite-caption {
   }
 
   .case-icon {
-    font-size: 2rem;
+    font-size: 3rem;
+    margin-bottom: 24px;
+  }
+
+  .case-icon img {
+    width: 60px;
+    height: 60px;
   }
 
   .case b {
@@ -2144,4 +2151,26 @@ a.cta,
 button a,
 a:has(button) {
   text-decoration: none;
+}
+
+@media (max-width: 700px) {
+  .hero-glass {
+    padding: 24px 8px 32px 8px !important;
+    border-radius: 18px !important;
+    box-shadow: 0 2px 16px 0 #0002 !important;
+    margin: 0 4px !important;
+  }
+  .hero-glass h1 {
+    font-size: 1.35rem !important;
+    line-height: 1.15 !important;
+    margin-bottom: 18px !important;
+    word-break: break-word;
+    font-weight: 800 !important;
+    padding: 0 2px;
+  }
+  .hero-glass p {
+    font-size: 1rem !important;
+    margin-bottom: 16px !important;
+    padding: 0 2px;
+  }
 }

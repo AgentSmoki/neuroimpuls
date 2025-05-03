@@ -1,0 +1,71 @@
+image.png.hero-photo {
+  width: 520px;
+  max-width: none;
+  filter: none;
+  border-radius: 24px;
+  background: none;
+}
+
+@media (max-width: 1200px) {
+  .hero-content {
+    max-width: 98vw;
+    padding: 24px 0 0 0;
+  }
+  .hero-photo {
+    width: 320px;
+    filter: none;
+  }
+  .hero-glass {
+    padding: 24px 8vw 32px 8vw;
+  }
+  .hero-photo-col {
+    margin-left: -30px;
+  }
+}
+
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(90deg, #181c23 0%, rgba(24,28,35,0.85) 30%, rgba(24,28,35,0.0) 65%);
+  opacity: 1;
+  z-index: 0;
+}
+
+body.light-theme .hero-overlay {
+  background: linear-gradient(90deg, #181c23 0%, rgba(24,28,35,0.85) 30%, rgba(24,28,35,0.0) 65%);
+  opacity: 1;
+}
+
+@media (max-width: 768px) {
+  .hero-overlay {
+    background: linear-gradient(90deg, #181c23 0%, rgba(24,28,35,0.85) 30%, rgba(24,28,35,0.0) 65%);
+  }
+}
+
+.case-icon {
+  font-size: 4rem;
+  color: var(--primary-color);
+  margin-bottom: 32px;
+  text-align: center;
+}
+
+.case-icon img {
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
+}
+
+@media (max-width: 480px) {
+  .case-icon {
+    font-size: 3rem;
+    margin-bottom: 24px;
+  }
+  
+  .case-icon img {
+    width: 60px;
+    height: 60px;
+  }
+} 

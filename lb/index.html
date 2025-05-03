@@ -3,14 +3,27 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Neuroimpulse</title>
+  <title>Neuroimpulse - Крупный бизнес</title>
   <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="../header-styles.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  
 </head>
 <body>
+  <div class="business-header">
+    <div class="theme-toggle">
+      <button id="themeSwitcher" aria-label="Сменить тему">
+        <span id="themeIcon">🌙</span> <span id="themeText">Тёмная тема</span>
+      </button>
+    </div>
+    <nav class="business-nav">
+      <a href="../sb/index.html">Главная</a>
+      <a href="../lb/index.html" class="active">Крупный бизнес</a>
+    </nav>
+  </div>
   <header class="hero hero-with-photo">
-    <div class="theme-toggle" style="position:absolute;top:24px;right:32px;z-index:10;">
-      <button id="themeSwitcher" aria-label="Сменить тему" style="background:rgba(0,0,0,0.15);border:none;border-radius:24px;padding:8px 18px;font-size:1.1rem;color:#fff;cursor:pointer;display:flex;align-items:center;gap:8px;transition:background 0.2s;">
+    <div class="theme-toggle">
+      <button id="themeSwitcher" aria-label="Сменить тему">
         <span id="themeIcon">🌙</span> <span id="themeText">Тёмная тема</span>
       </button>
     </div>
@@ -60,6 +73,27 @@
               <li><svg class="metallic-svg" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" stroke-width="2" stroke="url(#metal-gradient)" fill="none" stroke-linecap="round" stroke-linejoin="round"><defs><linearGradient id="metal-gradient" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#f5f6fa"/><stop offset="30%" stop-color="#bfc0c0"/><stop offset="60%" stop-color="#888b92"/><stop offset="100%" stop-color="#f5f6fa"/></linearGradient></defs><path d="M3 17l6-6 4 4 8-8" stroke="url(#metal-gradient)"/><path d="M14 7h7v7" stroke="url(#metal-gradient)"/></svg> Почему в 2025 году искусственный интеллект эффективнее любого аудитора и в 10 раз дешевле</li>
               <li><svg class="metallic-svg" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" stroke-width="2" stroke="url(#metal-gradient)" fill="none" stroke-linecap="round" stroke-linejoin="round"><defs><linearGradient id="metal-gradient" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#f5f6fa"/><stop offset="30%" stop-color="#bfc0c0"/><stop offset="60%" stop-color="#888b92"/><stop offset="100%" stop-color="#f5f6fa"/></linearGradient></defs><path d="M21 13.5a1.5 1.5 0 0 1-3 0V13h-2.5a1.5 1.5 0 0 1 0-3H18v-.5a1.5 1.5 0 0 1 3 0V10h.5a1.5 1.5 0 0 1 0 3H21zM3 10.5a1.5 1.5 0 0 1 3 0V11h2.5a1.5 1.5 0 0 1 0 3H6v.5a1.5 1.5 0 0 1-3 0V14H2.5a1.5 1.5 0 0 1 0-3H3z" stroke="url(#metal-gradient)"/></svg> Как компании из топ-10 своих ниш уже используют наши технологии для безопасности бизнеса</li>
             </ul>
+             <!-- Видеокружок с Богданом -->
+    <section class="video-invite">
+      <div class="container">
+        
+        <div class="video-invite-content">
+          <div class="video-circle" id="tgVideoCircle" tabindex="0" aria-label="Смотреть видео приглашение">
+            <video
+              id="tgVideo"
+              src="../image/bogdan-invite.mp4"
+              muted
+              playsinline
+              style="width:100%;height:100%;object-fit:cover;border-radius:50%;display:block;"
+            ></video>
+            <span class="video-play-icon" id="tgPlayIcon" style="display:none;">▶</span>
+            <div class="video-overlay" id="tgVideoOverlay" style="display:none;"></div>
+          </div>
+          
+        </div>
+        
+      </div>
+    </section>
             <a href="https://t.me/annya_ai" target="_blank"><button class="cta"><span>Внедряем.</span></button></a>
           </div>
         </section>
@@ -225,27 +259,7 @@
       </div>
     </section>
 
-    <!-- Видеокружок с Богданом -->
-    <section class="video-invite">
-      <div class="container">
-        <h2>Личное приглашение от основателя Neuroimpulse</h2>
-        <div class="video-invite-content">
-          <div class="video-circle" id="tgVideoCircle" tabindex="0" aria-label="Смотреть видео приглашение">
-            <video
-              id="tgVideo"
-              src="../image/bogdan-invite.mp4"
-              muted
-              playsinline
-              style="width:100%;height:100%;object-fit:cover;border-radius:50%;display:block;"
-            ></video>
-            <span class="video-play-icon" id="tgPlayIcon" style="display:none;">▶</span>
-            <div class="video-overlay" id="tgVideoOverlay" style="display:none;"></div>
-          </div>
-          <div class="video-invite-caption">Видео-приглашение от Богдана</div>
-        </div>
-        <a href="https://t.me/annya_ai" target="_blank"><button class="cta" id="videoInviteBtn">Записаться на экскурсию</button></a>
-      </div>
-    </section>
+   
 
     <!-- Экскурсия -->
     <section class="excursion">
@@ -283,28 +297,29 @@
           <h3>NeuroImpulse</h3>
           <p>Инновационные решения для вашего бизнеса с использованием искусственного интеллекта.</p>
           <div class="social-links">
-            <a href="#" class="social-link telegram-link" aria-label="Telegram">
+            <a href="https://t.me/+Hgxlzu_cdEVmNWNi" class="social-link telegram-link" aria-label="Telegram">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="currentColor">
                 <path d="M20.665,3.717l-17.73,6.837c-1.21,0.486-1.203,1.161-0.222,1.462l4.552,1.42l10.532-6.645c0.498-0.303,0.953-0.14,0.579,0.192l-8.533,7.701l-0.332,4.99c0.485,0,0.699-0.222,0.969-0.486l2.328-2.243l4.837,3.566c0.89,0.49,1.526,0.241,1.747-0.824l3.15-14.833c0.322-1.293-0.493-1.881-1.467-1.496z"/>
               </svg>
             </a>
-            <a href="#" class="social-link instagram-link" aria-label="Instagram">
+            <a href="https://www.instagram.com/jony_piatochka?igsh=bGt4MnBiZ2ZnOWo4&utm_source=qr" class="social-link instagram-link" aria-label="Instagram">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="currentColor">
                 <path d="M12,2.163c3.204,0,3.584,0.012,4.85,0.07c3.252,0.148,4.771,1.691,4.919,4.919c0.058,1.265,0.069,1.645,0.069,4.849c0,3.205-0.012,3.584-0.069,4.849c-0.149,3.225-1.664,4.771-4.919,4.919c-1.266,0.058-1.644,0.07-4.85,0.07c-3.204,0-3.584-0.012-4.849-0.07c-3.26-0.149-4.771-1.699-4.919-4.92c-0.058-1.265-0.07-1.644-0.07-4.849c0-3.204,0.013-3.583,0.07-4.849c0.149-3.227,1.664-4.771,4.919-4.919c1.266-0.057,1.645-0.069,4.849-0.069zm0-2.163c-3.259,0-3.667,0.014-4.947,0.072c-4.358,0.2-6.78,2.618-6.98,6.98c-0.059,1.281-0.073,1.689-0.073,4.948c0,3.259,0.014,3.668,0.072,4.948c0.2,4.358,2.618,6.78,6.98,6.98c1.281,0.058,1.689,0.072,4.948,0.072c3.259,0,3.668-0.014,4.948-0.072c4.354-0.2,6.782-2.618,6.979-6.98c0.059-1.28,0.073-1.689,0.073-4.948c0-3.259-0.014-3.667-0.072-4.947c-0.196-4.354-2.617-6.78-6.979-6.98c-1.281-0.059-1.69-0.073-4.949-0.073zm0,5.838c-3.403,0-6.162,2.759-6.162,6.162s2.759,6.163,6.162,6.163s6.162-2.759,6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0,10.162c-2.209,0-4-1.79-4-4c0-2.209,1.791-4,4-4s4,1.791,4,4c0,2.21-1.791,4-4,4zm6.406-11.845c-0.796,0-1.441,0.645-1.441,1.44s0.645,1.44,1.441,1.44c0.795,0,1.439-0.645,1.439-1.44s-0.644-1.44-1.439-1.44z"/>
               </svg>
             </a>
-            <a href="#" class="social-link youtube-link" aria-label="YouTube">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="currentColor">
-                <path d="M23.498,6.186c-0.276-1.039-1.089-1.858-2.122-2.136C19.505,3.546,12,3.546,12,3.546s-7.505,0-9.377,0.504c-1.033,0.278-1.846,1.097-2.122,2.136C0,8.07,0,12,0,12s0,3.93,0.501,5.814c0.276,1.039,1.089,1.858,2.122,2.136C4.495,20.454,12,20.454,12,20.454s7.505,0,9.377-0.504c1.033-0.278,1.846-1.097,2.122-2.136C24,15.93,24,12,24,12S24,8.07,23.498,6.186z M9.546,15.569V8.431L15.818,12L9.546,15.569z"/>
+            <a href="https://vk.com/bogman108" class="social-link vk-link" aria-label="VK">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                <rect width="24" height="24" rx="12" fill="#0077FF"/>
+                <path d="M16.37 8.5c.13-.41 0-.7-.59-.7h-1.01c-.5 0-.73.26-.86.54 0 0-1.01 2.45-2.44 4.04-.46.46-.67.6-.92.6-.13 0-.32-.14-.32-.55V8.8c0-.49-.14-.7-.55-.7H8.01c-.32 0-.52.15-.52.46 0 .46.68.57.75 1.87v2.82c0 .62-.11.73-.35.73-.67 0-2.29-2.47-3.25-5.3-.19-.54-.38-.75-.88-.75H2.99c-.56 0-.67.26-.67.54 0 .51.67 3.04 3.13 6.39 1.64 2.18 3.95 3.36 6.05 3.36 1.26 0 1.41-.28 1.41-.76v-1.75c0-.55.12-.66.51-.66.29 0 .8.14 1.98 1.21 1.36 1.23 1.59 1.76 2.36 1.76h1.01c.56 0 .84-.28.68-.82-.18-.54-.82-1.33-1.67-2.27-.46-.5-1.15-1.04-1.36-1.31-.29-.38-.21-.55 0-.89.01-.01 2.41-3.39 2.66-4.54z" fill="#fff"/>
               </svg>
             </a>
           </div>
         </div>
         <div class="footer-section">
           <h3>Контакты</h3>
-          <p><i class="fas fa-map-marker-alt"></i> Москва, ул. Примерная, 123</p>
-          <p><i class="fas fa-phone"></i> +7 (999) 123-45-67</p>
-          <p><i class="fas fa-envelope"></i> info@neuroimpulse.ru</p>
+          <p><i class="fas fa-map-marker-alt"></i> Волгоград, невская 10с1</p>
+          
+          <p><i class="fas fa-envelope"></i> neuroimpuls@yandex.ru</p>
         </div>
       </div>
       <div class="footer-bottom">
@@ -315,25 +330,37 @@
   <script src="script.js"></script>
   <script>
     // Переключение темы
-    const themeSwitcher = document.getElementById('themeSwitcher');
-    const themeIcon = document.getElementById('themeIcon');
-    const themeText = document.getElementById('themeText');
-    function setTheme(light) {
-      if (light) {
-        document.body.classList.add('light-theme');
-        themeIcon.textContent = '☀️';
-        themeText.textContent = 'Светлая тема';
-      } else {
-        document.body.classList.remove('light-theme');
-        themeIcon.textContent = '🌙';
-        themeText.textContent = 'Тёмная тема';
+    document.addEventListener('DOMContentLoaded', function() {
+      const themeSwitcher = document.getElementById('themeSwitcher');
+      const themeIcon = document.getElementById('themeIcon');
+      const themeText = document.getElementById('themeText');
+      
+      // Проверяем сохраненную тему
+      let isLight = localStorage.getItem('isLightTheme') === 'true';
+      
+      function setTheme(light) {
+        if (light) {
+          document.body.classList.add('light-theme');
+          themeIcon.textContent = '☀️';
+          themeText.textContent = 'Светлая тема';
+        } else {
+          document.body.classList.remove('light-theme');
+          themeIcon.textContent = '🌙';
+          themeText.textContent = 'Тёмная тема';
+        }
+        // Сохраняем выбор темы
+        localStorage.setItem('isLightTheme', light);
       }
-    }
-    let isLight = false;
-    themeSwitcher.onclick = function() {
-      isLight = !isLight;
+      
+      // Устанавливаем начальную тему
       setTheme(isLight);
-    };
+      
+      // Обработчик клика
+      themeSwitcher.addEventListener('click', function() {
+        isLight = !isLight;
+        setTheme(isLight);
+      });
+    });
 
     // Функция определения мобильного устройства
     function isMobile() {

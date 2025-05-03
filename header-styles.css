@@ -1,0 +1,137 @@
+.business-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    padding: 12px 16px;
+    background: rgba(24,28,35,0.85);
+    backdrop-filter: blur(8px);
+}
+
+.business-nav {
+    display: flex;
+    gap: 12px;
+}
+
+.business-nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 1rem;
+    padding: 8px 16px;
+    border-radius: 20px;
+    transition: all 0.2s;
+    background: rgba(0, 0, 0, 0.15);
+    font-weight: 500;
+}
+
+.business-nav a:hover {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.business-nav a.active {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.theme-toggle {
+    position: static;
+    z-index: 1100;
+}
+
+#themeSwitcher {
+    background: rgba(0, 0, 0, 0.15);
+    border: none;
+    border-radius: 20px;
+    padding: 8px 16px;
+    font-size: 1rem;
+    color: #fff;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: background 0.2s;
+    font-weight: 500;
+}
+
+#themeSwitcher:hover {
+    background: rgba(255,255,255,0.08);
+}
+
+/* Стили для светлой темы */
+body.light-theme {
+    background-color: #ffffff;
+    color: #333333;
+}
+
+body.light-theme .hero-overlay {
+    background: rgba(255, 255, 255, 0.8);
+}
+
+body.light-theme .business-header {
+    background: rgba(255,255,255,0.95);
+}
+
+body.light-theme .business-nav a,
+body.light-theme #themeSwitcher {
+    color: #232733;
+    background: rgba(0,0,0,0.08);
+}
+
+body.light-theme .business-nav a.active {
+    background: rgba(0,0,0,0.15);
+}
+
+body.light-theme .business-nav a:hover,
+body.light-theme #themeSwitcher:hover {
+    background: rgba(0,0,0,0.12);
+}
+
+/* Базовые стили для темной темы */
+body {
+    background-color: #1a1a1a;
+    color: #ffffff;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+@media (max-width: 700px) {
+    .business-header {
+        flex-direction: row;
+        align-items: center;
+        padding: 8px 4vw;
+        gap: 0;
+    }
+    .business-nav {
+        gap: 4px;
+    }
+    .business-nav a, #themeSwitcher {
+        font-size: 0.95rem;
+        padding: 7px 10px;
+        border-radius: 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    .business-header {
+        padding: 4px 2vw;
+    }
+    .business-nav a, #themeSwitcher {
+        font-size: 0.9rem;
+        padding: 6px 7px;
+        border-radius: 14px;
+    }
+}
+
+.vk-link {
+  background: #0077FF !important;
+  color: #fff !important;
+  border: none !important;
+}
+.vk-link:hover {
+  background: #005ecb !important;
+  color: #fff !important;
+} 
