@@ -3506,6 +3506,8 @@ img {
     left: 0;
     right: 0;
     bottom: 0;
+    width: 100%;
+    height: 100%;
     background: url('https://images.unsplash.com/photo-1548407260-da850faa41e3') no-repeat center center;
     background-size: cover;
     opacity: 0.15;
@@ -3673,10 +3675,10 @@ img {
     content: '';
     position: absolute;
     top: 0;
-    right: 0;
-    width: 300px;
-    height: 300px;
-    background: radial-gradient(circle, rgba(255, 62, 0, 0.15) 0%, rgba(255, 62, 0, 0) 70%);
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at 70% 30%, rgba(255, 62, 0, 0.15) 0%, rgba(255, 62, 0, 0) 70%);
     z-index: 0;
 }
 
@@ -3730,11 +3732,11 @@ img {
 .operations:before {
     content: '';
     position: absolute;
-    bottom: 0;
+    top: 0;
     left: 0;
-    width: 300px;
-    height: 300px;
-    background: radial-gradient(circle, rgba(255, 62, 0, 0.1) 0%, rgba(255, 62, 0, 0) 70%);
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at 30% 70%, rgba(255, 62, 0, 0.1) 0%, rgba(255, 62, 0, 0) 70%);
     z-index: 0;
 }
 
@@ -3827,9 +3829,9 @@ img {
     content: '';
     position: absolute;
     top: 0;
-    right: 0;
-    width: 400px;
-    height: 400px;
+    left: 0;
+    width: 100%;
+    height: 100%;
     background: url('https://images.unsplash.com/photo-1551288049-bebda4e38f71') no-repeat center center;
     background-size: cover;
     opacity: 0.1;
@@ -3857,10 +3859,10 @@ img {
 .steps:before {
     content: '';
     position: absolute;
-    bottom: 0;
-    right: 0;
-    width: 500px;
-    height: 500px;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
     background: url('https://images.unsplash.com/photo-1517245386807-bb43f82c33c4') no-repeat center center;
     background-size: cover;
     opacity: 0.1;
@@ -3958,8 +3960,8 @@ img {
     position: absolute;
     top: 0;
     left: 0;
-    width: 400px;
-    height: 400px;
+    width: 100%;
+    height: 100%;
     background: url('https://images.unsplash.com/photo-1504868584819-f8e8b4b6d7e3') no-repeat center center;
     background-size: cover;
     opacity: 0.1;
@@ -4026,8 +4028,8 @@ img {
     position: absolute;
     top: 0;
     left: 0;
-    right: 0;
-    bottom: 0;
+    width: 100%;
+    height: 100%;
     background: url('https://images.unsplash.com/photo-1568992687947-868a62a9f521') no-repeat center center;
     background-size: cover;
     opacity: 0.1;
@@ -4086,8 +4088,8 @@ img {
     position: absolute;
     top: 0;
     left: 0;
-    right: 0;
-    bottom: 0;
+    width: 100%;
+    height: 100%;
     background: url('https://images.unsplash.com/photo-1526628953301-3e589a6a8b74') no-repeat center center;
     background-size: cover;
     opacity: 0.1;
@@ -4474,5 +4476,82 @@ img {
     .founder-avatar-large-wrapper {
         width: 100px;
         height: 100px;
+    }
+}
+
+/* Скрываем фоновые изображения для ПК */
+.simple-hero:before,
+.channel-content:before,
+.operations:before,
+.money-talk:before,
+.steps:before,
+.reasons:before,
+.testimonial:before,
+.final-cta:before {
+    display: none;
+}
+
+/* Показываем фоновые изображения только для мобильных устройств */
+@media (max-width: 768px) {
+    .simple-hero:before,
+    .channel-content:before,
+    .operations:before,
+    .money-talk:before,
+    .steps:before,
+    .reasons:before,
+    .testimonial:before,
+    .final-cta:before {
+        display: block;
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 0;
+    }
+    
+    .simple-hero:before {
+        background: url('https://images.unsplash.com/photo-1548407260-da850faa41e3') no-repeat center center;
+        background-size: cover;
+        opacity: 0.15;
+    }
+    
+    .channel-content:before {
+        background: radial-gradient(circle at 70% 30%, rgba(255, 62, 0, 0.15) 0%, rgba(255, 62, 0, 0) 70%);
+    }
+    
+    .operations:before {
+        background: radial-gradient(circle at 30% 70%, rgba(255, 62, 0, 0.1) 0%, rgba(255, 62, 0, 0) 70%);
+    }
+    
+    .money-talk:before {
+        background: url('https://images.unsplash.com/photo-1551288049-bebda4e38f71') no-repeat center center;
+        background-size: cover;
+        opacity: 0.1;
+    }
+    
+    .steps:before {
+        background: url('https://images.unsplash.com/photo-1517245386807-bb43f82c33c4') no-repeat center center;
+        background-size: cover;
+        opacity: 0.1;
+    }
+    
+    .reasons:before {
+        background: url('https://images.unsplash.com/photo-1504868584819-f8e8b4b6d7e3') no-repeat center center;
+        background-size: cover;
+        opacity: 0.1;
+    }
+    
+    .testimonial:before {
+        background: url('https://images.unsplash.com/photo-1568992687947-868a62a9f521') no-repeat center center;
+        background-size: cover;
+        opacity: 0.1;
+    }
+    
+    .final-cta:before {
+        background: url('https://images.unsplash.com/photo-1526628953301-3e589a6a8b74') no-repeat center center;
+        background-size: cover;
+        opacity: 0.1;
     }
 }
