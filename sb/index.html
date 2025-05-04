@@ -8,6 +8,19 @@
     <link rel="stylesheet" href="../header-styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="stylesheet" href="header-fix.css">
+    <style>
+        /* Принудительно переопределяем стили для навигации */
+        .business-nav a,
+        .business-nav a:link,
+        .business-nav a:visited,
+        .business-nav a:hover,
+        .business-nav a:active,
+        .business-nav a.active {
+            background: transparent !important;
+            background-color: transparent !important;
+            background-image: none !important;
+        }
+    </style>
 </head>
 <body>
     <div class="business-header">
@@ -20,8 +33,8 @@
             <i class="fas fa-bars"></i>
         </button>
         <nav class="business-nav">
-            <a href="../sb/index.html" class="active">Главная</a>
-            <a href="../lb/index.html">Крупный бизнес</a>
+            <a href="../sb/index.html" class="active" style="background:transparent !important;">Главная</a>
+            <a href="../lb/index.html" style="background:transparent !important;">Крупный бизнес</a>
         </nav>
     </div>
 
@@ -65,44 +78,24 @@
                 <div class="container">
                     <div class="section-header">
                         <span class="section-badge">Результаты</span>
-                        <h2>Подписавшись на канал, вы узнаете:</h2>
+                        <h2>Подпишитесь на канал, вы узнаете:</h2>
                     </div>
-                    <ul class="learn-list">
+                    <ul class="learn-list compact-list">
                         <li>
-                            <div class="learn-icon">
-                                <i class="fas fa-chart-line"></i>
-                            </div>
-                            <div class="learn-content">
-                                <b>Как внедрение искусственного интеллекта в компанию "Landal" снизило стоимость квалифицированного лида на 50%</b>
-                                <p>с 800₽ до 400₽</p>
-                            </div>
+                            <i class="fas fa-chart-line"></i>
+                            <span>Как внедрение искусственного интеллекта в компанию "Landal" снизило стоимость квалифицированного лида на 50% (с 800₽ до 400₽)</span>
                         </li>
                         <li>
-                            <div class="learn-icon">
-                                <i class="fas fa-headset"></i>
-                            </div>
-                            <div class="learn-content">
-                                <b>Как наша виртуальная техподдержка избавила розничную сеть от 80% технических проблем в 50 торговых точках</b>
-                                <p>сократив время решения тех.проблем на 90%</p>
-                            </div>
+                            <i class="fas fa-headset"></i>
+                            <span>Как наша виртуальная техподдержка избавила розничную сеть от 80% технических проблем в 50 торговых точках, сократив время решения на 90%</span>
                         </li>
                         <li>
-                            <div class="learn-icon">
-                                <i class="fas fa-gavel"></i>
-                            </div>
-                            <div class="learn-content">
-                                <b>Как в юридической фирме по банкротству мы увеличили прибыль на 34%</b>
-                                <p>высвободив юристов от первичных консультаций и помогая клиентам 24/7</p>
-                            </div>
+                            <i class="fas fa-gavel"></i>
+                            <span>Как в юридической фирме по банкротству мы увеличили прибыль на 34%, высвободив юристов от первичных консультаций</span>
                         </li>
                         <li>
-                            <div class="learn-icon">
-                                <i class="fas fa-coins"></i>
-                            </div>
-                            <div class="learn-content">
-                                <b>Почему наши клиенты экономят от 30% до 45% бюджета на ФОТ</b>
-                                <p>уже в первый месяц после внедрения виртуальных сотрудников</p>
-                            </div>
+                            <i class="fas fa-coins"></i>
+                            <span>Почему наши клиенты экономят от 30% до 45% бюджета на ФОТ уже в первый месяц внедрения</span>
                         </li>
                     </ul>
                 </div>
@@ -176,6 +169,7 @@
                         </div>
                     </div>
                     <button class="cta cta-primary">ЗАБРОНИРОВАТЬ ЭКСКУРСИЮ</button>
+                    <p class="cta-subtext">Чтобы посмотреть как работают Виртуальная команда на примере нашего бизнеса</p>
                     <ul class="cta-list">
                         <li>
                             <i class="fas fa-rocket"></i>
@@ -187,7 +181,7 @@
                         </li>
                         <li>
                             <i class="fas fa-chart-pie"></i>
-                            <b>Гарантия реального сокращения ФОТ на 30-45%</b> уже в первый месяц после внедрения
+                            <b>Гарантия снижения стоимость квал.заявки по договору</b> уже в первый месяц после внедрения
                         </li>
                     </ul>
                 </div>
@@ -262,7 +256,7 @@
                                 <i class="fas fa-bolt"></i>
                             </div>
                             <div class="reason-content">
-                                <b>ТЕХ, КТО ЖДЕТ, ОПЕРЕДЯТ КОНКУРЕНТЫ</b>
+                                <b>ТЕХ, КТО ЖДЕТ - ОПЕРЕДЯТ КОНКУРЕНТЫ</b>
                                 <p>К 2026 году ИИ-автоматизация станет стандартом рынка, но максимальное преимущество получат первопроходцы</p>
                             </div>
                         </li>
@@ -312,28 +306,25 @@
                         <span class="section-badge">Акция</span>
                         <h2>ОСВОБОДИТЕ 37 ЧАСОВ В НЕДЕЛЮ. ХВАТИТ ТРАТИТЬ ВРЕМЯ НА ОПЕРАЦИОНКУ</h2>
                     </div>
-                    <p>Запишитесь на экскурсию и увидите, как виртуальные сотрудники уже сейчас меняют бизнес в вашей отрасли</p>
+                    
                     <div class="cta-offer">
                         <div class="offer-badge">Ограниченное предложение</div>
                         <p><b>Первым 5 клиентам — бесплатный аудит бизнес-процессов и персональная дорожная карта автоматизации (стоимость 50 000₽)</b></p>
                         <button class="cta cta-primary">ЗАБРОНИРОВАТЬ МЕСТО НА ЭКСКУРСИИ (осталось 3)</button>
+                        
                         <div class="offer-timer">
                             <i class="fas fa-clock"></i>
                             <span>Количество экскурсий ограничено: осталось 10 мест на май</span>
                         </div>
+                        <p>Запишитесь на экскурсию и увидите, как виртуальные сотрудники уже сейчас меняют бизнес в вашей отрасли</p>
                     </div>
+                    
                 </div>
             </section>
 
             <section class="founder-quote-section">
                 <div class="container">
-                    <div class="founder-block">
-                        <img src="../image/bogdan.jpg" alt="Богдан Neuroimpulse" class="founder-avatar">
-                        <div class="founder-info">
-                            <b>Богдан Neuroimpulse</b>
-                            <span class="founder-role">Telegram | YouTube</span>
-                        </div>
-                    </div>
+                    
                     <blockquote class="case-quote">
                         <p>"После внедрения виртуального консультанта мы сократили стоимость привлечения клиента с 8000₽ до 1600₽ с таргета Вконтакте и полностью автоматизировали первичную квалификацию лидов"<br><span class="quote-author">— Олег, Директор по маркетингу "Landal"</span></p>
                     </blockquote>
@@ -448,7 +439,19 @@
                     <div class="final-cta-block">
                         <h2>Готовы вывести бизнес на новый уровень?</h2>
                         <p>Запишитесь на бесплатную консультацию и получите персональную стратегию автоматизации.</p>
-                        <button class="cta cta-primary cta-large">ЗАПИСАТЬСЯ НА КОНСУЛЬТАЦИЮ</button>
+                        <form id="consultation-form" class="consultation-form" action="https://2meetup.in/company/neuroimpuls" method="get">
+                            <div class="form-group">
+                                <input type="text" name="name" placeholder="Ваше имя" required>
+                            </div>
+                            <div class="form-group">
+                                <input type="tel" name="phone" placeholder="Ваш телефон" required>
+                            </div>
+                            <div class="form-group">
+                                <input type="text" name="telegram" placeholder="Ваш ник в Telegram" required>
+                            </div>
+                            <button type="submit" class="cta cta-primary cta-large">Забронировать время консультации</button>
+                           
+                        </form>
                     </div>
                 </div>
             </section>
@@ -549,6 +552,22 @@
                     toggleMobileNav();
                 }
             });
+            
+            // Handle consultation form submission
+            const consultationForm = document.getElementById('consultation-form');
+            if (consultationForm) {
+                consultationForm.addEventListener('submit', function(e) {
+                    e.preventDefault();
+                    
+                    // Store form data if needed
+                    const name = consultationForm.querySelector('input[name="name"]').value;
+                    const phone = consultationForm.querySelector('input[name="phone"]').value;
+                    const telegram = consultationForm.querySelector('input[name="telegram"]').value;
+                    
+                    // Redirect to 2meetup
+                    window.location.href = 'https://2meetup.in/company/neuroimpuls';
+                });
+            }
         });
     </script>
 </body>

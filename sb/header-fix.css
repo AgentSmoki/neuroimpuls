@@ -78,6 +78,30 @@
         font-size: 1.3rem;
         margin-bottom: 1.2rem;
     }
+    
+    /* Fix for mobile menu toggle button */
+    .mobile-nav-toggle {
+        display: flex !important;
+        align-items: center;
+        justify-content: center;
+        background: rgba(255, 255, 255, 0.15);
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        color: #fff;
+        font-size: 1.2rem;
+        cursor: pointer;
+        z-index: 1010;
+        padding: 10px;
+        border-radius: 8px;
+        position: relative;
+        margin-left: auto;
+        margin-right: 15px;
+    }
+    
+    .business-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
 }
 
 @media (max-width: 480px) {
@@ -90,4 +114,40 @@
         font-size: 1.1rem;
         margin-bottom: 1rem;
     }
+}
+
+/* Перезаписываем все возможные стили для элементов меню */
+.business-nav a,
+nav.business-nav a,
+.business-header .business-nav a,
+a[href="../sb/index.html"],
+a[href="../lb/index.html"],
+.business-nav a.active {
+    background: transparent !important;
+    background-color: transparent !important;
+    background-image: none !important;
+    border: 1px solid rgba(255, 255, 255, 0.2) !important;
+    box-shadow: none !important;
+}
+
+.business-nav a[href="../sb/index.html"].active,
+.business-nav a[href="../lb/index.html"].active {
+    border-color: var(--primary-color) !important;
+    color: var(--primary-color) !important;
+    background: none !important;
+}
+
+/* Предотвращаем синий фон для кнопок в мобильном меню */
+.business-nav a,
+.business-nav a.active,
+.business-nav a:active,
+.business-nav a:link,
+.business-nav a:visited,
+.business-nav a:hover {
+    background: none !important;
+    background-color: transparent !important;
+    background-image: none !important;
+    background: rgba(0,0,0,0) !important;
+    -webkit-background: none !important;
+    -moz-background: none !important;
 } 
