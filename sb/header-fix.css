@@ -1,0 +1,93 @@
+/* Header styling fixes */
+.hero-badge {
+    color: var(--primary-light);
+    font-weight: 700;
+    font-size: 1.8rem;
+    margin-bottom: 2.5rem;
+    display: block;
+    position: relative;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    background: none;
+    border-radius: 0;
+    padding: 0;
+    box-shadow: none;
+    text-align: center;
+}
+
+.hero-badge::before {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 3px;
+    background: var(--gradient-primary);
+    animation: none;
+}
+
+.hero-badge:hover {
+    transform: none;
+    box-shadow: none;
+    background: none;
+}
+
+.section-badge {
+    color: var(--primary-light);
+    font-weight: 700;
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+    display: block;
+    position: relative;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    background: none;
+    border-radius: 0;
+    padding: 0;
+    box-shadow: none;
+    text-align: center;
+}
+
+.section-badge::before {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 3px;
+    background: var(--gradient-primary);
+    animation: none;
+}
+
+.section-badge:hover {
+    transform: none;
+    box-shadow: none;
+    background: none;
+}
+
+/* Mobile adjustments */
+@media (max-width: 768px) {
+    .hero-badge {
+        font-size: 1.5rem;
+        margin-bottom: 2rem;
+    }
+    
+    .section-badge {
+        font-size: 1.3rem;
+        margin-bottom: 1.2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-badge {
+        font-size: 1.3rem;
+        margin-bottom: 1.5rem;
+    }
+    
+    .section-badge {
+        font-size: 1.1rem;
+        margin-bottom: 1rem;
+    }
+} 
