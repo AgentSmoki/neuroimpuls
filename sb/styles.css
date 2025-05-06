@@ -4555,3 +4555,171 @@ img {
         opacity: 0.1;
     }
 }
+
+/* Article Cards */
+.article-card {
+    background: var(--glass-bg);
+    border-radius: 16px;
+    padding: 1.5rem;
+    margin-bottom: 1rem;
+    border: 1px solid var(--glass-border);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    transition: var(--transition);
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+.article-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 28px rgba(99, 102, 241, 0.3);
+    border-color: var(--primary-color);
+}
+
+.article-icon {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.article-icon img {
+    width: 36px;
+    height: 36px;
+    margin-right: 0.8rem;
+    border-radius: 50%;
+    object-fit: cover;
+    background-color: rgba(99, 102, 241, 0.1);
+    padding: 3px;
+}
+
+.article-title {
+    color: var(--text-color);
+    font-size: 1.1rem;
+    font-weight: 600;
+    line-height: 1.4;
+    margin-bottom: 1rem;
+}
+
+.read-more {
+    display: inline-flex;
+    align-items: center;
+    padding: 0.5rem 1rem;
+    margin-top: 0.8rem;
+    background: rgba(99, 102, 241, 0.15);
+    color: var(--primary-light);
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    text-decoration: none;
+    transition: var(--transition);
+    border: none;
+    cursor: pointer;
+    align-self: flex-start;
+}
+
+.read-more i {
+    margin-left: 0.5rem;
+    font-size: 0.8rem;
+    transition: transform 0.2s ease;
+}
+
+.read-more:hover {
+    background: rgba(99, 102, 241, 0.25);
+    color: var(--primary-color);
+}
+
+.read-more:hover i {
+    transform: translateX(3px);
+}
+
+/* Article icon-specific styling */
+.article-icon.ai-icon {
+    color: #6366f1;
+}
+
+.article-icon.support-icon {
+    color: #06b6d4;
+}
+
+.article-icon.legal-icon {
+    color: #8b5cf6;
+}
+
+.article-icon.finance-icon {
+    color: #10b981;
+}
+
+/* Custom separator line */
+.article-separator {
+    height: 1px;
+    width: 100%;
+    background: linear-gradient(to right, transparent, var(--glass-border), transparent);
+    margin: 0.8rem 0;
+}
+
+/* Article Cards Grid */
+.article-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+@media (max-width: 768px) {
+    .article-cards {
+        grid-template-columns: 1fr;
+    }
+    
+    .article-title {
+        font-size: 1rem;
+    }
+    
+    .article-card {
+        padding: 1.2rem;
+    }
+}
+
+/* Fancy hover effects */
+.article-card:hover .read-more {
+    background: rgba(99, 102, 241, 0.25);
+    color: var(--primary-color);
+}
+
+.article-card:hover .read-more i {
+    transform: translateX(5px);
+}
+
+/* Ensure icons load properly */
+.article-icon img {
+    width: 36px;
+    height: 36px;
+    margin-right: 0.8rem;
+    border-radius: 50%;
+    object-fit: cover;
+    background-color: rgba(99, 102, 241, 0.1);
+    padding: 3px;
+}
+
+.article-icon span {
+    font-size: 0.95rem;
+    font-weight: 600;
+    opacity: 0.9;
+}
+
+/* Color themes for different article types */
+.article-icon.ai-icon {
+    color: #6366f1;
+}
+
+.article-icon.support-icon {
+    color: #06b6d4;
+}
+
+.article-icon.legal-icon {
+    color: #8b5cf6;
+}
+
+.article-icon.finance-icon {
+    color: #10b981;
+}
