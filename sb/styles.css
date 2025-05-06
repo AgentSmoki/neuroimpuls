@@ -4723,3 +4723,217 @@ img {
 .article-icon.finance-icon {
     color: #10b981;
 }
+
+/* Article Cards - Mobile Fixes */
+@media (max-width: 768px) {
+    .article-cards {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+    
+    .article-card {
+        padding: 1.2rem;
+        background: var(--glass-bg) !important;
+        border-radius: 16px !important;
+        border: 1px solid var(--glass-border) !important;
+        width: 100% !important;
+        margin-bottom: 1rem !important;
+        box-sizing: border-box !important;
+    }
+    
+    .article-title {
+        font-size: 1.05rem;
+        line-height: 1.4;
+        margin-bottom: 0.8rem;
+        color: var(--text-color) !important;
+    }
+    
+    .article-icon {
+        display: flex !important;
+        align-items: center !important;
+        margin-bottom: 0.8rem !important;
+    }
+    
+    .article-icon img {
+        width: 32px !important;
+        height: 32px !important;
+        margin-right: 0.6rem !important;
+        border-radius: 50% !important;
+        object-fit: cover !important;
+        background-color: rgba(99, 102, 241, 0.1) !important;
+        padding: 3px !important;
+        display: inline-block !important;
+    }
+    
+    .article-icon span {
+        font-size: 0.9rem !important;
+        font-weight: 600 !important;
+        opacity: 0.9 !important;
+        color: var(--primary-light) !important;
+    }
+    
+    .read-more {
+        display: inline-flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        padding: 0.6rem 1.2rem !important;
+        margin-top: 0.8rem !important;
+        background: rgba(99, 102, 241, 0.15) !important;
+        color: var(--primary-light) !important;
+        border-radius: 8px !important;
+        font-weight: 600 !important;
+        font-size: 0.95rem !important;
+        text-decoration: none !important;
+        transition: var(--transition) !important;
+        border: none !important;
+        cursor: pointer !important;
+        align-self: flex-start !important;
+    }
+    
+    .read-more i {
+        margin-left: 0.5rem !important;
+        font-size: 0.85rem !important;
+    }
+}
+
+/* Additional fallback styles for mobile */
+@media (max-width: 480px) {
+    .article-cards {
+        margin-top: 1.5rem;
+    }
+    
+    .article-card {
+        margin-bottom: 0.8rem !important;
+        box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15) !important;
+    }
+    
+    .article-icon img {
+        width: 28px !important;
+        height: 28px !important;
+    }
+    
+    .read-more {
+        padding: 0.5rem 1rem !important;
+        font-size: 0.9rem !important;
+        margin-top: 0.6rem !important;
+    }
+}
+
+/* Additional mobile optimization styles */
+.mobile-optimized {
+    width: 100%;
+    max-width: 100%;
+    overflow: visible;
+}
+
+.mobile-card {
+    display: flex !important;
+    flex-direction: column !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+}
+
+.icon-label {
+    display: inline-block !important;
+    vertical-align: middle !important;
+    margin-top: 2px;
+}
+
+.read-button {
+    width: auto !important;
+    min-width: 120px !important;
+    text-align: center !important;
+}
+
+/* Force mobile styles for problematic devices */
+@media screen and (max-width: 600px) {
+    .mobile-card {
+        background: var(--glass-bg) !important;
+        border: 1px solid var(--glass-border) !important;
+        border-radius: 16px !important;
+        margin-bottom: 15px !important;
+        padding: 15px !important;
+        width: 100% !important;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2) !important;
+    }
+    
+    .mobile-card .article-title {
+        font-size: 16px !important;
+        line-height: 1.4 !important;
+        margin: 10px 0 !important;
+        color: var(--text-color) !important;
+    }
+    
+    .mobile-card .article-icon {
+        display: flex !important;
+        align-items: center !important;
+    }
+    
+    .mobile-card .read-button {
+        background: rgba(99, 102, 241, 0.2) !important;
+        color: #fff !important;
+        border: none !important;
+        border-radius: 8px !important;
+        padding: 8px 16px !important;
+        font-size: 14px !important;
+        cursor: pointer !important;
+        margin-top: 10px !important;
+        align-self: flex-start !important;
+    }
+    
+    .mobile-optimized {
+        display: grid !important;
+        grid-template-columns: 1fr !important;
+        gap: 15px !important;
+        width: 100% !important;
+        padding: 0 !important;
+        margin: 15px 0 !important;
+    }
+}
+
+/* Final fixes for all mobile devices */
+@supports (-webkit-touch-callout: none) {
+    /* iOS-specific styles */
+    .mobile-card {
+        background: #1e293b !important;
+        border: 1px solid rgba(255, 255, 255, 0.1) !important;
+    }
+    
+    .read-button {
+        background: rgba(99, 102, 241, 0.3) !important;
+    }
+}
+
+/* Generic mobile fixes */
+@media only screen and (max-width: 600px) {
+    .article-card, .mobile-card {
+        margin: 0 0 15px 0 !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        box-sizing: border-box !important;
+    }
+    
+    .article-icon img {
+        display: inline-block !important;
+    }
+    
+    .icon-label {
+        color: var(--primary-light) !important;
+    }
+    
+    .article-separator {
+        display: block !important;
+        height: 1px !important;
+        width: 100% !important;
+        background: rgba(255, 255, 255, 0.1) !important;
+        margin: 10px 0 !important;
+    }
+    
+    /* Force flexbox layout */
+    .article-cards, .mobile-optimized {
+        display: flex !important;
+        flex-direction: column !important;
+        flex-wrap: nowrap !important;
+        width: 100% !important;
+    }
+}
