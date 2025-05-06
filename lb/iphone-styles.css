@@ -1,0 +1,342 @@
+/**
+ * iPhone-specific styles
+ * This file contains styles specifically for iOS devices
+ */
+
+/* Определяем стили только для iOS устройств */
+@supports (-webkit-touch-callout: none) {
+    /* Основные iOS-специфичные исправления */
+    body {
+        /* Исправление проблемы с 100vh на iOS */
+        min-height: -webkit-fill-available;
+        /* Исправление отступов для iPhone с "челкой" */
+        padding-top: env(safe-area-inset-top);
+        padding-bottom: env(safe-area-inset-bottom);
+        padding-left: env(safe-area-inset-left);
+        padding-right: env(safe-area-inset-right);
+        /* Улучшение плавности прокрутки */
+        -webkit-overflow-scrolling: touch;
+    }
+
+    /* Фиксы для размытия фона */
+    .business-header,
+    .hero-glass,
+    .card-base {
+        /* Улучшенное размытие для iOS */
+        -webkit-backdrop-filter: blur(12px);
+    }
+
+    /* Исправление высоты героя */
+    .hero-with-photo {
+        height: -webkit-fill-available;
+        min-height: 100vh;
+    }
+
+    /* Улучшенные эффекты нажатия для сенсорных устройств */
+    .cta,
+    .solution-link,
+    .business-nav a {
+        /* Устранение задержки при нажатии */
+        -webkit-tap-highlight-color: transparent;
+        /* Улучшение отзывчивости при нажатии */
+        touch-action: manipulation;
+    }
+
+    /* Исправление для кнопок */
+    button, 
+    .cta,
+    .solution-link {
+        /* Предотвращение стилизации iOS по умолчанию */
+        -webkit-appearance: none;
+        appearance: none;
+    }
+
+    /* Исправление для прокрутки в модальных окнах */
+    .modal-content {
+        -webkit-overflow-scrolling: touch;
+    }
+
+    /* Исправление отображения фиксированных элементов */
+    .business-header {
+        position: -webkit-sticky;
+        /* Дополнительные отступы для "челки" */
+        padding-top: max(12px, env(safe-area-inset-top));
+    }
+
+    /* Исправления для анимаций, чтобы они работали плавнее */
+    .fade-in,
+    .fade-in-up,
+    .fade-in-left,
+    .fade-in-right {
+        -webkit-transform: translateZ(0);
+        transform: translateZ(0);
+        -webkit-backface-visibility: hidden;
+        backface-visibility: hidden;
+        will-change: transform, opacity;
+    }
+
+    /* Специальные исправления для iPhone с челкой */
+    @supports (padding-top: env(safe-area-inset-top)) {
+        .business-header {
+            padding-top: max(12px, env(safe-area-inset-top));
+            padding-left: max(16px, env(safe-area-inset-left));
+            padding-right: max(16px, env(safe-area-inset-right));
+        }
+
+        .content {
+            margin-top: calc(80px + env(safe-area-inset-top));
+        }
+
+        .hero-with-photo {
+            padding-top: calc(80px + env(safe-area-inset-top));
+        }
+    }
+
+    /* Улучшения для форм на iOS */
+    input, 
+    textarea, 
+    select {
+        -webkit-appearance: none;
+        border-radius: 8px;
+        /* Предотвращение изменения размера шрифта */
+        font-size: 16px;
+    }
+
+    /* Исправление для автомасштабирования и зума */
+    input[type="text"],
+    input[type="email"],
+    input[type="tel"],
+    input[type="number"] {
+        font-size: 16px;
+    }
+
+    /* Исправления для Safari на iOS */
+    @media not all and (min-resolution:.001dpcm) { 
+        @supports (-webkit-appearance:none) {
+            /* Safari-only CSS here */
+            .hero-glass::before,
+            .card-base::before,
+            .solution-card::before {
+                /* Исправление градиентной границы для Safari */
+                -webkit-mask-composite: source-out;
+                mask-composite: subtract;
+            }
+
+            /* Исправление эффектов hover для сенсорных устройств */
+            .solution-card:hover,
+            .cta:hover,
+            .solution-link:hover {
+                transform: none;
+            }
+            
+            /* Активировать эффекты при нажатии вместо hover */
+            .solution-card:active,
+            .cta:active,
+            .solution-link:active {
+                transform: translateY(2px);
+            }
+        }
+    }
+
+    /* Исправления для iOS 15+ */
+    @supports (aspect-ratio: 1) {
+        /* iOS 15+ поддерживает aspect-ratio */
+        .solution-icon,
+        .founder-img,
+        .gallery-item {
+            aspect-ratio: 1;
+        }
+    }
+    
+    /* Исправление для длинных слов/ссылок, которые могут вызвать горизонтальную прокрутку */
+    p, h1, h2, h3, h4, h5, h6, a, span, li {
+        overflow-wrap: break-word;
+        word-wrap: break-word;
+        -ms-word-break: break-all;
+        word-break: break-word;
+        -webkit-hyphens: auto;
+        -ms-hyphens: auto;
+        hyphens: auto;
+    }
+}
+
+/* Стили для iPhone на основе классов, добавляемых JavaScript */
+.ios-device {
+    /* Исправление прокрутки и инерционного скроллинга */
+    -webkit-overflow-scrolling: touch;
+    
+    /* Использование пользовательской переменной для высоты вьюпорта */
+    --vh-fix: var(--vh, 1vh);
+}
+
+.ios-device .hero-with-photo {
+    height: calc(100 * var(--vh-fix));
+    min-height: -webkit-fill-available;
+}
+
+.ios-device .business-nav a {
+    /* Увеличение области нажатия для удобства на сенсорных устройствах */
+    padding: 12px 18px;
+    margin: 2px 0;
+}
+
+.ios-device .cta,
+.ios-device .solution-link,
+.ios-device .read-more {
+    /* Исправления для кнопок на iOS */
+    padding: 12px 24px;
+    font-weight: 600;
+}
+
+/* Специфичные стили для iPhone X и новее (с челкой) */
+.iphone-x {
+    /* Безопасные отступы для контента */
+    --safe-top: env(safe-area-inset-top, 44px);
+    --safe-bottom: env(safe-area-inset-bottom, 34px);
+    --safe-left: env(safe-area-inset-left, 0px);
+    --safe-right: env(safe-area-inset-right, 0px);
+}
+
+.iphone-x .business-header {
+    padding-top: var(--safe-top);
+    padding-left: calc(16px + var(--safe-left));
+    padding-right: calc(16px + var(--safe-right));
+}
+
+.iphone-x .content {
+    margin-top: calc(76px + var(--safe-top));
+    padding-bottom: var(--safe-bottom);
+}
+
+.iphone-x .hero-with-photo {
+    padding-top: calc(80px + var(--safe-top));
+}
+
+/* Исправления для скроллинга на iOS */
+.ios-device * {
+    /* Исправление инерционного скроллинга */
+    -webkit-overflow-scrolling: touch;
+}
+
+/* Исправление для Fixed-позиционированных элементов на iOS */
+.ios-device .business-header {
+    /* Снижение бликов и повышение контрастности для элементов с размытием */
+    -webkit-backdrop-filter: saturate(180%) blur(20px);
+    backdrop-filter: saturate(180%) blur(20px);
+}
+
+/* Исправление для форм на iOS */
+.ios-device input,
+.ios-device textarea,
+.ios-device select,
+.ios-device button {
+    /* Исправление скругления углов и стилей форм */
+    border-radius: 8px;
+    -webkit-appearance: none;
+    appearance: none;
+}
+
+/* Улучшения для жестов и анимаций на iOS */
+.ios-device {
+    /* Улучшение обработки жестов */
+    touch-action: manipulation;
+}
+
+/* Оптимизация для мобильных сеток в Safari */
+.ios-device .solutions-grid,
+.ios-device .article-cards,
+.ios-device .mobile-optimized,
+.ios-device .hero-stats {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-wrap: wrap;
+    flex-wrap: wrap;
+}
+
+/* Исправление для кнопок в iOS Safari */
+.ios-device button,
+.ios-device .cta,
+.ios-device .solution-link,
+.ios-device .read-more {
+    cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
+    
+    /* Эффект нажатия вместо hover */
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.ios-device button:active,
+.ios-device .cta:active,
+.ios-device .solution-link:active,
+.ios-device .read-more:active {
+    transform: scale(0.98) translateY(2px);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+/* Исправление эффектов для карточек на iOS */
+.ios-device .solution-card:active,
+.ios-device .article-card:active,
+.ios-device .mobile-card:active {
+    transform: translateY(2px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+/* Оптимизации для iPhone 12/13/14/15 */
+@media only screen 
+and (device-width: 390px) 
+and (device-height: 844px) 
+and (-webkit-device-pixel-ratio: 3),
+only screen 
+and (device-width: 428px) 
+and (device-height: 926px) 
+and (-webkit-device-pixel-ratio: 3),
+only screen 
+and (device-width: 430px) 
+and (device-height: 932px) 
+and (-webkit-device-pixel-ratio: 3) {
+    .ios-device {
+        --safe-top: env(safe-area-inset-top, 47px);
+        --safe-bottom: env(safe-area-inset-bottom, 34px);
+    }
+    
+    .ios-device .business-header {
+        padding-top: var(--safe-top);
+    }
+}
+
+/* Оптимизация анимаций для iOS */
+.ios-device .fade-in, 
+.ios-device .fade-in-up, 
+.ios-device .fade-in-left, 
+.ios-device .fade-in-right {
+    /* Аппаратное ускорение для более плавных анимаций на iOS */
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+    
+    /* Улучшение производительности */
+    perspective: 1000px;
+    -webkit-perspective: 1000px;
+}
+
+/* Оптимизация изображений для низкой производительности устройств */
+@media not all and (min-resolution:.001dpcm) {
+    @supports (-webkit-appearance:none) {
+        .ios-device .hero-bg-image, 
+        .ios-device .cta-img {
+            transform: translateZ(0);
+            will-change: transform;
+        }
+    }
+}
+
+/* Улучшение быстродействия меню */
+.ios-device .mobile-nav-toggle:active {
+    transform: scale(0.95);
+}
+
+.ios-device .business-nav.active {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+    transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+} 

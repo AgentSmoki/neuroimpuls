@@ -2,12 +2,15 @@
 <html lang="ru">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <title>Neuroimpulse - Крупный бизнес</title>
   <link rel="stylesheet" href="styles.css">
   <link rel="stylesheet" href="../header-styles.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
   <link rel="stylesheet" href="header-fix.css">
+  <link rel="stylesheet" href="iphone-styles.css">
   
 </head>
 <body>
@@ -423,6 +426,35 @@
     window.addEventListener('resize', function() {
       if (!isMobile()) {
         closeAllSteps();
+      }
+    });
+
+    // Определение iOS-устройств и добавление специального класса для стилизации
+    document.addEventListener('DOMContentLoaded', function() {
+      // Проверка на iOS
+      const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream;
+      
+      if (isIOS) {
+        document.body.classList.add('ios-device');
+        
+        // Определение модели iPhone
+        const iPhoneX = isIOS && window.screen.height >= 812 && window.screen.width >= 375;
+        if (iPhoneX) {
+          document.body.classList.add('iphone-x');
+        }
+        
+        // Решение проблемы с 100vh на iOS
+        function setIOSHeight() {
+          const vh = window.innerHeight * 0.01;
+          document.documentElement.style.setProperty('--vh', `${vh}px`);
+        }
+        
+        // Установка высоты при загрузке
+        setIOSHeight();
+        
+        // Обновление высоты при изменении размера или ориентации
+        window.addEventListener('resize', setIOSHeight);
+        window.addEventListener('orientationchange', setIOSHeight);
       }
     });
   </script>
