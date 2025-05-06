@@ -907,10 +907,11 @@ section::before {
 
 /* Learn Section */
 .learn {
-    background: transparent;
     padding: 30px 0;
+    background: transparent;
     position: relative;
     overflow: hidden;
+    margin-top: 100px; /* Added full-height margin from top */
 }
 
 .learn::before {
@@ -920,8 +921,14 @@ section::before {
     left: 0;
     right: 0;
     bottom: 0;
-    background: radial-gradient(circle at 50% 50%, rgba(99, 102, 241, 0.1), transparent 70%);
+    background: radial-gradient(circle at 100% 0%, rgba(99, 102, 241, 0.1), transparent 70%);
     z-index: 0;
+    margin-top: 20px; /* Added additional margin for the gradient effect */
+}
+
+/* Adding margin to the container for better spacing from first block */
+.learn .container {
+    margin-top: 20px;
 }
 
 .learn-list {
@@ -4935,5 +4942,31 @@ img {
         flex-direction: column !important;
         flex-wrap: nowrap !important;
         width: 100% !important;
+    }
+}
+
+@media (max-width: 768px) {
+    /* Existing media query styles */
+
+    .learn {
+        margin-top: 60px; /* Adjusted margin for tablet view */
+        padding-top: 40px;
+    }
+    
+    .learn .container {
+        margin-top: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    /* Existing media query styles */
+    
+    .learn {
+        margin-top: 40px; /* Further adjusted for mobile */
+        padding-top: 30px;
+    }
+    
+    .learn .container {
+        margin-top: 10px;
     }
 }
