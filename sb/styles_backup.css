@@ -911,7 +911,7 @@ section::before {
     background: transparent;
     position: relative;
     overflow: hidden;
-    margin-top: 100px !important; /* Added full-height margin from top */
+    margin-top: 100px; /* Added full-height margin from top */
 }
 
 .learn::before {
@@ -4968,49 +4968,5 @@ img {
     
     .learn .container {
         margin-top: 10px;
-    }
-}
-
- 
- / *   M o b i l e   R e s p o n s i v e n e s s   f o r   L e a r n   S e c t i o n   * / 
- @ m e d i a   ( m a x - w i d t h :   7 6 8 p x )   { 
-         . l e a r n   { 
-                 m a r g i n - t o p :   6 0 p x   ! i m p o r t a n t ; 
-                 p a d d i n g - t o p :   4 0 p x   ! i m p o r t a n t ; 
-         } 
-         
-         . l e a r n   . c o n t a i n e r   { 
-                 m a r g i n - t o p :   1 5 p x   ! i m p o r t a n t ; 
-         } 
- } 
- 
- @ m e d i a   ( m a x - w i d t h :   4 8 0 p x )   { 
-         . l e a r n   { 
-                 m a r g i n - t o p :   4 0 p x   ! i m p o r t a n t ; 
-                 p a d d i n g - t o p :   3 0 p x   ! i m p o r t a n t ; 
-         } 
-         
-         . l e a r n   . c o n t a i n e r   { 
-                 m a r g i n - t o p :   1 0 p x   ! i m p o r t a n t ; 
-         } 
- } 
- 
- /* Mobile Responsiveness for Learn Section */
-@media (max-width: 768px) {
-    .learn {
-        margin-top: 60px !important;
-        padding-top: 40px !important;
-    }
-    .learn .container {
-        margin-top: 15px !important;
-    }
-}
-@media (max-width: 480px) {
-    .learn {
-        margin-top: 40px !important;
-        padding-top: 30px !important;
-    }
-    .learn .container {
-        margin-top: 10px !important;
     }
 }
