@@ -131,7 +131,7 @@
                 <div class="container">
                     <div class="section-header">
                         <span class="section-badge">Решения</span>
-                        <h2>ТРАНСФОРМАЦИЯ БИЗНЕСА</h2>
+                        <h2>ТРАНСФОРМАЦИЯ <br>БИЗНЕСА</h2>
                         <p class="section-subtitle">Проверенные решения для выхода из операционки</p>
                     </div>
                     <div class="solutions-grid">
@@ -152,7 +152,7 @@
                             <div class="solution-icon">
                                 <i class="fas fa-graduation-cap"></i>
                             </div>
-                            <h3>ВИРТУАЛЬНЫЙ ТРЕНЕР ПЕРСОНАЛА и ТЕХ.ПОДДЕРЖКА</h3>
+                            <h3>ВИРТУАЛЬНЫЙ ТРЕНЕР <br>ПЕРСОНАЛА и ТЕХ.ПОДДЕРЖКА</h3>
                             <p>Сокращает время адаптации новых сотрудников и рассказывает как решить технические проблемы</p>
                             <div class="solution-features">
                                 <span class="feature">Обучение персонала</span>
@@ -182,7 +182,7 @@
                 <div class="container">
                     <div class="section-header">
                         <span class="section-badge">Гарантия</span>
-                        <h2>ВЫХОД ИЗ ОПЕРАЦИОНКИ — РЕАЛЬНОСТЬ, А НЕ ОБЕЩАНИЕ</h2>
+                        <h2>ВЫХОД ИЗ ОПЕРАЦИОНКИ <br> РЕАЛЬНОСТЬ, А НЕ ОБЕЩАНИЕ</h2>
                     </div>
                     <div class="cta-content">
                         <div class="cta-text">
@@ -217,7 +217,7 @@
                 <div class="container">
                     <div class="section-header">
                         <span class="section-badge">Процесс</span>
-                        <h2>ОТ ПРОБЛЕМЫ К РЕШЕНИЮ ЗА 14 ДНЕЙ</h2>
+                        <h2>ОТ ПРОБЛЕМЫ К <br>РЕШЕНИЮ ЗА 14 ДНЕЙ</h2>
                         <p class="section-subtitle">5 шагов к выходу из операционки</p>
                     </div>
                     <ul class="steps-list">
@@ -739,6 +739,11 @@
             const mobileNavToggle = document.getElementById('mobileNavToggle');
             const businessNav = document.querySelector('.business-nav');
 
+            // Force smart design to be true if not previously set in localStorage
+            if (localStorage.getItem('isSmartDesign') === null) {
+                localStorage.setItem('isSmartDesign', 'true');
+            }
+            
             let isSmart = localStorage.getItem('isSmartDesign') !== 'false';
 
             function setDesign(smart) {
@@ -747,120 +752,41 @@
                     simpleDiv.style.display = 'none';
                     designIcon.textContent = '🎨';
                     designText.textContent = 'Что то на простом';
+                    document.body.classList.remove('simple-design'); // Ensure the body doesn't have simple-design class
                 } else {
                     smartDiv.style.display = 'none';
                     simpleDiv.style.display = '';
                     designIcon.textContent = '📝';
                     designText.textContent = 'Что то на умном ';
+                    document.body.classList.add('simple-design'); // Add simple-design to body when in simple mode
                 }
                 localStorage.setItem('isSmartDesign', smart);
             }
 
-            setDesign(isSmart);
+            // Force smart design to be used initially
+            setDesign(true);
 
             designSwitcher.addEventListener('click', function() {
                 isSmart = !isSmart;
                 setDesign(isSmart);
             });
 
-            // Function to toggle mobile navigation
-            function toggleMobileNav() {
-                businessNav.classList.toggle('active');
+            // Мобильное меню
+            document.getElementById('mobileNavToggle').addEventListener('click', function() {
+                const nav = document.querySelector('.business-nav');
+                nav.classList.toggle('active');
                 
-                // Toggle icon between bars and times
-                const icon = mobileNavToggle.querySelector('i');
-                if (icon.classList.contains('fa-bars')) {
+                const icon = this.querySelector('i');
+                if (nav.classList.contains('active')) {
                     icon.classList.remove('fa-bars');
                     icon.classList.add('fa-times');
                 } else {
-                    icon.classList.add('fa-bars');
                     icon.classList.remove('fa-times');
-                }
-                
-                // Prevent body scrolling when menu is open
-                document.body.style.overflow = 
-                    businessNav.classList.contains('active') ? 'hidden' : '';
-            }
-
-            // Mobile navigation toggle
-            mobileNavToggle.addEventListener('click', function(e) {
-                e.stopPropagation();
-                toggleMobileNav();
-            });
-
-            // Close mobile menu when clicking on a link
-            document.querySelectorAll('.business-nav a').forEach(link => {
-                link.addEventListener('click', function() {
-                    if (window.innerWidth <= 768) {
-                        toggleMobileNav();
-                    }
-                });
-            });
-
-            // Close mobile menu when clicking outside
-            document.addEventListener('click', function(e) {
-                if (window.innerWidth <= 768 && 
-                    !businessNav.contains(e.target) && 
-                    !mobileNavToggle.contains(e.target) && 
-                    businessNav.classList.contains('active')) {
-                    toggleMobileNav();
+                    icon.classList.add('fa-bars');
                 }
             });
-            
-            // Close mobile menu on window resize (if switching to desktop)
-            window.addEventListener('resize', function() {
-                if (window.innerWidth > 768 && businessNav.classList.contains('active')) {
-                    toggleMobileNav();
-                }
-            });
-            
-            // Handle consultation form submission
-            const consultationForm = document.getElementById('consultation-form');
-            if (consultationForm) {
-                consultationForm.addEventListener('submit', function(e) {
-                    e.preventDefault();
-                    
-                    // Store form data if needed
-                    const name = consultationForm.querySelector('input[name="name"]').value;
-                    const phone = consultationForm.querySelector('input[name="phone"]').value;
-                    const telegram = consultationForm.querySelector('input[name="telegram"]').value;
-                    
-                    // Redirect to 2meetup
-                    window.location.href = 'https://2meetup.in/company/neuroimpuls';
-                });
-            }
-        });
 
-        // Переключение между умным и простым дизайном
-        document.getElementById('designSwitcher').addEventListener('click', function() {
-            document.body.classList.toggle('simple-design');
-            updateDesignText();
-        });
-        
-        function updateDesignText() {
-            const isSimple = document.body.classList.contains('simple-design');
-            document.getElementById('designText').textContent = isSimple ? 'Что то на красивом' : 'Что то на умном';
-            document.getElementById('designIcon').textContent = isSimple ? '🎭' : '🎨';
-        }
-        
-        // Мобильное меню
-        document.getElementById('mobileNavToggle').addEventListener('click', function() {
-            const nav = document.querySelector('.business-nav');
-            nav.classList.toggle('active');
-            
-            const icon = this.querySelector('i');
-            if (nav.classList.contains('active')) {
-                icon.classList.remove('fa-bars');
-                icon.classList.add('fa-times');
-            } else {
-                icon.classList.remove('fa-times');
-                icon.classList.add('fa-bars');
-            }
-        });
-
-        // Определение iOS-устройств и добавление специального класса для стилизации
-        document.addEventListener('DOMContentLoaded', function() {
-            // Проверка на iOS
+            // Определение iOS-устройств и добавление специального класса для стилизации
             const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream;
             
             if (isIOS) {
