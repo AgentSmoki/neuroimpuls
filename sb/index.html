@@ -880,14 +880,16 @@
                     const vh = window.innerHeight * 0.01;
                     document.documentElement.style.setProperty('--vh', `${vh}px`);
                     
-                    // Ensure hero section has correct height and position
+                    // Ensure hero section has correct position without height restrictions
                     const heroSection = document.querySelector('.hero-with-photo');
                     const header = document.querySelector('.business-header');
+                    const heroGlass = document.querySelector('.hero-glass');
                     
                     if (heroSection) {
-                        heroSection.style.height = `${window.innerHeight}px`;
-                        heroSection.style.maxHeight = `${window.innerHeight}px`;
+                        heroSection.style.height = 'auto';
+                        heroSection.style.maxHeight = 'none';
                         heroSection.style.marginTop = '0';
+                        heroSection.style.overflow = 'visible';
                     }
                     
                     if (header) {
@@ -897,10 +899,24 @@
                         header.style.zIndex = '1000';
                     }
                     
+                    if (heroGlass) {
+                        heroGlass.style.maxHeight = 'none';
+                        heroGlass.style.overflow = 'visible';
+                        heroGlass.style.overflowY = 'visible';
+                        heroGlass.style.height = 'auto';
+                    }
+                    
                     // Adjust content container margin
                     const content = document.querySelector('.content');
                     if (content) {
                         content.style.marginTop = '0';
+                    }
+                    
+                    // Ensure hero stats are properly displayed
+                    const heroStats = document.querySelector('.hero-stats');
+                    if (heroStats) {
+                        heroStats.style.marginTop = '20px';
+                        heroStats.style.marginBottom = '20px';
                     }
                 }
                 

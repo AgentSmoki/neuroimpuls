@@ -4984,6 +4984,8 @@ img {
         padding-top: calc(env(safe-area-inset-top));
         padding-bottom: env(safe-area-inset-bottom);
         margin-top: 0;
+        height: auto;
+        max-height: none;
     }
     
     .business-header {
@@ -4998,8 +5000,12 @@ img {
     
     .hero-glass {
         max-height: none;
+        overflow: visible;
+        overflow-y: visible;
+        -webkit-overflow-scrolling: auto;
         padding-bottom: 20px;
         margin-top: 50px;
+        height: auto;
     }
     
     .hero-glass h1 {
@@ -5011,10 +5017,23 @@ img {
         flex-wrap: wrap;
         justify-content: center;
         gap: 15px;
+        margin-top: 20px;
+        margin-bottom: 20px;
     }
     
     .article-cards {
         gap: 15px;
+    }
+    
+    /* Ensure all content in hero section is visible without scrolling */
+    .hero-content, 
+    .hero-with-photo, 
+    .hero-glass, 
+    .hero-badge, 
+    .hero-subtitle, 
+    .hero-cta-group {
+        overflow: visible !important;
+        overflow-y: visible !important;
     }
 }
 

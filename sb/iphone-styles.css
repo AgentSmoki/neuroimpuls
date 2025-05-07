@@ -200,10 +200,10 @@
             height: auto;
         }
         
-        /* Make hero section start from top */
+        /* Make hero section start from top without height restriction */
         .hero-with-photo {
-            height: 100vh;
-            height: -webkit-fill-available;
+            height: auto;
+            min-height: 100vh;
             min-height: -webkit-fill-available;
             max-height: none !important;
             padding-top: env(safe-area-inset-top);
@@ -213,19 +213,39 @@
         /* Adjust hero content to account for header */
         .hero-content {
             padding-top: 60px;
+            height: auto;
         }
         
+        /* Remove height limitations and scrolling from hero glass */
         .hero-glass {
-            max-height: calc(100vh - env(safe-area-inset-top) - env(safe-area-inset-bottom));
-            overflow-y: auto;
-            -webkit-overflow-scrolling: touch;
+            max-height: none;
+            overflow-y: visible;
+            overflow: visible;
+            -webkit-overflow-scrolling: auto;
             padding-top: 10px;
+            height: auto;
+        }
+        
+        /* Ensure hero stats are properly displayed */
+        .hero-stats {
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 20px;
+            margin-bottom: 20px;
         }
         
         /* Fix for smart-design container */
         .smart-design {
             margin-top: 0;
             padding-top: 0;
+            height: auto;
+        }
+        
+        /* No scrolling for hero content */
+        .hero-content, .hero-with-photo, .hero-glass {
+            overflow: visible !important;
+            overflow-y: visible !important;
         }
     }
 }
