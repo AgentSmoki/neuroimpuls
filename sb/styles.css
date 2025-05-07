@@ -4971,45 +4971,63 @@ img {
     }
 }
 
- 
- / *   M o b i l e   R e s p o n s i v e n e s s   f o r   L e a r n   S e c t i o n   * / 
- @ m e d i a   ( m a x - w i d t h :   7 6 8 p x )   { 
-         . l e a r n   { 
-                 m a r g i n - t o p :   6 0 p x   ! i m p o r t a n t ; 
-                 p a d d i n g - t o p :   4 0 p x   ! i m p o r t a n t ; 
-         } 
-         
-         . l e a r n   . c o n t a i n e r   { 
-                 m a r g i n - t o p :   1 5 p x   ! i m p o r t a n t ; 
-         } 
- } 
- 
- @ m e d i a   ( m a x - w i d t h :   4 8 0 p x )   { 
-         . l e a r n   { 
-                 m a r g i n - t o p :   4 0 p x   ! i m p o r t a n t ; 
-                 p a d d i n g - t o p :   3 0 p x   ! i m p o r t a n t ; 
-         } 
-         
-         . l e a r n   . c o n t a i n e r   { 
-                 m a r g i n - t o p :   1 0 p x   ! i m p o r t a n t ; 
-         } 
- } 
- 
- /* Mobile Responsiveness for Learn Section */
+/* iPhone 13 Pro and Pro Max fix */
+@media only screen and (device-width: 390px) and (device-height: 844px),
+       only screen and (device-width: 428px) and (device-height: 926px) {
+    .hero-with-photo {
+        min-height: 100vh;
+        min-height: -webkit-fill-available;
+        padding-bottom: env(safe-area-inset-bottom);
+    }
+    
+    .hero-glass {
+        max-height: none;
+        padding-bottom: 20px;
+    }
+    
+    .hero-glass h1 {
+        font-size: 1.8rem;
+        margin-bottom: 15px;
+    }
+    
+    .hero-stats {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+    }
+    
+    .content {
+        margin-top: calc(60px + env(safe-area-inset-top));
+    }
+    
+    .article-cards {
+        gap: 15px;
+    }
+    
+    .business-header {
+        height: auto;
+        padding-top: env(safe-area-inset-top);
+    }
+}
+
+/* Mobile Responsiveness for Learn Section */
 @media (max-width: 768px) {
     .learn {
         margin-top: 60px !important;
         padding-top: 40px !important;
     }
+    
     .learn .container {
         margin-top: 15px !important;
     }
 }
+
 @media (max-width: 480px) {
     .learn {
         margin-top: 40px !important;
         padding-top: 30px !important;
     }
+    
     .learn .container {
         margin-top: 10px !important;
     }

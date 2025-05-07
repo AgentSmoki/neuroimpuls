@@ -9,6 +9,7 @@
     body {
         /* Исправление проблемы с 100vh на iOS */
         min-height: -webkit-fill-available;
+        height: 100%;
         /* Исправление отступов для iPhone с "челкой" */
         padding-top: env(safe-area-inset-top);
         padding-bottom: env(safe-area-inset-bottom);
@@ -16,6 +17,10 @@
         padding-right: env(safe-area-inset-right);
         /* Улучшение плавности прокрутки */
         -webkit-overflow-scrolling: touch;
+    }
+
+    html {
+        height: -webkit-fill-available;
     }
 
     /* Фиксы для размытия фона */
@@ -28,8 +33,9 @@
 
     /* Исправление высоты героя */
     .hero-with-photo {
-        height: -webkit-fill-available;
         min-height: 100vh;
+        min-height: -webkit-fill-available;
+        height: calc(100 * var(--vh, 1vh));
     }
 
     /* Улучшенные эффекты нажатия для сенсорных устройств */
@@ -85,10 +91,18 @@
 
         .content {
             margin-top: calc(80px + env(safe-area-inset-top));
+            padding-bottom: env(safe-area-inset-bottom);
         }
 
         .hero-with-photo {
-            padding-top: calc(80px + env(safe-area-inset-top));
+            padding-top: env(safe-area-inset-top);
+            height: calc(100vh - env(safe-area-inset-top));
+            min-height: calc(100vh - env(safe-area-inset-top));
+        }
+        
+        /* Fix for content being cut off at the bottom */
+        section {
+            padding-bottom: max(30px, env(safe-area-inset-bottom));
         }
     }
 
@@ -157,6 +171,37 @@
         -webkit-hyphens: auto;
         -ms-hyphens: auto;
         hyphens: auto;
+    }
+    
+    /* Fix for iPhone 13 Pro and newer models with notch */
+    @media only screen and (device-width: 390px) and (device-height: 844px),
+           only screen and (device-width: 428px) and (device-height: 926px),
+           only screen and (device-width: 430px) and (device-height: 932px),
+           only screen and (device-width: 393px) and (device-height: 852px),
+           only screen and (device-width: 375px) and (device-height: 812px) {
+        
+        .hero-with-photo {
+            height: 100vh;
+            height: -webkit-fill-available;
+            min-height: -webkit-fill-available;
+            max-height: none !important;
+            padding-top: calc(env(safe-area-inset-top) + 5px);
+        }
+        
+        .hero-glass {
+            max-height: calc(100vh - env(safe-area-inset-top) - env(safe-area-inset-bottom));
+            overflow-y: auto;
+            -webkit-overflow-scrolling: touch;
+        }
+        
+        .business-header {
+            padding-top: env(safe-area-inset-top);
+            height: auto;
+        }
+        
+        .content {
+            margin-top: calc(60px + env(safe-area-inset-top));
+        }
     }
 }
 
