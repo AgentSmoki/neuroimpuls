@@ -1,0 +1,863 @@
+﻿<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <title>Neuroimpulse - AI РђРІС‚РѕРјР°С‚РёР·Р°С†РёСЏ Р‘РёР·РЅРµСЃР°</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="../header-styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="header-fix.css">
+    <link rel="stylesheet" href="iphone-styles.css">
+    <style>
+        /* РџСЂРёРЅСѓРґРёС‚РµР»СЊРЅРѕ РїРµСЂРµРѕРїСЂРµРґРµР»СЏРµРј СЃС‚РёР»Рё РґР»СЏ РЅР°РІРёРіР°С†РёРё */
+        .business-nav a,
+        .business-nav a:link,
+        .business-nav a:visited,
+        .business-nav a:hover,
+        .business-nav a:active,
+        .business-nav a.active {
+            background: transparent !important;
+            background-color: transparent !important;
+            background-image: none !important;
+        }
+    </style>
+</head>
+<body>
+    <div class="business-header">
+        <div class="design-selector">
+            <button id="designSwitcher" aria-label="РЎРјРµРЅРёС‚СЊ РґРёР·Р°Р№РЅ">
+                <span id="designIcon">рџЋЁ</span> <span id="designText">Р§С‚Рѕ С‚Рѕ РЅР° СѓРјРЅРѕРј</span>
+            </button>
+        </div>
+        <button class="mobile-nav-toggle" id="mobileNavToggle" aria-label="РћС‚РєСЂС‹С‚СЊ РјРµРЅСЋ">
+            <i class="fas fa-bars"></i>
+        </button>
+        <nav class="business-nav">
+            <a href="../sb/index.html" class="active" style="background:transparent !important;">Р“Р»Р°РІРЅР°СЏ</a>
+            <a href="../lb/index.html" style="background:transparent !important;">РљСЂСѓРїРЅС‹Р№ Р±РёР·РЅРµСЃ</a>
+        </nav>
+    </div>
+
+    <main class="content">
+        <!-- РЈРјРЅС‹Р№ РґРёР·Р°Р№РЅ -->
+        <div class="smart-design">
+            <section class="hero hero-with-photo">
+                <div class="hero-overlay"></div>
+                <div class="hero-background" style="max-height: 600px">
+                    <img src="https://images.unsplash.com/photo-1677442136019-21780ecad995" alt="AI Technology Background" class="hero-bg-image" style="height: 600px; object-fit: cover; opacity: 0.2;">
+                </div>
+                <div class="hero-content">
+                    <div class="hero-glass">
+                        <div class="hero-badge">РќРѕРІРѕРµ РїРѕРєРѕР»РµРЅРёРµ AI</div>
+                        <h1>Р”Р›РЇ РџР Р•Р”РџР РРќРРњРђРўР•Р›Р•Р™, РљРћРўРћР Р«Р• РҐРћРўРЇРў Р’Р«Р™РўР РР— РћРџР•Р РђР¦РРћРќРљР Р РЎРќРР—РРўР¬ РЎРўРћРРњРћРЎРўР¬ Р›РР”Рђ РІ 3-5 СЂР°Р· <br>Р·Р° 2 РјРµСЃСЏС†Р°</h1>
+                        <p>РџРѕРґРїРёС€РёС‚РµСЃСЊ РЅР° РјРѕР№ С‚РµР»РµРіСЂР°Рј-РєР°РЅР°Р» Рё СѓР·РЅР°Р№С‚Рµ:</p>
+                        <p class="hero-subtitle"><b>В«РљР°Рє СЏ СЃРЅРёР·РёР» РѕРїРµСЂР°С†РёРѕРЅРЅСѓСЋ РЅР°РіСЂСѓР·РєСѓ РЅР° 80% Рё РїРѕРјРѕРі РєР»РёРµРЅС‚Р°Рј Р·Р°СЂР°Р±РѕС‚Р°С‚СЊ СЃРІС‹С€Рµ 10 РјРёР»Р»РёРѕРЅРѕРІ СЂСѓР±Р»РµР№ СЃ РїРѕРјРѕС‰СЊСЋ РІРёСЂС‚СѓР°Р»СЊРЅС‹С… СЃРѕС‚СЂСѓРґРЅРёРєРѕРІ РЅР° Р±Р°Р·Рµ РРВ»</b></p>
+                        <div class="hero-cta-group">
+                            <button class="cta cta-primary">РџРћРЎРњРћРўР Р•РўР¬ РљР•Р™РЎР«</button>
+                        </div>
+                        <div class="hero-stats">
+                            <div class="stat-item">
+                                <span class="stat-number">80%</span>
+                                <span class="stat-label">РЎРЅРёР¶РµРЅРёРµ РѕРїРµСЂР°С†РёРѕРЅРєРё</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-number">3-5x</span>
+                                <span class="stat-label">Р”РµС€РµРІР»Рµ Р»РёРґС‹</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-number">24/7</span>
+                                <span class="stat-label">Р Р°Р±РѕС‚Р°РµС‚ Р±РµР· РІС‹С…РѕРґРЅС‹С…</span>
+                            </div>
+                        </div>
+                            
+                    </div>
+                </div>
+            </section>
+
+            <section class="learn">
+                <div class="container">
+                    <div class="section-header">
+                        <span class="section-badge">Р РµР·СѓР»СЊС‚Р°С‚С‹</span>
+                        <h2>РџРѕРґРїРёС€РёС‚РµСЃСЊ РЅР° РєР°РЅР°Р», РІС‹ СѓР·РЅР°РµС‚Рµ:</h2>
+                    </div>
+                    <div class="article-cards mobile-optimized">
+                        <div class="article-card mobile-card">
+                            <div class="article-icon ai-icon">
+                                <img src="../image/ai-icon.svg" alt="AI Icon" onerror="this.src='https://img.icons8.com/fluency/48/artificial-intelligence.png'">
+                                <span class="icon-label">РљРµР№СЃ</span>
+                            </div>
+                            <h3 class="article-title">РљР°Рє РІРЅРµРґСЂРµРЅРёРµ РёСЃРєСѓСЃСЃС‚РІРµРЅРЅРѕРіРѕ РёРЅС‚РµР»Р»РµРєС‚Р° РІ РєРѕРјРїР°РЅРёСЋ "Landal" СЃРЅРёР·РёР»Рѕ СЃС‚РѕРёРјРѕСЃС‚СЊ РєРІР°Р»РёС„РёС†РёСЂРѕРІР°РЅРЅРѕРіРѕ Р»РёРґР° РЅР° 50% (СЃ 800в‚Ѕ РґРѕ 400в‚Ѕ)</h3>
+                            <div class="article-separator"></div>
+                            <button class="read-more read-button">РџСЂРѕС‡РёС‚Р°С‚СЊ <i class="fas fa-arrow-right"></i></button>
+                        </div>
+                        
+                        <div class="article-card mobile-card">
+                            <div class="article-icon support-icon">
+                                <img src="../image/support-icon.svg" alt="Support Icon" onerror="this.src='https://img.icons8.com/fluency/48/headset.png'">
+                                <span class="icon-label">РўРµС…РїРѕРґРґРµСЂР¶РєР°</span>
+                            </div>
+                            <h3 class="article-title">РљР°Рє РЅР°С€Р° РІРёСЂС‚СѓР°Р»СЊРЅР°СЏ С‚РµС…РїРѕРґРґРµСЂР¶РєР° РёР·Р±Р°РІРёР»Р° СЂРѕР·РЅРёС‡РЅСѓСЋ СЃРµС‚СЊ РѕС‚ 80% С‚РµС…РЅРёС‡РµСЃРєРёС… РїСЂРѕР±Р»РµРј РІ 50 С‚РѕСЂРіРѕРІС‹С… С‚РѕС‡РєР°С…, СЃРѕРєСЂР°С‚РёРІ РІСЂРµРјСЏ СЂРµС€РµРЅРёСЏ РЅР° 90%</h3>
+                            <div class="article-separator"></div>
+                            <button class="read-more read-button">РџСЂРѕС‡РёС‚Р°С‚СЊ <i class="fas fa-arrow-right"></i></button>
+                        </div>
+                        
+                        <div class="article-card mobile-card">
+                            <div class="article-icon legal-icon">
+                                <img src="../image/legal-icon.svg" alt="Legal Icon" onerror="this.src='https://img.icons8.com/fluency/48/law.png'">
+                                <span class="icon-label">Р®СЂРёРґРёС‡РµСЃРєРёРµ СѓСЃР»СѓРіРё</span>
+                            </div>
+                            <h3 class="article-title">РљР°Рє РІ СЋСЂРёРґРёС‡РµСЃРєРѕР№ С„РёСЂРјРµ РїРѕ Р±Р°РЅРєСЂРѕС‚СЃС‚РІСѓ РјС‹ СѓРІРµР»РёС‡РёР»Рё РїСЂРёР±С‹Р»СЊ РЅР° 34%, РІС‹СЃРІРѕР±РѕРґРёРІ СЋСЂРёСЃС‚РѕРІ РѕС‚ РїРµСЂРІРёС‡РЅС‹С… РєРѕРЅСЃСѓР»СЊС‚Р°С†РёР№</h3>
+                            <div class="article-separator"></div>
+                            <button class="read-more read-button">РџСЂРѕС‡РёС‚Р°С‚СЊ <i class="fas fa-arrow-right"></i></button>
+                        </div>
+                        
+                        <div class="article-card mobile-card">
+                            <div class="article-icon finance-icon">
+                                <img src="../image/finance-icon.svg" alt="Finance Icon" onerror="this.src='https://img.icons8.com/fluency/48/money-bag.png'">
+                                <span class="icon-label">Р­РєРѕРЅРѕРјРёСЏ</span>
+                            </div>
+                            <h3 class="article-title">РџРѕС‡РµРјСѓ РєР»РёРµРЅС‚С‹ СЌРєРѕРЅРѕРјСЏС‚ РѕС‚ 30% РґРѕ 45% РЅР° Р·Р°СЂРїР»Р°С‚Р°С… СѓР¶Рµ РІ РїРµСЂРІС‹Р№ РјРµСЃСЏС† РІРЅРµРґСЂРµРЅРёСЏ РІРёСЂС‚СѓР°Р»СЊРЅС‹С… СЃРѕС‚СЂСѓРґРЅРёРєРѕРІ</h3>
+                            <div class="article-separator"></div>
+                            <button class="read-more read-button">РџСЂРѕС‡РёС‚Р°С‚СЊ <i class="fas fa-arrow-right"></i></button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="solutions">
+                <div class="container">
+                    <div class="section-header">
+                        <span class="section-badge">Р РµС€РµРЅРёСЏ</span>
+                        <h2>РўР РђРќРЎР¤РћР РњРђР¦РРЇ <br>Р‘РР—РќР•РЎРђ</h2>
+                        <p class="section-subtitle">РџСЂРѕРІРµСЂРµРЅРЅС‹Рµ СЂРµС€РµРЅРёСЏ РґР»СЏ РІС‹С…РѕРґР° РёР· РѕРїРµСЂР°С†РёРѕРЅРєРё</p>
+                    </div>
+                    <div class="solutions-grid">
+                        <div class="solution-card">
+                            <div class="solution-icon">
+                                <i class="fas fa-user-tie"></i>
+                            </div>
+                            <h3>Р’РР РўРЈРђР›Р¬РќР«Р™ РњР•РќР•Р”Р–Р•Р  РџР РћР”РђР–</h3>
+                            <p>РљРІР°Р»РёС„РёС†РёСЂСѓРµС‚ Р»РёРґС‹, РѕС‚РІРµС‡Р°РµС‚ РЅР° РІРѕРїСЂРѕСЃС‹ Рё РєРѕРЅРІРµСЂС‚РёСЂСѓРµС‚ РїРѕСЃРµС‚РёС‚РµР»РµР№ РІ РєР»РёРµРЅС‚РѕРІ 24/7. РќР° РїСЂРёРјРµСЂРµ РєРѕРјРїР°РЅРёРё Landal</p>
+                            <div class="solution-features">
+                                <span class="feature">РљРІР°Р»РёС„РёРєР°С†РёСЏ Р»РёРґРѕРІ</span>
+                                <span class="feature">24/7 РїРѕРґРґРµСЂР¶РєР°</span>
+                                <span class="feature">РђРІС‚РѕРјР°С‚РёС‡РµСЃРєРёРµ РѕС‚РІРµС‚С‹</span>
+                            </div>
+                            <a href="https://t.me/Landal_pro_bot" class="solution-link">РџРѕСЃРјРѕС‚СЂРµС‚СЊ РІ СЂР°Р±РѕС‚Рµ</a>
+                        </div>
+                        <div class="solution-card">
+                            <div class="solution-icon">
+                                <i class="fas fa-graduation-cap"></i>
+                            </div>
+                            <h3>Р’РР РўРЈРђР›Р¬РќР«Р™ РўР Р•РќР•Р  <br>РџР•Р РЎРћРќРђР›Рђ Рё РўР•РҐ.РџРћР”Р”Р•Р Р–РљРђ</h3>
+                            <p>РЎРѕРєСЂР°С‰Р°РµС‚ РІСЂРµРјСЏ Р°РґР°РїС‚Р°С†РёРё РЅРѕРІС‹С… СЃРѕС‚СЂСѓРґРЅРёРєРѕРІ Рё СЂР°СЃСЃРєР°Р·С‹РІР°РµС‚ РєР°Рє СЂРµС€РёС‚СЊ С‚РµС…РЅРёС‡РµСЃРєРёРµ РїСЂРѕР±Р»РµРјС‹</p>
+                            <div class="solution-features">
+                                <span class="feature">РћР±СѓС‡РµРЅРёРµ РїРµСЂСЃРѕРЅР°Р»Р°</span>
+                                <span class="feature">РўРµС…РїРѕРґРґРµСЂР¶РєР°</span>
+                                <span class="feature">РђРІС‚РѕРјР°С‚РёР·Р°С†РёСЏ</span>
+                            </div>
+                            <a href="https://t.me/Technical_support_uppetit_bot" class="solution-link">РџРѕСЃРјРѕС‚СЂРµС‚СЊ РІ СЂР°Р±РѕС‚Рµ</a>
+                        </div>
+                        <div class="solution-card">
+                            <div class="solution-icon">
+                                <i class="fas fa-robot"></i>
+                            </div>
+                            <h3>РњРЈР›Р¬РўРРђР“Р•РќРўРќРђРЇ РЎРРЎРўР•РњРђ</h3>
+                            <p>РџРѕР»РЅРѕСЃС‚СЊСЋ Р°РІС‚РѕРјР°С‚РёР·РёСЂСѓРµС‚ РїСЂРѕС†РµСЃСЃ Р·Р°РєР°Р·Р° Р±СѓРєРµС‚Р° РёР»Рё РїРѕРґР°СЂРѕС‡РЅРѕРіРѕ РЅР°Р±РѕСЂР°, СЃРѕР±РёСЂР°СЏ РІСЃРµ РґР°РЅРЅС‹Рµ РґР»СЏ Р·Р°РєР°Р·Р°.</p>
+                            <div class="solution-features">
+                                <span class="feature">РђРІС‚РѕРјР°С‚РёР·Р°С†РёСЏ</span>
+                                <span class="feature">РњСѓР»СЊС‚РёР°РіРµРЅС‚РЅРѕСЃС‚СЊ</span>
+                                <span class="feature">РРЅС‚РµРіСЂР°С†РёРё</span>
+                            </div>
+                            <a href="https://t.me/Florist_anny_bot" class="solution-link">РџРѕСЃРјРѕС‚СЂРµС‚СЊ РІ СЂР°Р±РѕС‚Рµ</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="cta-section">
+                <div class="container">
+                    <div class="section-header">
+                        <span class="section-badge">Р“Р°СЂР°РЅС‚РёСЏ</span>
+                        <h2>Р’Р«РҐРћР” РР— РћРџР•Р РђР¦РРћРќРљР <br> Р Р•РђР›Р¬РќРћРЎРўР¬, Рђ РќР• РћР‘Р•Р©РђРќРР•</h2>
+                    </div>
+                    <div class="cta-content">
+                        <div class="cta-text">
+                            <p>РџРѕРєР° РґСЂСѓРіРёРµ РіРѕРІРѕСЂСЏС‚ Рѕ Р±СѓРґСѓС‰РµРј РР, СЏ СѓР¶Рµ РїРѕРјРѕРіР°СЋ РїСЂРµРґРїСЂРёРЅРёРјР°С‚РµР»СЏРј РІС‹Р№С‚Рё РёР· РѕРїРµСЂР°С†РёРѕРЅРєРё СЃ РїРѕРјРѕС‰СЊСЋ РІРёСЂС‚СѓР°Р»СЊРЅС‹С… СЃРѕС‚СЂСѓРґРЅРёРєРѕРІ. РћРЅРё Р·Р°РјРµРЅСЏСЋС‚ Р»СЋРґРµР№ РІ СЂСѓС‚РёРЅРЅС‹С… РѕРїРµСЂР°С†РёСЏС…, СЂР°Р±РѕС‚Р°СЋС‚ 24/7 Рё РЅРµ РїСЂРѕСЃСЏС‚ РїРѕРІС‹С€РµРЅРёСЏ Р·Р°СЂРїР»Р°С‚С‹.</p>
+                            <p>Р’ 2025 РіРѕРґСѓ РѕРґРёРЅ РІРёСЂС‚СѓР°Р»СЊРЅС‹Р№ СЃРѕС‚СЂСѓРґРЅРёРє Р·Р°РјРµРЅСЏРµС‚ РґРѕ 6 С‡РµР»РѕРІРµРє РІ Р·Р°РґР°С‡Р°С… РїРѕРґРґРµСЂР¶РєРё, РїСЂРѕРґР°Р¶ Рё РєРѕРЅС‚СЂРѕР»СЏ РєР°С‡РµСЃС‚РІР°.</p>
+                            <p>Р РµР·СѓР»СЊС‚Р°С‚ РјРѕРµР№ СЂР°Р±РѕС‚С‹ вЂ” РЅРµ РїСЂРѕСЃС‚Рѕ Р°РІС‚РѕРјР°С‚РёР·Р°С†РёСЏ, Р° РїРѕР»РЅР°СЏ С‚СЂР°РЅСЃС„РѕСЂРјР°С†РёСЏ Р±РёР·РЅРµСЃ-РјРѕРґРµР»Рё СЃ С„РѕРєСѓСЃРѕРј РЅР° РєР°С‡РµСЃС‚РІРѕ, СЃРєРѕСЂРѕСЃС‚СЊ Рё СЌРєРѕРЅРѕРјРёС‡РµСЃРєСѓСЋ СЌС„С„РµРєС‚РёРІРЅРѕСЃС‚СЊ.</p>
+                        </div>
+                        <div class="cta-image" style="max-height: 300px;">
+                            <img src="https://images.unsplash.com/photo-1551434678-e076c223a692" alt="Business Automation" class="cta-img" style="max-height: 300px; object-fit: cover;">
+                        </div>
+                    </div>
+                    <button class="cta cta-primary">Р—РђР‘Р РћРќРР РћР’РђРўР¬ Р­РљРЎРљРЈР РЎРР®</button>
+                    <p class="cta-subtext">Р§С‚РѕР±С‹ РїРѕСЃРјРѕС‚СЂРµС‚СЊ РєР°Рє СЂР°Р±РѕС‚Р°СЋС‚ Р’РёСЂС‚СѓР°Р»СЊРЅР°СЏ РєРѕРјР°РЅРґР° РЅР° РїСЂРёРјРµСЂРµ РЅР°С€РµРіРѕ Р±РёР·РЅРµСЃР°</p>
+                    <ul class="cta-list">
+                        <li>
+                            <i class="fas fa-rocket"></i>
+                            <b>РўРµС…РЅРѕР»РѕРіРёРё 2026 РіРѕРґР°</b> СѓР¶Рµ СЂР°Р±РѕС‚Р°СЋС‚ Сѓ РјРѕРёС… РєР»РёРµРЅС‚РѕРІ
+                        </li>
+                        <li>
+                            <i class="fas fa-crown"></i>
+                            <b>Р­РєСЃРєР»СЋР·РёРІРЅС‹Рµ РІРЅРµРґСЂРµРЅРёСЏ</b> вЂ” С‚РѕР»СЊРєРѕ РѕРґРЅР° РєРѕРјРїР°РЅРёСЏ РІ РЅРёС€Рµ
+                        </li>
+                        <li>
+                            <i class="fas fa-chart-pie"></i>
+                            <b>Р“Р°СЂР°РЅС‚РёСЏ СЃРЅРёР¶РµРЅРёСЏ СЃС‚РѕРёРјРѕСЃС‚СЊ РєРІР°Р».Р·Р°СЏРІРєРё РїРѕ РґРѕРіРѕРІРѕСЂСѓ</b> СѓР¶Рµ РІ РїРµСЂРІС‹Р№ РјРµСЃСЏС† РїРѕСЃР»Рµ РІРЅРµРґСЂРµРЅРёСЏ
+                        </li>
+                    </ul>
+                </div>
+            </section>
+
+            <section class="steps-section">
+                <div class="container">
+                    <div class="section-header">
+                        <span class="section-badge">РџСЂРѕС†РµСЃСЃ</span>
+                        <h2>РћРў РџР РћР‘Р›Р•РњР« Рљ <br>Р Р•РЁР•РќРР® Р—Рђ 14 Р”РќР•Р™</h2>
+                        <p class="section-subtitle">5 С€Р°РіРѕРІ Рє РІС‹С…РѕРґСѓ РёР· РѕРїРµСЂР°С†РёРѕРЅРєРё</p>
+                    </div>
+                    <ul class="steps-list">
+                        <li data-step="1">
+                            <div class="step-icon">
+                                <i class="fas fa-search"></i>
+                            </div>
+                            <div class="step-content">
+                                <b>Р­РљРЎРљРЈР РЎРРЇ Р Р”РРђР“РќРћРЎРўРРљРђ <br>(1 РґРµРЅСЊ)</b>
+                                <p>РџРѕРєР°Р·С‹РІР°СЋ СЂР°Р±РѕС‚Сѓ С‚РµС…РЅРѕР»РѕРіРёРё РЅР° Р¶РёРІС‹С… РїСЂРёРјРµСЂР°С… Рё РІС‹СЏРІР»СЏРµРј Р±РѕР»РµРІС‹Рµ С‚РѕС‡РєРё РІ РІР°С€РµРј Р±РёР·РЅРµСЃРµ.</p>
+                            </div>
+                        </li>
+                        <li data-step="4">
+                            <div class="step-icon">
+                                <i class="fas fa-file-contract"></i>
+                            </div>
+                            <div class="step-content">
+                                <b>РџРћР”РџРРЎР«Р’РђР•Рњ Р”РћР“РћР’РћР  <br>(2-3 РґРЅСЏ)</b>
+                                <p>РћР±СЃСѓР¶РґР°РµРј РІСЃРµ СЋСЂРёРґРёС‡РµСЃРєРёРµ РјРѕРјРµРЅС‚С‹, NDA, РїСЂРѕРІРѕРґРёРј РѕРїР»Р°С‚Сѓ.</p>
+                            </div>
+                        </li>
+                        <li data-step="2">
+                            <div class="step-icon">
+                                <i class="fas fa-code"></i>
+                            </div>
+                            <div class="step-content">
+                                <b>Р РђР—Р РђР‘РћРўРљРђ РџР РћРўРћРўРРџРђ <br>(5-7 РґРЅРµР№)</b>
+                                <p>РЎРѕР·РґР°СЋ РґРµР№СЃС‚РІСѓСЋС‰РёР№ РїСЂРѕС‚РѕС‚РёРї РІРёСЂС‚СѓР°Р»СЊРЅРѕРіРѕ СЃРѕС‚СЂСѓРґРЅРёРєР° РїРѕРґ РєРѕРЅРєСЂРµС‚РЅС‹Рµ РїСЂРѕС†РµСЃСЃС‹ РІР°С€РµР№ РєРѕРјРїР°РЅРёРё.</p>
+                            </div>
+                        </li>
+                        <li data-step="3">
+                            <div class="step-icon">
+                                <i class="fas fa-vial"></i>
+                            </div>
+                            <div class="step-content">
+                                <b>РўР•РЎРўРР РћР’РђРќРР• Р’ Р Р•РђР›Р¬РќР«РҐ РЈРЎР›РћР’РРЇРҐ <br>(14 РґРЅРµР№)</b>
+                                <p>РџРѕРґРєР»СЋС‡Р°РµРј РІРёСЂС‚СѓР°Р»СЊРЅРѕРіРѕ СЃРѕС‚СЂСѓРґРЅРёРєР° РєРѕ РІСЃРµРј РєР°РЅР°Р»Р°Рј Рё РґРѕРѕР±СѓС‡Р°РµРј РјРѕРґРµР»СЊ РґР»СЏ РјР°РєСЃРёРјР°Р»СЊРЅРѕР№ СЌС„С„РµРєС‚РёРІРЅРѕСЃС‚Рё.</p>
+                            </div>
+                        </li>
+                        <li data-step="5">
+                            <div class="step-icon">
+                                <i class="fas fa-chart-line"></i>
+                            </div>
+                            <div class="step-content">
+                                <b>РњРђРЎРЁРўРђР‘РР РћР’РђРќРР• Р РџРћР”Р”Р•Р Р–РљРђ</b>
+                                <p>Р Р°СЃС€РёСЂСЏРµРј С„СѓРЅРєС†РёРѕРЅР°Р» РЅР° РґСЂСѓРіРёРµ РѕС‚РґРµР»С‹ Рё СѓРІРµР»РёС‡РёРІР°РµРј СЌРєРѕРЅРѕРјРёСЋ РґРѕ 150-200% РѕС‚ РїРµСЂРІРѕРЅР°С‡Р°Р»СЊРЅС‹С… РїРѕРєР°Р·Р°С‚РµР»РµР№.</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+
+            <section class="reasons-section">
+                <div class="container">
+                    <div class="section-header">
+                        <span class="section-badge">РџСЂРµРёРјСѓС‰РµСЃС‚РІР°</span>
+                        <h2>5 РџР РР§РРќ Р’РќР•Р”Р РРўР¬ РР-РЎРћРўР РЈР”РќРРљРћР’ РџР РЇРњРћ РЎР•Р™Р§РђРЎ</h2>
+                    </div>
+                    <ul class="reasons-list">
+                        <li>
+                            <div class="reason-icon">
+                                <i class="fas fa-bolt"></i>
+                            </div>
+                            <div class="reason-content">
+                                <b>РўР•РҐ, РљРўРћ Р–Р”Р•Рў - РћРџР•Р Р•Р”РЇРў РљРћРќРљРЈР Р•РќРўР«</b>
+                                <p>Рљ 2026 РіРѕРґСѓ РР-Р°РІС‚РѕРјР°С‚РёР·Р°С†РёСЏ СЃС‚Р°РЅРµС‚ СЃС‚Р°РЅРґР°СЂС‚РѕРј СЂС‹РЅРєР°, РЅРѕ РјР°РєСЃРёРјР°Р»СЊРЅРѕРµ РїСЂРµРёРјСѓС‰РµСЃС‚РІРѕ РїРѕР»СѓС‡Р°С‚ РїРµСЂРІРѕРїСЂРѕС…РѕРґС†С‹</p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="reason-icon">
+                                <i class="fas fa-clock"></i>
+                            </div>
+                            <div class="reason-content">
+                                <b>РџРћРљРђ РљРћРќРљРЈР Р•РќРўР« Р§РРўРђР®Рў РќРћР’РћРЎРўР РћР‘ РР</b>
+                                <p>Р’Р°С€ Р±РёР·РЅРµСЃ СѓР¶Рµ СЃРЅРёР¶Р°РµС‚ СЃРµР±РµСЃС‚РѕРёРјРѕСЃС‚СЊ Рё СѓРІРµР»РёС‡РёРІР°РµС‚ РјР°СЂР¶Сѓ</p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="reason-icon">
+                                <i class="fas fa-coins"></i>
+                            </div>
+                            <div class="reason-content">
+                                <b>РћРљРЈРџРђР•РњРћРЎРўР¬ РЎ РџР•Р Р’РћР“Рћ РњР•РЎРЇР¦Рђ</b>
+                                <p>РЎСЂРµРґРЅРёР№ СЃСЂРѕРє РѕРєСѓРїР°РµРјРѕСЃС‚Рё РІРёСЂС‚СѓР°Р»СЊРЅРѕРіРѕ СЃРѕС‚СЂСѓРґРЅРёРєР° вЂ” 17-21 РґРµРЅСЊ, РґР°Р»СЊС€Рµ вЂ” С‡РёСЃС‚Р°СЏ РїСЂРёР±С‹Р»СЊ</p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="reason-icon">
+                                <i class="fas fa-user-tie"></i>
+                            </div>
+                            <div class="reason-content">
+                                <b>РЈРџР РђР’Р›РЇР™РўР• Р‘РР—РќР•РЎРћРњ, Рђ РќР• РџР•Р РЎРћРќРђР›РћРњ</b>
+                                <p>Р’Р»Р°РґРµР»СЊС†С‹ Р±РёР·РЅРµСЃР° СЌРєРѕРЅРѕРјСЏС‚ РІ СЃСЂРµРґРЅРµРј 37 С‡Р°СЃРѕРІ РІ РЅРµРґРµР»СЋ РЅР° РєРѕРЅС‚СЂРѕР»Рµ РёСЃРїРѕР»РЅРµРЅРёСЏ РїРѕСЃР»Рµ РІРЅРµРґСЂРµРЅРёСЏ РР</p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="reason-icon">
+                                <i class="fas fa-trophy"></i>
+                            </div>
+                            <div class="reason-content">
+                                <b>РЎРўРђРќРћР’РРўР•РЎР¬ Р›РР”Р•Р РћРњ РћРўР РђРЎР›Р</b>
+                                <p>РљРѕРјРїР°РЅРёРё, РїРµСЂРІС‹РјРё РІРЅРµРґСЂСЏСЋС‰РёРµ РёРЅРЅРѕРІР°С†РёРё, РІ СЃСЂРµРґРЅРµРј РЅР° 37% Р±С‹СЃС‚СЂРµРµ СЂР°СЃС‚СѓС‚ РІ СЃРІРѕРёС… РЅРёС€Р°С…</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+
+            <section class="cta-section">
+                <div class="container">
+                    <div class="section-header">
+                        <span class="section-badge">РђРєС†РёСЏ</span>
+                        <h2>РћРЎР’РћР‘РћР”РРўР• 37 Р§РђРЎРћР’ Р’ РќР•Р”Р•Р›Р®. РҐР’РђРўРРў РўР РђРўРРўР¬ Р’Р Р•РњРЇ РќРђ РћРџР•Р РђР¦РРћРќРљРЈ</h2>
+                    </div>
+                    
+                    <div class="cta-offer">
+                        <div class="offer-badge">РћРіСЂР°РЅРёС‡РµРЅРЅРѕРµ РїСЂРµРґР»РѕР¶РµРЅРёРµ</div>
+                        <p><b>РџРµСЂРІС‹Рј 5 РєР»РёРµРЅС‚Р°Рј вЂ” Р±РµСЃРїР»Р°С‚РЅС‹Р№ Р°СѓРґРёС‚ Р±РёР·РЅРµСЃ-РїСЂРѕС†РµСЃСЃРѕРІ Рё РїРµСЂСЃРѕРЅР°Р»СЊРЅР°СЏ РґРѕСЂРѕР¶РЅР°СЏ РєР°СЂС‚Р° Р°РІС‚РѕРјР°С‚РёР·Р°С†РёРё <br>(СЃС‚РѕРёРјРѕСЃС‚СЊ 50 000в‚Ѕ)</b></p>
+                        <button class="cta cta-primary">Р—РђР‘Р РћРќРР РћР’РђРўР¬ РњР•РЎРўРћ РќРђ Р­РљРЎРљРЈР РЎРР </button>
+                        
+                        <div class="offer-timer">
+                            <i class="fas fa-clock"></i>
+                            <span>РљРѕР»РёС‡РµСЃС‚РІРѕ СЌРєСЃРєСѓСЂСЃРёР№ РѕРіСЂР°РЅРёС‡РµРЅРѕ: РѕСЃС‚Р°Р»РѕСЃСЊ 3 РјРµСЃС‚Р° РЅР° РјР°Р№</span>
+                        </div>
+                        <p>Р—Р°РїРёС€РёС‚РµСЃСЊ РЅР° СЌРєСЃРєСѓСЂСЃРёСЋ Рё СѓРІРёРґРёС‚Рµ, РєР°Рє РІРёСЂС‚СѓР°Р»СЊРЅС‹Рµ СЃРѕС‚СЂСѓРґРЅРёРєРё СѓР¶Рµ СЃРµР№С‡Р°СЃ РјРµРЅСЏСЋС‚ Р±РёР·РЅРµСЃ РІ РІР°С€РµР№ РѕС‚СЂР°СЃР»Рё</p>
+                    </div>
+                    
+                </div>
+            </section>
+
+            <section class="founder-quote-section">
+                <div class="container">
+                    
+                    <blockquote class="case-quote">
+                        <p>"РџРѕСЃР»Рµ РІРЅРµРґСЂРµРЅРёСЏ РІРёСЂС‚СѓР°Р»СЊРЅРѕРіРѕ РєРѕРЅСЃСѓР»СЊС‚Р°РЅС‚Р° РјС‹ СЃРѕРєСЂР°С‚РёР»Рё СЃС‚РѕРёРјРѕСЃС‚СЊ РїСЂРёРІР»РµС‡РµРЅРёСЏ РєР»РёРµРЅС‚Р° СЃ 8000в‚Ѕ РґРѕ 1600в‚Ѕ СЃ С‚Р°СЂРіРµС‚Р° Р’РєРѕРЅС‚Р°РєС‚Рµ Рё РїРѕР»РЅРѕСЃС‚СЊСЋ Р°РІС‚РѕРјР°С‚РёР·РёСЂРѕРІР°Р»Рё РїРµСЂРІРёС‡РЅСѓСЋ РєРІР°Р»РёС„РёРєР°С†РёСЋ Р»РёРґРѕРІ"<br><span class="quote-author">вЂ” РћР»РµРі, Р”РёСЂРµРєС‚РѕСЂ РїРѕ РјР°СЂРєРµС‚РёРЅРіСѓ "Landal"</span></p>
+                    </blockquote>
+                </div>
+            </section>
+
+            <!-- Benefits Block -->
+            <section class="benefits-section">
+                <div class="container">
+                    <div class="section-header">
+                        <span class="section-badge">РџРѕС‡РµРјСѓ РІС‹Р±РёСЂР°СЋС‚ РЅР°СЃ</span>
+                        <h2>РџСЂРµРёРјСѓС‰РµСЃС‚РІР° AI-Р°РІС‚РѕРјР°С‚РёР·Р°С†РёРё РґР»СЏ Р±РёР·РЅРµСЃР°</h2>
+                    </div>
+                    <div class="benefits-grid">
+                        <div class="benefit-card">
+                            <i class="fas fa-bolt"></i>
+                            <h3>РњРѕР»РЅРёРµРЅРѕСЃРЅР°СЏ СЃРєРѕСЂРѕСЃС‚СЊ</h3>
+                            <p>Р’РЅРµРґСЂРµРЅРёРµ СЂРµС€РµРЅРёР№ Р·Р° 14 РґРЅРµР№ Рё Р±С‹СЃС‚СЂС‹Р№ СЂРѕСЃС‚ СЌС„С„РµРєС‚РёРІРЅРѕСЃС‚Рё.</p>
+                        </div>
+                        <div class="benefit-card">
+                            <i class="fas fa-chart-line"></i>
+                            <h3>Р­РєРѕРЅРѕРјРёСЏ Р±СЋРґР¶РµС‚Р°</h3>
+                            <p>РЎРЅРёР¶РµРЅРёРµ СЃС‚РѕРёРјРѕСЃС‚Рё Р»РёРґР° Рё СЂР°СЃС…РѕРґРѕРІ РЅР° РїРµСЂСЃРѕРЅР°Р» РґРѕ 45%.</p>
+                        </div>
+                        <div class="benefit-card">
+                            <i class="fas fa-user-shield"></i>
+                            <h3>Р“Р°СЂР°РЅС‚РёСЏ СЂРµР·СѓР»СЊС‚Р°С‚Р°</h3>
+                            <p>РџРµСЂСЃРѕРЅР°Р»СЊРЅР°СЏ РґРѕСЂРѕР¶РЅР°СЏ РєР°СЂС‚Р° Рё РїРѕРґРґРµСЂР¶РєР° РЅР° РєР°Р¶РґРѕРј СЌС‚Р°РїРµ.</p>
+                        </div>
+                        <div class="benefit-card">
+                            <i class="fas fa-robot"></i>
+                            <h3>Р’РёСЂС‚СѓР°Р»СЊРЅС‹Рµ СЃРѕС‚СЂСѓРґРЅРёРєРё</h3>
+                            <p>Р Р°Р±РѕС‚Р°СЋС‚ 24/7, РЅРµ Р±РѕР»РµСЋС‚ Рё РЅРµ С‚СЂРµР±СѓСЋС‚ РѕС‚РїСѓСЃРєР°.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Case Studies Block -->
+            <section class="cases-section">
+                <div class="container">
+                    <div class="section-header">
+                        <span class="section-badge">РљРµР№СЃС‹</span>
+                        <h2>Р РµР°Р»СЊРЅС‹Рµ СЂРµР·СѓР»СЊС‚Р°С‚С‹ РЅР°С€РёС… РєР»РёРµРЅС‚РѕРІ</h2>
+                    </div>
+                    <div class="cases-grid">
+                        <div class="case-card">
+                            <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb" alt="Landal Case" class="case-img" style="max-height: 180px; object-fit: cover;">
+                            <div class="case-content">
+                                <h3>Landal: -50% Рє СЃС‚РѕРёРјРѕСЃС‚Рё Р»РёРґР°</h3>
+                                <p>AI СЃРЅРёР·РёР» СЃС‚РѕРёРјРѕСЃС‚СЊ РєРІР°Р»РёС„РёС†РёСЂРѕРІР°РЅРЅРѕРіРѕ Р»РёРґР° СЃ 800в‚Ѕ РґРѕ 400в‚Ѕ.</p>
+                            </div>
+                        </div>
+                        <div class="case-card">
+                            <img src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6" alt="Retail Case" class="case-img" style="max-height: 180px; object-fit: cover;">
+                            <div class="case-content">
+                                <h3>Р РѕР·РЅРёС‡РЅР°СЏ СЃРµС‚СЊ: -80% РїСЂРѕР±Р»РµРј</h3>
+                                <p>Р’РёСЂС‚СѓР°Р»СЊРЅР°СЏ С‚РµС…РїРѕРґРґРµСЂР¶РєР° СЂРµС€РёР»Р° 80% РїСЂРѕР±Р»РµРј РІ 50 С‚РѕС‡РєР°С…, СѓСЃРєРѕСЂРёРІ СЂРµС€РµРЅРёСЏ РЅР° 90%.</p>
+                            </div>
+                        </div>
+                        <div class="case-card">
+                            <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c" alt="Law Case" class="case-img" style="max-height: 180px; object-fit: cover;">
+                            <div class="case-content">
+                                <h3>Р®СЂС„РёСЂРјР°: +34% Рє РїСЂРёР±С‹Р»Рё</h3>
+                                <p>РђРІС‚РѕРјР°С‚РёР·Р°С†РёСЏ РєРѕРЅСЃСѓР»СЊС‚Р°С†РёР№ РІС‹СЃРІРѕР±РѕРґРёР»Р° СЋСЂРёСЃС‚РѕРІ Рё РѕР±РµСЃРїРµС‡РёР»Р° РїРѕРґРґРµСЂР¶РєСѓ 24/7.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+
+            <!-- Founder Section -->
+            <section class="founder-section">
+                <div class="container founder-container">
+                    <div class="founder-avatar-large-wrapper">
+                        <img src="../image/bogdan.jpg" alt="Р‘РѕРіРґР°РЅ Neuroimpulse" class="founder-avatar-large">
+                    </div>
+                    <div class="founder-info-large">
+                        <h3>Р‘РѕРіРґР°РЅ Neuroimpulse</h3>
+                        <span class="founder-role">Р­РєСЃРїРµСЂС‚ РїРѕ AI-Р°РІС‚РѕРјР°С‚РёР·Р°С†РёРё Р±РёР·РЅРµСЃР°</span>
+                        <blockquote>"РЇ РїРѕРјРѕРіР°СЋ РїСЂРµРґРїСЂРёРЅРёРјР°С‚РµР»СЏРј РІС‹Р№С‚Рё РёР· РѕРїРµСЂР°С†РёРѕРЅРєРё Рё СѓРІРµР»РёС‡РёС‚СЊ РїСЂРёР±С‹Р»СЊ СЃ РїРѕРјРѕС‰СЊСЋ AI. РњРѕР№ РѕРїС‹С‚ вЂ” СЌС‚Рѕ РґРµСЃСЏС‚РєРё СѓСЃРїРµС€РЅС‹С… РєРµР№СЃРѕРІ Рё РјРёР»Р»РёРѕРЅС‹ СЂСѓР±Р»РµР№, Р·Р°СЂР°Р±РѕС‚Р°РЅРЅС‹Рµ РєР»РёРµРЅС‚Р°РјРё."</blockquote>
+                    </div>
+                </div>
+            </section>
+
+            <!-- FAQ Block -->
+            <section class="faq-section">
+                <div class="container">
+                    <div class="section-header">
+                        <span class="section-badge">FAQ</span>
+                        <h2>Р§Р°СЃС‚Рѕ Р·Р°РґР°РІР°РµРјС‹Рµ РІРѕРїСЂРѕСЃС‹</h2>
+                    </div>
+                    <div class="faq-list">
+                        <div class="faq-item">
+                            <h4>РЎРєРѕР»СЊРєРѕ РІСЂРµРјРµРЅРё Р·Р°РЅРёРјР°РµС‚ РІРЅРµРґСЂРµРЅРёРµ?</h4>
+                            <p>РћР±С‹С‡РЅРѕ 2-4 РЅРµРґРµР»Рё СЃ РјРѕРјРµРЅС‚Р° РґРёР°РіРЅРѕСЃС‚РёРєРё РґРѕ Р·Р°РїСѓСЃРєР°.</p>
+                        </div>
+                        <div class="faq-item">
+                            <h4>РљР°РєРёРµ РіР°СЂР°РЅС‚РёРё СЂРµР·СѓР»СЊС‚Р°С‚Р°?</h4>
+                            <p>Р“Р°СЂР°РЅС‚РёСЂСѓРµРј СЃРѕРєСЂР°С‰РµРЅРёРµ СЂР°СЃС…РѕРґРѕРІ Рё СЂРѕСЃС‚ СЌС„С„РµРєС‚РёРІРЅРѕСЃС‚Рё, РїСЂРѕРїРёСЃС‹РІР°РµРј KPI РІ РґРѕРіРѕРІРѕСЂРµ.</p>
+                        </div>
+                        <div class="faq-item">
+                            <h4>РњРѕР¶РЅРѕ Р»Рё РїРѕСЃРјРѕС‚СЂРµС‚СЊ РґРµРјРѕ?</h4>
+                            <p>Р”Р°, РїРѕРєР°Р¶РµРј СЂРµР°Р»СЊРЅС‹Рµ РєРµР№СЃС‹ Рё РґР°РґРёРј РґРѕСЃС‚СѓРї Рє РґРµРјРѕ-Р±РѕС‚Р°Рј.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Final CTA -->
+            <section class="final-cta-section">
+                <div class="container">
+                    <div class="final-cta-block">
+                        <h2>Р“РѕС‚РѕРІС‹ РІС‹РІРµСЃС‚Рё Р±РёР·РЅРµСЃ РЅР° РЅРѕРІС‹Р№ СѓСЂРѕРІРµРЅСЊ?</h2>
+                        <p>Р—Р°РїРёС€РёС‚РµСЃСЊ РЅР° Р±РµСЃРїР»Р°С‚РЅСѓСЋ РєРѕРЅСЃСѓР»СЊС‚Р°С†РёСЋ Рё РїРѕР»СѓС‡РёС‚Рµ РїРµСЂСЃРѕРЅР°Р»СЊРЅСѓСЋ СЃС‚СЂР°С‚РµРіРёСЋ Р°РІС‚РѕРјР°С‚РёР·Р°С†РёРё.</p>
+                        <form id="consultation-form" class="consultation-form" action="https://t.me/annya_ai" method="get">
+                            <div class="form-group">
+                                <input type="text" name="name" placeholder="Р’Р°С€Рµ РёРјСЏ" required>
+                            </div>
+                            <div class="form-group">
+                                <input type="tel" name="phone" placeholder="Р’Р°С€ С‚РµР»РµС„РѕРЅ" required>
+                            </div>
+                            <div class="form-group">
+                                <input type="text" name="telegram" placeholder="Р’Р°С€ РЅРёРє РІ Telegram" required>
+                            </div>
+                            <button type="submit" class="cta cta-primary cta-large">Р—Р°Р±СЂРѕРЅРёСЂРѕРІР°С‚СЊ РІСЂРµРјСЏ РєРѕРЅСЃСѓР»СЊС‚Р°С†РёРё</button>
+                           
+                        </form>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- РџСЂРѕСЃС‚РѕР№ РґРёР·Р°Р№РЅ (РїРѕРєР° РїСѓСЃС‚РѕР№) -->
+        <div class="simple-design">
+            <section class="hero simple-hero">
+                <div class="container">
+                    <h1>Р”Р›РЇ РџР Р•Р”РџР РРќРРњРђРўР•Р›Р•Р™, РљРћРўРћР Р«Р• Р—РђР•Р‘РђР›РРЎР¬ РўРћРќРЈРўР¬ Р’ РћРџР•Р РђР¦РРћРќРљР• Р РЎР›РР’РђРўР¬ Р‘РђР‘РљР РќРђ Р›РР”Р“Р•Рќ</h1>
+                    <p>Р—Р°Р»РµС‚Р°Р№ РІ РјРѕР№ С‚РµР»РµРіСЂР°Рј-РєР°РЅР°Р» Рё СѓР·РЅР°Р№:</p>
+                    <p class="hero-subtitle"><b>В«РљР°Рє СЏ Р·Р°Р±РёР» С…СѓР№ РЅР° 80% СЂСѓС‚РёРЅС‹ Рё РїРѕРјРѕРі РєР»РёРµРЅС‚Р°Рј СЃСЂСѓР±РёС‚СЊ СЃРІС‹С€Рµ 10 Р»СЏРјРѕРІ СЃ РїРѕРјРѕС‰СЊСЋ РІРёСЂС‚СѓР°Р»СЊРЅС‹С… Р±РѕС‚РѕРІ РЅР° РРВ»</b></p>
+                    <button class="simple-button"><i class="fas fa-rocket"></i> Р“Р›РЇРќР¬ РљР•Р™РЎР«</button>
+                    
+                    <div class="founder-block">
+                        <div class="founder-img-wrapper">
+                            <img src="../image/bogdan.jpg" alt="Р¤РѕС‚Рѕ РѕСЃРЅРѕРІР°С‚РµР»СЏ" class="founder-img">
+                        </div>
+                        <div class="founder-info">
+                            <h3>Р‘РѕРіРґР°РЅ Neuroimpulse</h3>
+                            <p>Р§СѓРІР°Рє, РєРѕС‚РѕСЂС‹Р№ РЅР°СѓС‡РёР» РР РїР°С…Р°С‚СЊ Р·Р° С‚РµР±СЏ</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="channel-content">
+                <div class="container">
+                    <div class="section-header">
+                        <span class="section-badge">Р’ РєР°РЅР°Р»Рµ</span>
+                        <h2>Р’С‹ СѓР·РЅР°РµС‚Рµ:</h2>
+                    </div>
+                    
+                    <div class="article-cards mobile-optimized">
+                        <div class="article-card mobile-card">
+                            <div class="article-icon ai-icon">
+                                <img src="../image/ai-icon.svg" alt="AI Icon" onerror="this.src='https://img.icons8.com/fluency/48/artificial-intelligence.png'">
+                                <span class="icon-label">РљРµР№СЃ</span>
+                            </div>
+                            <h3 class="article-title">РљР°Рє РІРЅРµРґСЂРµРЅРёРµ РёСЃРєСѓСЃСЃС‚РІРµРЅРЅРѕРіРѕ РёРЅС‚РµР»Р»РµРєС‚Р° РІ РєРѕРјРїР°РЅРёСЋ "Landal" СЃРЅРёР·РёР»Рѕ СЃС‚РѕРёРјРѕСЃС‚СЊ РєРІР°Р»РёС„РёС†РёСЂРѕРІР°РЅРЅРѕРіРѕ Р»РёРґР° РЅР° 50% (СЃ 800в‚Ѕ РґРѕ 400в‚Ѕ)</h3>
+                            <div class="article-separator"></div>
+                            <button class="read-more read-button">РџСЂРѕС‡РёС‚Р°С‚СЊ <i class="fas fa-arrow-right"></i></button>
+                        </div>
+                        
+                        <div class="article-card mobile-card">
+                            <div class="article-icon support-icon">
+                                <img src="../image/support-icon.svg" alt="Support Icon" onerror="this.src='https://img.icons8.com/fluency/48/headset.png'">
+                                <span class="icon-label">РўРµС…РїРѕРґРґРµСЂР¶РєР°</span>
+                            </div>
+                            <h3 class="article-title">РљР°Рє РЅР°С€Р° РІРёСЂС‚СѓР°Р»СЊРЅР°СЏ С‚РµС…РїРѕРґРґРµСЂР¶РєР° РёР·Р±Р°РІРёР»Р° СЂРѕР·РЅРёС‡РЅСѓСЋ СЃРµС‚СЊ РѕС‚ 80% С‚РµС…РЅРёС‡РµСЃРєРёС… РїСЂРѕР±Р»РµРј РІ 50 С‚РѕСЂРіРѕРІС‹С… С‚РѕС‡РєР°С…, СЃРѕРєСЂР°С‚РёРІ РІСЂРµРјСЏ СЂРµС€РµРЅРёСЏ РЅР° 90%</h3>
+                            <div class="article-separator"></div>
+                            <button class="read-more read-button">РџСЂРѕС‡РёС‚Р°С‚СЊ <i class="fas fa-arrow-right"></i></button>
+                        </div>
+                        
+                        <div class="article-card mobile-card">
+                            <div class="article-icon legal-icon">
+                                <img src="../image/legal-icon.svg" alt="Legal Icon" onerror="this.src='https://img.icons8.com/fluency/48/law.png'">
+                                <span class="icon-label">Р®СЂРёРґРёС‡РµСЃРєРёРµ СѓСЃР»СѓРіРё</span>
+                            </div>
+                            <h3 class="article-title">РљР°Рє РІ СЋСЂРёРґРёС‡РµСЃРєРѕР№ С„РёСЂРјРµ РїРѕ Р±Р°РЅРєСЂРѕС‚СЃС‚РІСѓ РјС‹ СѓРІРµР»РёС‡РёР»Рё РїСЂРёР±С‹Р»СЊ РЅР° 34%, РІС‹СЃРІРѕР±РѕРґРёРІ СЋСЂРёСЃС‚РѕРІ РѕС‚ РїРµСЂРІРёС‡РЅС‹С… РєРѕРЅСЃСѓР»СЊС‚Р°С†РёР№</h3>
+                            <div class="article-separator"></div>
+                            <button class="read-more read-button">РџСЂРѕС‡РёС‚Р°С‚СЊ <i class="fas fa-arrow-right"></i></button>
+                        </div>
+                        
+                        <div class="article-card mobile-card">
+                            <div class="article-icon finance-icon">
+                                <img src="../image/finance-icon.svg" alt="Finance Icon" onerror="this.src='https://img.icons8.com/fluency/48/money-bag.png'">
+                                <span class="icon-label">Р­РєРѕРЅРѕРјРёСЏ</span>
+                            </div>
+                            <h3 class="article-title">РџРѕС‡РµРјСѓ РєР»РёРµРЅС‚С‹ СЌРєРѕРЅРѕРјСЏС‚ РѕС‚ 30% РґРѕ 45% РЅР° Р·Р°СЂРїР»Р°С‚Р°С… СѓР¶Рµ РІ РїРµСЂРІС‹Р№ РјРµСЃСЏС† РІРЅРµРґСЂРµРЅРёСЏ РІРёСЂС‚СѓР°Р»СЊРЅС‹С… СЃРѕС‚СЂСѓРґРЅРёРєРѕРІ</h3>
+                            <div class="article-separator"></div>
+                            <button class="read-more read-button">РџСЂРѕС‡РёС‚Р°С‚СЊ <i class="fas fa-arrow-right"></i></button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="operations">
+                <div class="container">
+                    <div class="text-center">
+                        <h2>РљРђРљ РЇ Р РђР—РЄР•Р‘РђР› РћРџР•Р РђР¦РРћРќРљРЈ</h2>
+                        <p>Р Р°Р±РѕС‚Р°РµС‚ РґР»СЏ С‚РµС…, РєРѕРјСѓ РЅР°РґРѕРµР»Рѕ Р±С‹С‚СЊ СЂР°Р±РѕРј СЃРІРѕРµРіРѕ Р±РёР·РЅРµСЃР°</p>
+                    </div>
+                    
+                    <div class="solutions-simple">
+                        <div class="solution-simple">
+                            <div class="solution-icon"><i class="fas fa-user-tie"></i></div>
+                            <h3>Р’РР РўРЈРђР›Р¬РќР«Р™ РњР•РќР•Р”Р–Р•Р  РџР РћР”РђР–</h3>
+                            <p>РљРІР°Р»РёС„РёС†РёСЂСѓРµС‚ Р»РёРґС‹, РѕС‚РІРµС‡Р°РµС‚ РЅР° РІРѕРїСЂРѕСЃС‹ Рё РєРѕРЅРІРµСЂС‚РёС‚ РїРѕСЃРµС‚РёС‚РµР»РµР№ РІ РєР»РёРµРЅС‚РѕРІ РєСЂСѓРіР»РѕСЃСѓС‚РѕС‡РЅРѕ. РќРµ Р±РѕР»РµРµС‚. РќРµ РЅРѕРµС‚. РќРµ РїСЂРѕСЃРёС‚ РїРѕРІС‹С€РµРЅРёСЏ.</p>
+                            <button class="simple-button"><i class="fas fa-robot"></i> РџРћР©РЈРџРђРўР¬ Р‘РћРўРђ</button>
+                        </div>
+                        
+                        <div class="solution-simple">
+                            <div class="solution-icon"><i class="fas fa-graduation-cap"></i></div>
+                            <h3>Р’РР РўРЈРђР›Р¬РќР«Р™ РўР Р•РќР•Р  Р РўР•РҐРџРћР”Р”Р•Р Р–РљРђ</h3>
+                            <p>РќРѕРІРёС‡РєРё Р±РѕР»СЊС€Рµ РЅРµ Р·Р°РґР°Р»Р±СЊРІР°СЋС‚ РІРѕРїСЂРѕСЃР°РјРё, С‚РµС…РЅРёС‡РµСЃРєРёРµ РїСЂРѕР±Р»РµРјС‹ СЂРµС€Р°СЋС‚СЃСЏ РЅР° СЂР°Р·-РґРІР° Р±РµР· С‚РІРѕРµРіРѕ СѓС‡Р°СЃС‚РёСЏ:</p>
+                            <button class="simple-button"><i class="fas fa-headset"></i> РџРћР—РќРђРљРћРњРРўР¬РЎРЇ РЎ Р‘РћРўРћРњ</button>
+                        </div>
+                        
+                        <div class="solution-simple">
+                            <div class="solution-icon"><i class="fas fa-cogs"></i></div>
+                            <h3>РњРЈР›Р¬РўРРђР“Р•РќРўРќРђРЇ РЎРРЎРўР•РњРђ</h3>
+                            <p>РџРѕР»РЅРѕСЃС‚СЊСЋ Р°РІС‚РѕРјР°С‚РёР·РёСЂСѓРµС‚ Р·Р°РєР°Р·С‹ Р±СѓРєРµС‚РѕРІ РёР»Рё РїРѕРґР°СЂРєРѕРІ, СЃРѕР±РёСЂР°СЏ РІСЃРµ РґР°РЅРЅС‹Рµ Р±РµР· С‚РІРѕРµРіРѕ СѓС‡Р°СЃС‚РёСЏ. РўС‹ С‚РѕР»СЊРєРѕ Р±Р°Р±РєРё СЃС‡РёС‚Р°РµС€СЊ.</p>
+                            <button class="simple-button"><i class="fas fa-brain"></i> Р—РђР¦Р•РќРРўР¬</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="money-talk">
+                <div class="container">
+                    <h2>РџРћРљРђ Р’РЎР• Р”Р РћР§РђРў РќРђ РР”Р•Р® РР, РњР« РЈР–Р• Р”Р•Р›РђР•Рњ Р”Р•РќР¬Р“Р</h2>
+                    <p>Р‘СЂР°С‚РІР°, РјРµРЅСЏ Р·Р°РµР±Р°Р»Рё СЌС‚Рё СЂР°Р·РіРѕРІРѕСЂС‹ РїСЂРѕ "РїРѕС‚РµРЅС†РёР°Р» РР РІ Р±СѓРґСѓС‰РµРј". РљР°РєРѕРµ, РЅР°С…СѓР№, Р±СѓРґСѓС‰РµРµ? РЈ РјРѕРёС… РєР»РёРµРЅС‚РѕРІ СЌС‚Рѕ СѓР¶Рµ СЂР°Р±РѕС‚Р°РµС‚ Рё РїСЂРёРЅРѕСЃРёС‚ СЂРµР°Р»СЊРЅС‹Рµ Р±Р°Р±РєРё. РџРѕРєР° РґСЂСѓРіРёРµ С‡РµС€СѓС‚ СЏР№С†Р° Рё Р·Р°С‡РёС‚С‹РІР°СЋС‚СЃСЏ РЅРѕРІРѕСЃС‚СЏРјРё РїСЂРѕ ChatGPT, РјРѕРё РєР»РёРµРЅС‚С‹ СѓР¶Рµ СЃРІР°Р»РёР»Рё РёР· РѕРїРµСЂР°С†РёРѕРЅРєРё.</p>
+                    <p>Р’ 2025 РіРѕРґСѓ РѕРґРёРЅ РІРёСЂС‚СѓР°Р»СЊРЅС‹Р№ СЃРѕС‚СЂСѓРґРЅРёРє Р·Р°РјРµРЅСЏРµС‚ РґРѕ 6 Р¶РёРІС‹С… С‚РµР» РІ РїРѕРґРґРµСЂР¶РєРµ, РїСЂРѕРґР°Р¶Р°С… Рё РєРѕРЅС‚СЂРѕР»Рµ РєР°С‡РµСЃС‚РІР°. Р РЅРµ РїСЂРѕСЃРёС‚ РїРѕРІС‹С€РµРЅРёСЏ Р·Р°СЂРїР»Р°С‚С‹ РєР°Р¶РґС‹Р№ РєРІР°СЂС‚Р°Р».</p>
+                    <p>Р РµР·СѓР»СЊС‚Р°С‚ РјРѕРµР№ СЂР°Р±РѕС‚С‹ вЂ” РЅРµ РєР°РєР°СЏ-С‚Рѕ С‚Р°Рј РѕС‡РµСЂРµРґРЅР°СЏ "Р°РІС‚РѕРјР°С‚РёР·Р°С†РёСЏ", Р° РїРѕР»РЅС‹Р№ СЂР°Р·РІРѕСЂРѕС‚ Р±РёР·РЅРµСЃ-РјРѕРґРµР»Рё. Р”СѓРјР°Р»Рё, С‡С‚Рѕ Р±РµР· РІР°СЃ РІСЃС‘ СЂР°Р·РІР°Р»РёС‚СЃСЏ? РҐСѓР№ С‚Р°Рј РїР»Р°РІР°Р»!</p>
+                    
+                    <button class="simple-button"><i class="fas fa-calendar-check"></i> Р—РђР‘РРўР¬ РњР•РЎРўРћ РќРђ Р­РљРЎРљРЈР РЎРР®</button>
+                    
+                    <ul class="simple-list">
+                        <li>РўРµС…РЅРѕР»РѕРіРёРё 2026 РіРѕРґР° вЂ” РїРѕРєР° РІР°С€Рё РєРѕРЅРєСѓСЂРµРЅС‚С‹ С‚РѕР»СЊРєРѕ СЃС‚Р°С‚СЊРё С‡РёС‚Р°СЋС‚, РІС‹ СѓР¶Рµ РІРЅРµРґСЂРёР»Рё</li>
+                        <li>РўРѕР»СЊРєРѕ РґР»СЏ РѕРґРЅРѕР№ РєРѕРјРїР°РЅРёРё РІ РЅРёС€Рµ вЂ” С‡С‚РѕР±С‹ РІС‹, Р° РЅРµ РІР°С€ РєРѕРЅРєСѓСЂРµРЅС‚, Р±С‹Р»Рё С‚РµРј, РєС‚Рѕ РІСЃРµС… РЅР°РіРёР±Р°РµС‚</li>
+                        <li>Р“Р°СЂР°РЅС‚РёСЂРѕРІР°РЅРЅРѕ СЂРµР¶РµРј Р¤РћРў РЅР° 30-45% РІ РїРµСЂРІС‹Р№ Р¶Рµ РјРµСЃСЏС†, Р° РЅРµ "РєРѕРіРґР°-РЅРёР±СѓРґСЊ РїРѕС‚РѕРј"</li>
+                    </ul>
+                </div>
+            </section>
+
+            <section class="steps">
+                <div class="container">
+                    <div class="text-center">
+                        <h2>РћРў "РљРђРљРћР™ РџРР—Р”Р•Р¦" Р”Рћ "РћРҐРЈР•РќРќРћ Р РђР‘РћРўРђР•Рў" Р—Рђ 14 Р”РќР•Р™</h2>
+                        <p>5 С€Р°РіРѕРІ Рє СЃРІРѕР±РѕРґРµ РѕС‚ РµР±СѓС‡РµР№ РѕРїРµСЂР°С†РёРѕРЅРєРё</p>
+                    </div>
+                    
+                    <div class="steps-simple">
+                        <div class="step-simple">
+                            <div class="step-number">1</div>
+                            <div class="step-content-simple">
+                                <h3>Р­РљРЎРљРЈР РЎРРЇ Р Р”РРђР“РќРћРЎРўРРљРђ (1 РґРµРЅСЊ)</h3>
+                                <p>РџРѕРєР°Р·С‹РІР°СЋ СЂРµР°Р»СЊРЅСѓСЋ, Р±Р»СЏС‚СЊ, СЂР°Р±РѕС‚Сѓ С‚РµС…РЅРѕР»РѕРіРёРё РЅР° Р¶РёРІС‹С… РїСЂРёРјРµСЂР°С… Рё СЃРјРѕС‚СЂРёРј, РіРґРµ Сѓ РІР°СЃ Р±РѕР»РёС‚.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="step-simple">
+                            <div class="step-number">2</div>
+                            <div class="step-content-simple">
+                                <h3>Р”РћР“РћР’РћР  Р РћРџР›РђРўРђ (2-3 РґРЅСЏ)</h3>
+                                <p>РћР±СЃСѓР¶РґР°РµРј СЋСЂРёРґРёС‡РµСЃРєСѓСЋ С…СѓР№РЅСЋ, NDA, РїСЂРѕРІРѕРґРёРј РѕРїР»Р°С‚Сѓ. Р’СЃС‘ С‡С‘С‚РєРѕ Рё РїСЂРѕР·СЂР°С‡РЅРѕ.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="step-simple">
+                            <div class="step-number">3</div>
+                            <div class="step-content-simple">
+                                <h3>Р”Р•Р›РђР•Рњ РџР РћРўРћРўРРџ (5-7 РґРЅРµР№)</h3>
+                                <p>РЎРѕР·РґР°СЋ СЂР°Р±РѕС‡РµРіРѕ Р±РѕС‚Р° РєРѕРЅРєСЂРµС‚РЅРѕ РїРѕРґ РІР°С€Рё РїСЂРѕС†РµСЃСЃС‹. РќРµ С€Р°Р±Р»РѕРЅ, Р° СЂРµР°Р»СЊРЅРѕ РїРѕРґ РІР°СЃ.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="step-simple">
+                            <div class="step-number">4</div>
+                            <div class="step-content-simple">
+                                <h3>РўР•РЎРўРР РЈР•Рњ РџРћ-Р‘РћР•Р’РћРњРЈ (14 РґРЅРµР№)</h3>
+                                <p>РџРѕРґРєР»СЋС‡Р°РµРј РІРёСЂС‚СѓР°Р»СЊРЅРѕРіРѕ СЃРѕС‚СЂСѓРґРЅРёРєР° РєРѕ РІСЃРµРј РєР°РЅР°Р»Р°Рј Рё СѓС‡РёРј РµРіРѕ СЂР°Р±РѕС‚Р°С‚СЊ РёРјРµРЅРЅРѕ СЃ РІР°С€РёРј РїСЂРѕРґСѓРєС‚РѕРј.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="step-simple">
+                            <div class="step-number">5</div>
+                            <div class="step-content-simple">
+                                <h3>РњРђРЎРЁРўРђР‘РР РЈР•Рњ Р РџРћР”Р”Р•Р Р–РР’РђР•Рњ</h3>
+                                <p>Р Р°СЃС€РёСЂСЏРµРј С„СѓРЅРєС†РёРѕРЅР°Р» РЅР° РґСЂСѓРіРёРµ РѕС‚РґРµР»С‹. Р­РєРѕРЅРѕРјРёСЏ СЂР°СЃС‚С‘С‚ РґРѕ 150-200%. РљР°Р№С„СѓРµС‚Рµ.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="reasons">
+                <div class="container">
+                    <h2>РџРћР§Р•РњРЈ РќРђР”Рћ Р‘Р РђРўР¬ РЎР•Р™Р§РђРЎ, Рђ РќР• Р§Р•РЎРђРўР¬ Р Р•РџРЈ</h2>
+                    
+                    <div class="reasons-simple">
+                        <div class="reason-simple">
+                            <h3>РџРћРљРђ Р’Р« Р”РЈРњРђР•РўР•, РљРћРќРљРЈР Р•РќРўР« РЈР–Р• Р’РќР•Р”Р РЇР®Рў</h3>
+                            <p>Рљ 2026 РіРѕРґСѓ СЌС‚Рѕ Р±СѓРґРµС‚ СЃС‚Р°РЅРґР°СЂС‚ СЂС‹РЅРєР°, РЅРѕ С‚Рµ, РєС‚Рѕ Р·Р°С…РѕРґРёС‚ РїРµСЂРІС‹РјРё, СЃРЅРёРјР°СЋС‚ РІСЃРµ СЃР»РёРІРєРё</p>
+                        </div>
+                        
+                        <div class="reason-simple">
+                            <h3>РџРћРљРђ РљРћРќРљРЈР Р•РќРўР« РњРђРЎРўРЈР Р‘РР РЈР®Рў РќРђ РЎРўРђРўР¬Р РџР Рћ РР</h3>
+                            <p>Р’Р°С€ Р±РёР·РЅРµСЃ СѓР¶Рµ СЃРѕРєСЂР°С‰Р°РµС‚ СЂР°СЃС…РѕРґС‹ Рё СѓРІРµР»РёС‡РёРІР°РµС‚ РјР°СЂР¶Сѓ, РєР°Рє РљРћРќР§РµРЅС‹Р™</p>
+                        </div>
+                        
+                        <div class="reason-simple">
+                            <h3>РћРљРЈРџРђР•РњРћРЎРўР¬ РџРћР§РўР РњР“РќРћР’Р•РќРќРђРЇ</h3>
+                            <p>РЎСЂРµРґРЅРёР№ СЃСЂРѕРє РѕРєСѓРїР°РµРјРѕСЃС‚Рё вЂ” 17-21 РґРµРЅСЊ, РїРѕС‚РѕРј С‡РёСЃС‚С‹Р№ РїСЂРѕС„РёС‚. РљР°РєРѕР№ РµС‰Рµ Р±РёР·РЅРµСЃ РѕРєСѓРїР°РµС‚СЃСЏ С‚Р°Рє Р±С‹СЃС‚СЂРѕ?</p>
+                        </div>
+                        
+                        <div class="reason-simple">
+                            <h3>РЈРџР РђР’Р›РЇР™РўР• Р‘РР—РќР•РЎРћРњ, Рђ РќР• Р›Р®Р”Р¬РњР</h3>
+                            <p>Р’Р»Р°РґРµР»СЊС†С‹ СЌРєРѕРЅРѕРјСЏС‚ 37 С‡Р°СЃРѕРІ РІ РЅРµРґРµР»СЋ РЅР° РєРѕРЅС‚СЂРѕР»Рµ РёСЃРїРѕР»РЅРµРЅРёСЏ. РџСЂРµРґСЃС‚Р°РІСЊ, СЃРєРѕР»СЊРєРѕ РІСЂРµРјРµРЅРё РјРѕР¶РЅРѕ РїРѕС‚СЂР°С‚РёС‚СЊ РЅР° СЃРµР±СЏ РёР»Рё РјР°СЃС€С‚Р°Р±РёСЂРѕРІР°РЅРёРµ</p>
+                        </div>
+                        
+                        <div class="reason-simple">
+                            <h3>РЎРўРђРќРћР’РРўР•РЎР¬ РўР•Рњ, РљРўРћ Р’РЎР•РҐ РќРђР“РР‘РђР•Рў</h3>
+                            <p>РљРѕРјРїР°РЅРёРё, РєРѕС‚РѕСЂС‹Рµ РїРµСЂРІС‹РјРё РІРЅРµРґСЂСЏСЋС‚ РёРЅРЅРѕРІР°С†РёРё, СЂР°СЃС‚СѓС‚ РЅР° 37 % Р±С‹СЃС‚СЂРµРµ. Р­С‚Рѕ РЅРµ РјРѕРё РІС‹РґСѓРјРєРё, СЌС‚Рѕ С†РёС„СЂС‹, Р±СЂР°С‚Р°РЅ</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="testimonial">
+                <div class="container">
+                    <blockquote>
+                        "РџРѕСЃР»Рµ РІРЅРµРґСЂРµРЅРёСЏ РІРёСЂС‚СѓР°Р»СЊРЅРѕРіРѕ РєРѕРЅСЃСѓР»СЊС‚Р°РЅС‚Р° РјС‹ РїРµСЂРµСЃС‚Р°Р»Рё СЃР»РёРІР°С‚СЊ Р±Р°Р±РєРё вЂ” СЃС‚РѕРёРјРѕСЃС‚СЊ РєР»РёРµРЅС‚Р° СѓРїР°Р»Р° СЃ 80002 РґРѕ 16002 СЃ С‚Р°СЂРіРµС‚Р° Р’РєРѕРЅС‚Р°РєС‚Рµ, Рё РјС‹ РїРѕР»РЅРѕСЃС‚СЊСЋ Р°РІС‚РѕРјР°С‚РёР·РёСЂРѕРІР°Р»Рё РїРµСЂРІРёС‡РЅСѓСЋ РєРІР°Р»РёС„РёРєР°С†РёСЋ Р»РёРґРѕРІ. Р­С‚Рѕ РїСЂРѕСЃС‚Рѕ Р±Р»СЏС‚СЊ РІРѕР»С€РµР±СЃС‚РІРѕ"
+                        <cite>вЂ” РћР»РµРі, Р”РёСЂРµРєС‚РѕСЂ РїРѕ РјР°СЂРєРµС‚РёРЅРіСѓ "Landal"</cite>
+                    </blockquote>
+                </div>
+            </section>
+
+            <section class="final-cta">
+                <div class="container">
+                    <div class="text-center">
+                        <h2>Р’Р•Р РќР РЎР•Р‘Р• 37 Р§РђРЎРћР’ Р’ РќР•Р”Р•Р›Р®. РҐР’РђРўРРў Р–РРўР¬ Р’ РћРџР•Р РђР¦РРћРќРќРћРњ РђР”РЈ</h2>
+                        <p>Р—Р°РїРёС€РёСЃСЊ РЅР° СЌРєСЃРєСѓСЂСЃРёСЋ Рё РѕС…СѓРµР№ РѕС‚ С‚РѕРіРѕ, РєР°Рє РІРёСЂС‚СѓР°Р»СЊРЅС‹Рµ СЃРѕС‚СЂСѓРґРЅРёРєРё СѓР¶Рµ СЃРµР№С‡Р°СЃ РјРµРЅСЏСЋС‚ Р±РёР·РЅРµСЃ РІ С‚РІРѕРµР№ РЅРёС€Рµ</p>
+                        <p><strong>РџРµСЂРІС‹Рј 5 РєР»РёРµРЅС‚Р°Рј вЂ” Р±РµСЃРїР»Р°С‚РЅС‹Р№ Р°СѓРґРёС‚ РІСЃРµРіРѕ РІР°С€РµРіРѕ Р±РёР·РЅРµСЃ-РїРёР·РґРµС†Р° Рё РїРµСЂСЃРѕРЅР°Р»СЊРЅР°СЏ РґРѕСЂРѕР¶РЅР°СЏ РєР°СЂС‚Р° Р°РІС‚РѕРјР°С‚РёР·Р°С†РёРё (СЃС‚РѕРёРјРѕСЃС‚СЊ 50 С‚С‹СЃ.)</strong></p>
+                        
+                        <button class="simple-button"><i class="fas fa-bolt"></i> Р—РђР‘РРўР¬ РњР•РЎРўРћ РќРђ Р­РљРЎРљРЈР РЎРР (РѕСЃС‚Р°Р»РѕСЃСЊ 3)</button>
+                        
+                        <p class="limited-offer"><i class="fas fa-clock"></i> РљРѕР»РёС‡РµСЃС‚РІРѕ СЌРєСЃРєСѓСЂСЃРёР№ РѕРіСЂР°РЅРёС‡РµРЅРѕ: РѕСЃС‚Р°Р»РѕСЃСЊ 10 РјРµСЃС‚ РЅР° РјР°Р№, РЅРµ С‚РѕСЂРјРѕР·Рё</p>
+                    </div>
+                    
+                    <div class="founder-sign">
+                        <div class="founder-sign-content">
+                            <div class="founder-img-wrapper">
+                                <img src="../image/bogdan.jpg" alt="Р‘РѕРіРґР°РЅ Neuroimpulse" class="founder-img">
+                            </div>
+                            <h3>Р‘РѕРіРґР°РЅ Neuroimpulse</h3>
+                            <p>Р­РєСЃРїРµСЂС‚ РїРѕ РІС‹РІРѕРґСѓ Р±РёР·РЅРµСЃР° РёР· РѕРїРµСЂР°С†РёРѕРЅРєРё</p>
+                        </div>
+                        <div class="social-links">
+                            <a href="#"><i class="fab fa-telegram"></i> Telegram</a>
+                            <a href="#"><i class="fab fa-youtube"></i> YouTube</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+   
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const designSwitcher = document.getElementById('designSwitcher');
+            const designIcon = document.getElementById('designIcon');
+            const designText = document.getElementById('designText');
+            const smartDiv = document.querySelector('.smart-design');
+            const simpleDiv = document.querySelector('.simple-design');
+            const mobileNavToggle = document.getElementById('mobileNavToggle');
+            const businessNav = document.querySelector('.business-nav');
+
+            // Force smart design to be true if not previously set in localStorage
+            if (localStorage.getItem('isSmartDesign') === null) {
+                localStorage.setItem('isSmartDesign', 'true');
+            }
+            
+            let isSmart = localStorage.getItem('isSmartDesign') !== 'false';
+
+            function setDesign(smart) {
+                if (smart) {
+                    smartDiv.style.display = '';
+                    simpleDiv.style.display = 'none';
+                    designIcon.textContent = 'рџЋЁ';
+                    designText.textContent = 'Р§С‚Рѕ С‚Рѕ РЅР° РїСЂРѕСЃС‚РѕРј';
+                    document.body.classList.remove('simple-design'); // Ensure the body doesn't have simple-design class
+                } else {
+                    smartDiv.style.display = 'none';
+                    simpleDiv.style.display = '';
+                    designIcon.textContent = 'рџ“ќ';
+                    designText.textContent = 'Р§С‚Рѕ С‚Рѕ РЅР° СѓРјРЅРѕРј ';
+                    document.body.classList.add('simple-design'); // Add simple-design to body when in simple mode
+                }
+                localStorage.setItem('isSmartDesign', smart);
+            }
+
+            // Force smart design to be used initially
+            setDesign(true);
+
+            designSwitcher.addEventListener('click', function() {
+                isSmart = !isSmart;
+                setDesign(isSmart);
+            });
+
+            // РњРѕР±РёР»СЊРЅРѕРµ РјРµРЅСЋ
+            document.getElementById('mobileNavToggle').addEventListener('click', function() {
+                const nav = document.querySelector('.business-nav');
+                nav.classList.toggle('active');
+                
+                const icon = this.querySelector('i');
+                if (nav.classList.contains('active')) {
+                    icon.classList.remove('fa-bars');
+                    icon.classList.add('fa-times');
+                } else {
+                    icon.classList.remove('fa-times');
+                    icon.classList.add('fa-bars');
+                }
+            });
+
+            // РћРїСЂРµРґРµР»РµРЅРёРµ iOS-СѓСЃС‚СЂРѕР№СЃС‚РІ Рё РґРѕР±Р°РІР»РµРЅРёРµ СЃРїРµС†РёР°Р»СЊРЅРѕРіРѕ РєР»Р°СЃСЃР° РґР»СЏ СЃС‚РёР»РёР·Р°С†РёРё
+            const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream;
+            
+            if (isIOS) {
+                document.body.classList.add('ios-device');
+                
+                // РћРїСЂРµРґРµР»РµРЅРёРµ РјРѕРґРµР»Рё iPhone
+                const isIPhoneX = (window.screen.height >= 812 && window.screen.width >= 375) || 
+                                 (window.devicePixelRatio === 3 && window.screen.width === 390) ||  // iPhone 13 Pro
+                                 (window.devicePixelRatio === 3 && window.screen.width === 428);     // iPhone 13 Pro Max
+                
+                if (isIPhoneX) {
+                    document.body.classList.add('iphone-x');
+                }
+                
+                // Р РµС€РµРЅРёРµ РїСЂРѕР±Р»РµРјС‹ СЃ 100vh РЅР° iOS
+                function setIOSHeight() {
+                    const vh = window.innerHeight * 0.01;
+                    document.documentElement.style.setProperty('--vh', `${vh}px`);
+                    
+                    // Ensure hero section has correct position without height restrictions
+                    const heroSection = document.querySelector('.hero-with-photo');
+                    const header = document.querySelector('.business-header');
+                    const heroGlass = document.querySelector('.hero-glass');
+                    
+                    if (heroSection) {
+                        heroSection.style.height = 'auto';
+                        heroSection.style.maxHeight = 'none';
+                        heroSection.style.marginTop = '0';
+                        heroSection.style.overflow = 'visible';
+                    }
+                    
+                    if (header) {
+                        header.style.position = 'absolute';
+                        header.style.top = '0';
+                        header.style.width = '100%';
+                        header.style.zIndex = '1000';
+                    }
+                    
+                    if (heroGlass) {
+                        heroGlass.style.maxHeight = 'none';
+                        heroGlass.style.overflow = 'visible';
+                        heroGlass.style.overflowY = 'visible';
+                        heroGlass.style.height = 'auto';
+                    }
+                    
+                    // Adjust content container margin
+                    const content = document.querySelector('.content');
+                    if (content) {
+                        content.style.marginTop = '0';
+                    }
+                    
+                    // Ensure hero stats are properly displayed
+                    const heroStats = document.querySelector('.hero-stats');
+                    if (heroStats) {
+                        heroStats.style.marginTop = '20px';
+                        heroStats.style.marginBottom = '20px';
+                    }
+                }
+                
+                // РЈСЃС‚Р°РЅРѕРІРєР° РІС‹СЃРѕС‚С‹ РїСЂРё Р·Р°РіСЂСѓР·РєРµ
+                setIOSHeight();
+                
+                // РћР±РЅРѕРІР»РµРЅРёРµ РІС‹СЃРѕС‚С‹ РїСЂРё РёР·РјРµРЅРµРЅРёРё СЂР°Р·РјРµСЂР° РёР»Рё РѕСЂРёРµРЅС‚Р°С†РёРё
+                window.addEventListener('resize', setIOSHeight);
+                window.addEventListener('orientationchange', function() {
+                    // Delay to ensure correct values after rotation
+                    setTimeout(setIOSHeight, 300);
+                });
+            }
+        });
+    </script>
+</body>
+</html>
+
