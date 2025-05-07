@@ -87,17 +87,20 @@
             padding-top: max(12px, env(safe-area-inset-top));
             padding-left: max(16px, env(safe-area-inset-left));
             padding-right: max(16px, env(safe-area-inset-right));
+            position: absolute;
+            z-index: 1000;
+            width: 100%;
         }
 
         .content {
-            margin-top: calc(80px + env(safe-area-inset-top));
-            padding-bottom: env(safe-area-inset-bottom);
+            margin-top: 0;
         }
 
         .hero-with-photo {
             padding-top: env(safe-area-inset-top);
-            height: calc(100vh - env(safe-area-inset-top));
-            min-height: calc(100vh - env(safe-area-inset-top));
+            min-height: 100vh;
+            min-height: -webkit-fill-available;
+            margin-top: 0;
         }
         
         /* Fix for content being cut off at the bottom */
@@ -180,27 +183,49 @@
            only screen and (device-width: 393px) and (device-height: 852px),
            only screen and (device-width: 375px) and (device-height: 812px) {
         
+        /* Remove top margin from content container */
+        .content {
+            margin-top: 0;
+        }
+        
+        /* Position header absolutely at the top */
+        .business-header {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            background: rgba(30, 41, 59, 0.8);
+            padding-top: env(safe-area-inset-top);
+            height: auto;
+        }
+        
+        /* Make hero section start from top */
         .hero-with-photo {
             height: 100vh;
             height: -webkit-fill-available;
             min-height: -webkit-fill-available;
             max-height: none !important;
-            padding-top: calc(env(safe-area-inset-top) + 5px);
+            padding-top: env(safe-area-inset-top);
+            margin-top: 0;
+        }
+        
+        /* Adjust hero content to account for header */
+        .hero-content {
+            padding-top: 60px;
         }
         
         .hero-glass {
             max-height: calc(100vh - env(safe-area-inset-top) - env(safe-area-inset-bottom));
             overflow-y: auto;
             -webkit-overflow-scrolling: touch;
+            padding-top: 10px;
         }
         
-        .business-header {
-            padding-top: env(safe-area-inset-top);
-            height: auto;
-        }
-        
-        .content {
-            margin-top: calc(60px + env(safe-area-inset-top));
+        /* Fix for smart-design container */
+        .smart-design {
+            margin-top: 0;
+            padding-top: 0;
         }
     }
 }

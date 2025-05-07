@@ -4974,15 +4974,32 @@ img {
 /* iPhone 13 Pro and Pro Max fix */
 @media only screen and (device-width: 390px) and (device-height: 844px),
        only screen and (device-width: 428px) and (device-height: 926px) {
+    .content {
+        margin-top: 0;
+    }
+    
     .hero-with-photo {
         min-height: 100vh;
         min-height: -webkit-fill-available;
+        padding-top: calc(env(safe-area-inset-top));
         padding-bottom: env(safe-area-inset-bottom);
+        margin-top: 0;
+    }
+    
+    .business-header {
+        position: absolute;
+        background: rgba(30, 41, 59, 0.8);
+        backdrop-filter: blur(12px);
+        -webkit-backdrop-filter: blur(12px);
+        z-index: 1000;
+        padding-top: env(safe-area-inset-top);
+        height: auto;
     }
     
     .hero-glass {
         max-height: none;
         padding-bottom: 20px;
+        margin-top: 50px;
     }
     
     .hero-glass h1 {
@@ -4996,17 +5013,8 @@ img {
         gap: 15px;
     }
     
-    .content {
-        margin-top: calc(60px + env(safe-area-inset-top));
-    }
-    
     .article-cards {
         gap: 15px;
-    }
-    
-    .business-header {
-        height: auto;
-        padding-top: env(safe-area-inset-top);
     }
 }
 
