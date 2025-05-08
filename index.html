@@ -57,7 +57,7 @@
                         <h1>ДЛЯ ПРЕДПРИНИМАТЕЛЕЙ, КОТОРЫЕ ХОТЯТ ВЫЙТИ ИЗ ОПЕРАЦИОНКИ И СНИЗИТЬ СТОИМОСТЬ ЛИДА в 3-5 раз <br>за 2 месяца</h1>
                         <p>Подпишитесь на мой телеграм-канал и узнайте:</p>
                         <p class="hero-subtitle"><b>«Как я снизил операционную нагрузку на 80% и помог клиентам заработать свыше 10 миллионов рублей с помощью виртуальных сотрудников на базе ИИ»</b></p>
-                        <a href="#" class="cta cta-primary">ПОСМОТРЕТЬ КЕЙСЫ</a>
+                        <a href="#learn-section" class="cta cta-primary">ПОСМОТРЕТЬ КЕЙСЫ</a>
                         <div class="hero-stats">
                             <div class="stat-item">
                                 <span class="stat-number">80%</span>
@@ -77,7 +77,7 @@
                 </div>
             </section>
 
-            <section class="learn">
+            <section class="learn" id="learn-section">
                 <div class="container">
                     <div class="section-header">
                         <span class="section-badge">Результаты</span>
@@ -493,7 +493,7 @@
                     <h1>ДЛЯ ПРЕДПРИНИМАТЕЛЕЙ, КОТОРЫЕ ЗАЕБАЛИСЬ ТОНУТЬ В ОПЕРАЦИОНКЕ И СЛИВАТЬ БАБКИ НА ЛИДГЕН</h1>
                     <p>Залетай в мой телеграм-канал и узнай:</p>
                     <p class="hero-subtitle"><b>«Как я забил хуй на 80% рутины и помог клиентам срубить свыше 10 лямов с помощью виртуальных ботов на ИИ»</b></p>
-                    <a href="#" class="simple-button"><i class="fas fa-rocket"></i> ГЛЯНЬ КЕЙСЫ</a>
+                    <a href="#operations-section" class="simple-button"><i class="fas fa-rocket"></i> ГЛЯНЬ КЕЙСЫ</a>
                     
                     <div class="founder-block">
                         <div class="founder-img-wrapper">
@@ -509,7 +509,7 @@
 
            
 
-            <section class="operations">
+            <section class="operations" id="operations-section">
                 <div class="container">
                     <div class="text-center">
                         <h2>КАК Я РАЗЪЕБАЛ ОПЕРАЦИОНКУ</h2>
@@ -714,6 +714,28 @@
                 }
                 localStorage.setItem('isSmartDesign', smart);
             }
+
+            // Add smooth scrolling for anchor links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    
+                    const targetId = this.getAttribute('href');
+                    if (targetId === '#') return;
+                    
+                    const targetElement = document.querySelector(targetId);
+                    if (targetElement) {
+                        const headerOffset = 70; // Adjust for fixed header if needed
+                        const elementPosition = targetElement.getBoundingClientRect().top;
+                        const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+                        
+                        window.scrollTo({
+                            top: offsetPosition,
+                            behavior: 'smooth'
+                        });
+                    }
+                });
+            });
 
             // Force smart design to be used initially
             setDesign(true);
