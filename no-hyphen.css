@@ -1,0 +1,40 @@
+/* 
+ * Global CSS rules to prevent word hyphenation 
+ * This ensures that words move to the next line as whole units instead of being split with hyphens
+ */
+
+* {
+    /* Prevent hyphenation across all elements */
+    -webkit-hyphens: none !important;
+    -ms-hyphens: none !important;
+    hyphens: none !important;
+    
+    /* Ensure proper word breaking behavior */
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    word-break: normal;
+    -ms-word-break: normal;
+}
+
+/* Specific targeting for text elements */
+p, h1, h2, h3, h4, h5, h6, a, span, li, div, button {
+    /* Extra protection for text elements */
+    -webkit-hyphens: none !important;
+    -ms-hyphens: none !important;
+    hyphens: none !important;
+    word-break: normal !important;
+}
+
+/* Support for older browsers */
+@-moz-document url-prefix() {
+    * {
+        hyphens: none !important;
+    }
+}
+
+/* Webkit browsers specific fix */
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+    * {
+        -webkit-hyphens: none !important;
+    }
+} 

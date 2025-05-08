@@ -169,11 +169,12 @@
     p, h1, h2, h3, h4, h5, h6, a, span, li {
         overflow-wrap: break-word;
         word-wrap: break-word;
-        -ms-word-break: break-all;
-        word-break: break-word;
-        -webkit-hyphens: auto;
-        -ms-hyphens: auto;
-        hyphens: auto;
+        -ms-word-break: normal;
+        word-break: normal;
+        -webkit-hyphens: none;
+        -ms-hyphens: none;
+        hyphens: none;
+        white-space: normal;
     }
     
     /* Fix for iPhone 13 Pro and newer models with notch */
