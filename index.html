@@ -796,6 +796,18 @@
                         heroStats.style.marginTop = '20px';
                         heroStats.style.marginBottom = '20px';
                     }
+                    
+                    // Fix for links not working on iOS
+                    const links = document.querySelectorAll('a');
+                    links.forEach(link => {
+                        link.addEventListener('touchend', function(e) {
+                            e.preventDefault();
+                            const href = this.getAttribute('href');
+                            if (href && href !== '#') {
+                                window.location.href = href;
+                            }
+                        });
+                    });
                 }
                 
                 // Установка высоты при загрузке
