@@ -1926,9 +1926,8 @@ section::before {
     height: 200px;
     border-radius: 50%;
     object-fit: cover;
-    border: 4px solid var(--primary-color);
     box-shadow: 0 8px 24px rgba(99, 102, 241, 0.3);
-    }
+}
 
 .founder-info-large {
     flex: 1;
@@ -2053,27 +2052,16 @@ img {
 .founder-avatar,
 .testimonial-avatar,
 .founder-avatar-large {
-    border: 3px solid transparent;
-    background: 
-        linear-gradient(var(--glass-bg), var(--glass-bg)),
-        var(--gradient-primary);
-    background-clip: padding-box, border-box;
-    background-origin: padding-box, border-box;
-    box-shadow: 
-        0 10px 20px rgba(0, 0, 0, 0.2),
-        0 0 0 3px rgba(99, 102, 241, 0.1),
-        0 0 20px rgba(99, 102, 241, 0.4);
+    border: 4px solid var(--primary-color);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
     transition: all 0.3s ease;
-    }
+}
 
 .founder-avatar:hover,
 .testimonial-avatar:hover,
 .founder-avatar-large:hover {
     transform: translateY(-5px) scale(1.03);
-    box-shadow: 
-        0 15px 30px rgba(0, 0, 0, 0.3),
-        0 0 0 4px rgba(99, 102, 241, 0.2),
-        0 0 30px rgba(99, 102, 241, 0.6);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
 }
 
 /* CTA Section Image */
@@ -4433,11 +4421,13 @@ img {
 
 /* Make founder image in smart design circular too */
 .founder-avatar-large-wrapper {
+    position: relative;
     width: 200px;
     height: 200px;
     border-radius: 50%;
     overflow: hidden;
-    position: relative;
+    flex-shrink: 0;
+    background: var(--primary-color);
     border: 4px solid var(--primary-color);
     box-shadow: 0 8px 24px rgba(99, 102, 241, 0.3);
 }

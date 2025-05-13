@@ -468,7 +468,7 @@
                     <div class="final-cta-block">
                         <h2>Готовы вывести бизнес на новый уровень?</h2>
                         <p>Запишитесь на бесплатную консультацию и получите персональную стратегию автоматизации.</p>
-                        <form id="consultation-form" class="consultation-form" action="https://t.me/annya_ai" method="get">
+                        <form id="consultation-form" class="consultation-form">
                             <div class="form-group">
                                 <input type="text" name="name" placeholder="Ваше имя" required>
                             </div>
@@ -478,7 +478,7 @@
                             <div class="form-group">
                                 <input type="text" name="telegram" placeholder="Ваш ник в Telegram" required>
                             </div>
-                            <a href="https://t.me/annya_ai" class="cta cta-primary cta-large">Забронировать время консультации</a>
+                            <button type="submit" class="cta cta-primary cta-large">Забронировать время консультации</button>
                            
                         </form>
                     </div>
@@ -819,8 +819,46 @@
                         heroStats.style.marginBottom = '20px';
                     }
                     
+                    // Fix horizontal overflow issues
+                    document.body.style.width = '100%';
+                    document.body.style.maxWidth = '100%';
+                    document.body.style.overflowX = 'hidden';
+                    
+                    document.querySelectorAll('.content, .smart-design, .simple-design, section, .container').forEach(el => {
+                        el.style.width = '100%';
+                        el.style.maxWidth = '100%';
+                        el.style.overflowX = 'hidden';
+                        el.style.boxSizing = 'border-box';
+                    });
+                    
+                    // Fix unwanted redirects to 2meetup
+                    document.querySelectorAll('a[href="https://2meetup.in/company/neuroimpuls"]').forEach(link => {
+                        // Remove existing event listeners
+                        const newLink = link.cloneNode(true);
+                        link.parentNode.replaceChild(newLink, link);
+                        
+                        // Add click-only functionality
+                        newLink.addEventListener('click', function(e) {
+                            window.location.href = this.getAttribute('href');
+                        });
+                        
+                        // Prevent touch events from triggering navigation
+                        newLink.addEventListener('touchstart', function(e) {
+                            e.stopPropagation();
+                        });
+                        
+                        newLink.addEventListener('touchend', function(e) {
+                            e.preventDefault();
+                            e.stopPropagation();
+                            // Only navigate on deliberate tap (not accidental)
+                            if (e.target === this || e.target.parentNode === this) {
+                                window.location.href = this.getAttribute('href');
+                            }
+                        });
+                    });
+                    
                     // Fix for links not working on iOS
-                    const links = document.querySelectorAll('a');
+                    const links = document.querySelectorAll('a:not([href="https://2meetup.in/company/neuroimpuls"])');
                     links.forEach(link => {
                         link.addEventListener('touchend', function(e) {
                             e.preventDefault();
@@ -840,6 +878,58 @@
                 window.addEventListener('orientationchange', function() {
                     // Delay to ensure correct values after rotation
                     setTimeout(setIOSHeight, 300);
+                });
+            }
+        });
+
+        // Telegram form submission handler
+        document.addEventListener('DOMContentLoaded', function() {
+            const consultationForm = document.getElementById('consultation-form');
+            if (consultationForm) {
+                consultationForm.addEventListener('submit', function(e) {
+                    e.preventDefault();
+                    
+                    const name = consultationForm.querySelector('input[name="name"]').value;
+                    const phone = consultationForm.querySelector('input[name="phone"]').value;
+                    const telegram = consultationForm.querySelector('input[name="telegram"]').value;
+                    
+                    // Replace with your actual Telegram bot token
+                    const botToken = '7672901413:AAHd0SfBJC3HmwwYxhU_Dwtjzch-cl8GwgE';
+                    
+                    // Replace with your channel username or ID (format: @channelname or -100xxxxxxxxxx)
+                    const chatId = '-1002568274832';
+                    
+                    // Format message for Telegram
+                    const message = `📝 Новая заявка на консультацию!\n\n👤 Имя: ${name}\n📱 Телефон: ${phone}\n💬 Telegram: ${telegram}`;
+                    
+                    // Send to Telegram
+                    fetch(`https://api.telegram.org/bot${botToken}/sendMessage`, {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/json',
+                        },
+                        body: JSON.stringify({
+                            chat_id: chatId,
+                            text: message,
+                            parse_mode: 'HTML'
+                        })
+                    })
+                    .then(response => response.json())
+                    .then(data => {
+                        if (data.ok) {
+                            // Show success message
+                            alert('Спасибо! Ваша заявка отправлена. Мы свяжемся с вами в ближайшее время.');
+                            consultationForm.reset();
+                        } else {
+                            // Show error message
+                            alert('Произошла ошибка при отправке заявки. Пожалуйста, попробуйте позже или свяжитесь с нами напрямую.');
+                            console.error('Telegram API error:', data);
+                        }
+                    })
+                    .catch(error => {
+                        alert('Произошла ошибка при отправке заявки. Пожалуйста, попробуйте позже или свяжитесь с нами напрямую.');
+                        console.error('Error sending to Telegram:', error);
+                    });
                 });
             }
         });
