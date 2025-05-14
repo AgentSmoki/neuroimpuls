@@ -152,7 +152,7 @@
                             <div class="solution-icon">
                                 <i class="fas fa-graduation-cap"></i>
                             </div>
-                            <h3>ВИРТУАЛЬНЫЙ ТРЕНЕР <br>ПЕРСОНАЛА и ТЕХ.ПОДДЕРЖКА</h3>
+                            <h3>ВИРТУАЛЬНЫЙ ТРЕНЕР ДЛЯ<br>ПЕРСОНАЛА и Тех.ПОДДЕРЖКА</h3>
                             <p>Сокращает время адаптации новых сотрудников и рассказывает как решить технические проблемы</p>
                             <div class="solution-features">
                                 <span class="feature">Обучение персонала</span>
@@ -680,8 +680,24 @@
             </section>
         </div>
     </main>
-   
+    <!-- Yandex.Metrika counter -->
+<script type="text/javascript" >
+    (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+    m[i].l=1*new Date();
+    for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+    k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+    (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+ 
+    ym(101761947, "init", {
+         clickmap:true,
+         trackLinks:true,
+         accurateTrackBounce:true
+    });
+ </script>
+ <noscript><div><img src="https://mc.yandex.ru/watch/101761947" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+ <!-- /Yandex.Metrika counter -->
     <script>
+        
         document.addEventListener('DOMContentLoaded', function() {
             const designSwitcher = document.getElementById('designSwitcher');
             const designIcon = document.getElementById('designIcon');
@@ -702,7 +718,7 @@
                 if (smart) {
                     smartDiv.style.display = '';
                     simpleDiv.style.display = 'none';
-                    designIcon.textContent = '🎨';
+                    designIcon.textContent = '🎨    ';
                     designText.textContent = 'Что то на простом';
                     document.body.classList.remove('simple-design'); // Ensure the body doesn't have simple-design class
                 } else {

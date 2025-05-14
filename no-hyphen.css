@@ -25,6 +25,100 @@ p, h1, h2, h3, h4, h5, h6, a, span, li, div, button {
     word-break: normal !important;
 }
 
+/* Prevent orphaned words */
+p, h1, h2, h3, h4, h5, h6 {
+    orphans: 3 !important;
+    widows: 3 !important;
+}
+
+/* Improved line height for headings to make them more compact */
+.solution-card h3 {
+    line-height: 1.2 !important;
+    margin-bottom: 1rem !important;
+}
+
+/* Fix for solution card headings to prevent single letter breaks */
+.solution-card h3 {
+    text-wrap: balance !important;
+    white-space: normal !important;
+    overflow: visible !important;
+}
+
+/* Special handling for the third card with "МУЛЬТИАГЕНТНАЯ СИСТЕМА" heading */
+.solutions-grid .solution-card:nth-child(3) h3 {
+    letter-spacing: -0.02em !important;
+    word-spacing: -0.05em !important;
+}
+
+/* Fix for the second solution card with long heading */
+.solutions-grid .solution-card:nth-child(2) h3 {
+    letter-spacing: -0.02em !important;
+    font-size: calc(1.8rem - 0.1rem) !important;
+}
+
+/* Ensure solution cards have proper height and text doesn't get cut off */
+.solution-card {
+    height: auto !important;
+    min-height: 0 !important;
+    display: flex !important;
+    flex-direction: column !important;
+}
+
+.solution-features {
+    margin-top: auto !important;
+}
+
+.solution-card p {
+    flex-grow: 1 !important;
+    margin-bottom: 1rem !important;
+}
+
+/* Fix for the hover animation on the left button (#designSwitcher) */
+#designSwitcher, button[aria-label="Сменить дизайн"] {
+    overflow: hidden !important;
+    position: relative !important;
+    transition: all 0.3s ease !important;
+}
+
+#designSwitcher::before, button[aria-label="Сменить дизайн"]::before {
+    content: '' !important;
+    position: absolute !important;
+    top: 0 !important;
+    left: -100% !important;
+    width: 100% !important;
+    height: 100% !important;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent) !important;
+    transition: left 0.5s ease !important;
+}
+
+#designSwitcher:hover::before, button[aria-label="Сменить дизайн"]:hover::before {
+    left: 100% !important;
+}
+
+/* Fix for the underline on the navigation links */
+.business-nav a::after {
+    width: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
+    margin: 0 auto !important;
+    height: 2px !important;
+    content: '' !important;
+    position: absolute !important;
+    bottom: 0 !important;
+    background: currentColor !important;
+    transition: width 0.3s ease !important;
+    transform: none !important;
+    border-radius: 4px !important;
+}
+
+.business-nav a.active::after, 
+.business-nav a:hover::after {
+    width: calc(100% - 32px) !important; /* Made even narrower than before */
+    margin: 0 auto !important;
+    left: 0 !important;
+    right: 0 !important;
+}
+
 /* Support for older browsers */
 @-moz-document url-prefix() {
     * {
@@ -36,5 +130,30 @@ p, h1, h2, h3, h4, h5, h6, a, span, li, div, button {
 @media screen and (-webkit-min-device-pixel-ratio:0) {
     * {
         -webkit-hyphens: none !important;
+    }
+}
+
+/* Mobile responsiveness improvements */
+@media (max-width: 768px) {
+    .solution-card h3 {
+        line-height: 1.2 !important;
+        font-size: 1.5rem !important;
+        min-height: unset !important;
+    }
+    
+    /* Additional help for the second card on mobile */
+    .solutions-grid .solution-card:nth-child(2) h3 {
+        font-size: 1.4rem !important;
+    }
+}
+
+@media (max-width: 480px) {
+    .solution-card h3 {
+        font-size: 1.3rem !important;
+    }
+    
+    /* Additional help for the second card on small mobile */
+    .solutions-grid .solution-card:nth-child(2) h3 {
+        font-size: 1.2rem !important;
     }
 } 
