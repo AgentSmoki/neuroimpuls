@@ -6,43 +6,111 @@
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <title>Neuroimpulse - AI Автоматизация Бизнеса</title>
-    
-    <!-- Critical CSS inlined -->
+    <link rel="stylesheet" href="/sb/styles.css">
+    <link rel="stylesheet" href="header-styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="/sb/header-fix.css">
+    <link rel="stylesheet" href="/sb/iphone-styles.css">
+    <link rel="stylesheet" href="../no-hyphen.css">
+    <link rel="stylesheet" href="/sb_backup/styles.css">
     <style>
-      /* Critical styles inlined from critical.css */
-      @import url('critical.css');
+        /* Принудительно переопределяем стили для навигации */
+        .business-nav a,
+        .business-nav a:link,
+        .business-nav a:visited,
+        .business-nav a:hover,
+        .business-nav a:active,
+        .business-nav a.active {
+            background: transparent !important;
+            background-color: transparent !important;
+            background-image: none !important;
+            padding: 8px 16px;
+            margin: 0 5px;
+            border-radius: 20px;
+        }
+        
+        .business-nav a.active {
+            color: #fff !important;
+            background: linear-gradient(135deg, #6366F1, #8B5CF6) !important;
+        }
+        .article-cards a.article-card {
+            display: flex;
+            flex-direction: column;
+            text-decoration: none;
+            color: inherit;
+            cursor: pointer;
+        }
+        
+        .article-card .read-more {
+            text-decoration: none;
+            margin-top: auto;
+        }
+        .article-card {
+            cursor: pointer;
+            position: relative;
+            transition: transform 0.3s ease;
+        }
+        
+        .article-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .article-card .read-more {
+            position: relative;
+            z-index: 2;
+        }
+        .article-card, .solution-card, .case-card, .solution-simple {
+            cursor: pointer;
+            position: relative;
+            transition: transform 0.3s ease;
+        }
+        
+        .article-card:hover, .solution-card:hover, .case-card:hover, .solution-simple:hover {
+            transform: translateY(-5px);
+        }
+        
+        .article-card .read-more, .solution-card .solution-link, .solution-simple .simple-button, .case-card .read-more {
+            position: relative;
+            z-index: 2;
+            padding: 10px 20px;
+            border-radius: 5px;
+            display: inline-block;
+        }
+        
+        .read-more, .read-button, .solution-link, .simple-button, .cta-button {
+            padding: 10px 20px;
+            border-radius: 5px;
+            display: inline-block;
+        }
+        
+        /* Уменьшение размера шрифта в заголовках */
+        .solution-card h3, .solution-simple h3, .article-card h3, .case-card h3, 
+        .step-content h3, .step-content-simple h3, .benefit-card h3, .reason-content h3, 
+        .founder-info-large h3, .faq-item h4,
+        .section-header h2, .final-cta-block h2, .cta-section h2,
+        .reasons h2, .steps h2, .money-talk h2,
+        .hero h1 {
+            font-size: 25px;
+            line-height: 1.3;
+        }
+        
+        .article-separator, .case-content .article-separator {
+            height: 1px;
+            background: rgba(0,0,0,0.1);
+            margin: 15px 0;
+            width: 100%;
+        }
+        
+        .case-content {
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+        }
+        
+        .case-content .read-more {
+            margin-top: auto;
+        }
     </style>
-    
-    <!-- Preload critical fonts -->
-    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/webfonts/fa-solid-900.woff2" as="font" type="font/woff2" crossorigin>
-    
-    <!-- Preload hero image -->
-    <link rel="preload" href="https://images.unsplash.com/photo-1677442136019-21780ecad995" as="image">
-    
-    <!-- Preconnect to external domains -->
-    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
-    <link rel="preconnect" href="https://images.unsplash.com">
-    
-    <!-- Async CSS loading -->
-    <link rel="stylesheet" href="/sb/styles.css" media="print" onload="this.media='all'">
-    <link rel="stylesheet" href="header-styles.css" media="print" onload="this.media='all'">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" media="print" onload="this.media='all'">
-    <link rel="stylesheet" href="/sb/header-fix.css" media="print" onload="this.media='all'">
-    <link rel="stylesheet" href="/sb/iphone-styles.css" media="print" onload="this.media='all'">
-    <link rel="stylesheet" href="../no-hyphen.css" media="print" onload="this.media='all'">
-    <link rel="stylesheet" href="/sb_backup/styles.css" media="print" onload="this.media='all'">
-    
-    <!-- Fallback for no-JS -->
-    <noscript>
-        <link rel="stylesheet" href="critical.css">
-        <link rel="stylesheet" href="/sb/styles.css">
-        <link rel="stylesheet" href="header-styles.css">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-        <link rel="stylesheet" href="/sb/header-fix.css">
-        <link rel="stylesheet" href="/sb/iphone-styles.css">
-        <link rel="stylesheet" href="../no-hyphen.css">
-        <link rel="stylesheet" href="/sb_backup/styles.css">
-    </noscript>
 </head>
 <body>
     <div class="business-header">
@@ -66,7 +134,7 @@
             <section class="hero hero-with-photo">
                 <div class="hero-overlay"></div>
                 <div class="hero-background" style="max-height: 600px">
-                    <img src="https://images.unsplash.com/photo-1677442136019-21780ecad995" alt="AI Technology Background" class="hero-bg-image" style="height: 600px; object-fit: cover; opacity: 0.2;" loading="eager">
+                    <img src="https://images.unsplash.com/photo-1677442136019-21780ecad995" alt="AI Technology Background" class="hero-bg-image" style="height: 600px; object-fit: cover; opacity: 0.2;">
                 </div>
                 <div class="hero-content">
                     <div class="hero-glass">
@@ -111,7 +179,7 @@
                             <a href="https://t.me/Bogdan_luamchik/300" class="read-more read-button" target="_blank">Прочитать <i class="fas fa-arrow-right"></i></a>
                         </div>
                         
-                        <div class="article-card mobile-card">
+                       <!-- <div class="article-card mobile-card">
                             <div class="article-icon support-icon">
                                 <img src="../image/support-icon.svg" alt="Support Icon" onerror="this.src='https://img.icons8.com/fluency/48/headset.png'">
                                 <span class="icon-label">Техподдержка</span>
@@ -119,7 +187,7 @@
                             <h3 class="article-title">Как наша виртуальная техподдержка избавила розничную сеть от 80% технических проблем в 50 торговых точках, сократив время решения на 90%</h3>
                             <div class="article-separator"></div>
                             <a href="https://t.me/neuroimpulse_support" class="read-more read-button" target="_blank">Прочитать <i class="fas fa-arrow-right"></i></a>
-                        </div>
+                        </div>-->
                         
                         <div class="article-card mobile-card">
                             <div class="article-icon legal-icon">
@@ -416,7 +484,7 @@
                     </div>
                     <div class="cases-grid">
                         <div class="case-card">
-                            <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb" alt="Landal Case" class="case-img" style="max-height: 180px; object-fit: cover;" loading="lazy">
+                            <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb" alt="Landal Case" class="case-img" style="max-height: 180px; object-fit: cover;">
                             <div class="case-content">
                                 <h3>Landal: -50% к стоимости лида</h3>
                                 <p>AI снизил стоимость квалифицированного лида с 800₽ до 400₽.</p>
@@ -425,7 +493,7 @@
                             </div>
                         </div>
                         <div class="case-card">
-                            <img src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6" alt="Retail Case" class="case-img" style="max-height: 180px; object-fit: cover;" loading="lazy">
+                            <img src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6" alt="Retail Case" class="case-img" style="max-height: 180px; object-fit: cover;">
                             <div class="case-content">
                                 <h3>Инфобиз - сокращение расходов в 3 раза</h3>
                                 <p>ИИ сотрудник заменил отдел продаж из 5 менеджеров</p>
@@ -434,7 +502,7 @@
                             </div>
                         </div>
                         <div class="case-card">
-                            <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c" alt="Law Case" class="case-img" style="max-height: 180px; object-fit: cover;" loading="lazy">
+                            <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c" alt="Law Case" class="case-img" style="max-height: 180px; object-fit: cover;">
                             <div class="case-content">
                                 <h3>Юрфирма: +34% к прибыли</h3>
                                 <p>Автоматизация консультаций высвободила юристов и обеспечила поддержку 24/7.</p>
@@ -509,7 +577,7 @@
             </section>
         </div>
 
-        <!-- Простой дизайн -->
+        <!-- Простой дизайн (пока пустой) -->
         <div class="simple-design">
             <section class="hero simple-hero">
                 <div class="container">
@@ -703,12 +771,322 @@
             </section>
         </div>
     </main>
+    <!-- Yandex.Metrika counter -->
+<script type="text/javascript" >
+    (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+    m[i].l=1*new Date();
+    for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+    k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+    (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+ 
+    ym(101761947, "init", {
+         clickmap:true,
+         trackLinks:true,
+         accurateTrackBounce:true
+    });
+ </script>
+ <noscript><div><img src="https://mc.yandex.ru/watch/101761947" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+ <!-- /Yandex.Metrika counter -->
+    <script>
+        
+        document.addEventListener('DOMContentLoaded', function() {
+            const designSwitcher = document.getElementById('designSwitcher');
+            const designIcon = document.getElementById('designIcon');
+            const designText = document.getElementById('designText');
+            const smartDiv = document.querySelector('.smart-design');
+            const simpleDiv = document.querySelector('.simple-design');
+            const mobileNavToggle = document.getElementById('mobileNavToggle');
+            const businessNav = document.querySelector('.business-nav');
 
-    <!-- Optimized JS loading -->
-    <script defer src="app.js"></script>
-    
-    <!-- Yandex.Metrika noscript fallback -->
-    <noscript><div><img src="https://mc.yandex.ru/watch/101761947" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+            // Force smart design to be true if not previously set in localStorage
+            if (localStorage.getItem('isSmartDesign') === null) {
+                localStorage.setItem('isSmartDesign', 'true');
+            }
+            
+            let isSmart = localStorage.getItem('isSmartDesign') !== 'false';
+
+            function setDesign(smart) {
+                if (smart) {
+                    smartDiv.style.display = '';
+                    simpleDiv.style.display = 'none';
+                    designIcon.textContent = '🎨    ';
+                    designText.textContent = 'Что то на простом';
+                    document.body.classList.remove('simple-design'); // Ensure the body doesn't have simple-design class
+                } else {
+                    smartDiv.style.display = 'none';
+                    simpleDiv.style.display = '';
+                    designIcon.textContent = '📝';
+                    designText.textContent = 'Что то на умном ';
+                    document.body.classList.add('simple-design'); // Add simple-design to body when in simple mode
+                }
+                localStorage.setItem('isSmartDesign', smart);
+            }
+
+            // Add smooth scrolling for anchor links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    
+                    const targetId = this.getAttribute('href');
+                    if (targetId === '#') return;
+                    
+                    const targetElement = document.querySelector(targetId);
+                    if (targetElement) {
+                        const headerOffset = 70; // Adjust for fixed header if needed
+                        const elementPosition = targetElement.getBoundingClientRect().top;
+                        const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+                        
+                        window.scrollTo({
+                            top: offsetPosition,
+                            behavior: 'smooth'
+                        });
+                    }
+                });
+            });
+
+            // Force smart design to be used initially
+            setDesign(true);
+
+            designSwitcher.addEventListener('click', function() {
+                isSmart = !isSmart;
+                setDesign(isSmart);
+            });
+
+            // Мобильное меню
+            document.getElementById('mobileNavToggle').addEventListener('click', function() {
+                const nav = document.querySelector('.business-nav');
+                nav.classList.toggle('active');
+                
+                const icon = this.querySelector('i');
+                if (nav.classList.contains('active')) {
+                    icon.classList.remove('fa-bars');
+                    icon.classList.add('fa-times');
+                } else {
+                    icon.classList.remove('fa-times');
+                    icon.classList.add('fa-bars');
+                }
+            });
+
+            // Определение iOS-устройств и добавление специального класса для стилизации
+            const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream;
+            
+            if (isIOS) {
+                document.body.classList.add('ios-device');
+                
+                // Определение модели iPhone
+                const isIPhoneX = (window.screen.height >= 812 && window.screen.width >= 375) || 
+                                 (window.devicePixelRatio === 3 && window.screen.width === 390) ||  // iPhone 13 Pro
+                                 (window.devicePixelRatio === 3 && window.screen.width === 428);     // iPhone 13 Pro Max
+                
+                if (isIPhoneX) {
+                    document.body.classList.add('iphone-x');
+                }
+                
+                // Решение проблемы с 100vh на iOS
+                function setIOSHeight() {
+                    const vh = window.innerHeight * 0.01;
+                    document.documentElement.style.setProperty('--vh', `${vh}px`);
+                    
+                    // Ensure hero section has correct position without height restrictions
+                    const heroSection = document.querySelector('.hero-with-photo');
+                    const header = document.querySelector('.business-header');
+                    const heroGlass = document.querySelector('.hero-glass');
+                    
+                    if (heroSection) {
+                        heroSection.style.height = 'auto';
+                        heroSection.style.maxHeight = 'none';
+                        heroSection.style.marginTop = '0';
+                        heroSection.style.overflow = 'visible';
+                    }
+                    
+                    if (header) {
+                        header.style.position = 'absolute';
+                        header.style.top = '0';
+                        header.style.width = '100%';
+                        header.style.zIndex = '1000';
+                    }
+                    
+                    if (heroGlass) {
+                        heroGlass.style.maxHeight = 'none';
+                        heroGlass.style.overflow = 'visible';
+                        heroGlass.style.overflowY = 'visible';
+                        heroGlass.style.height = 'auto';
+                    }
+                    
+                    // Adjust content container margin
+                    const content = document.querySelector('.content');
+                    if (content) {
+                        content.style.marginTop = '0';
+                    }
+                    
+                    // Ensure hero stats are properly displayed
+                    const heroStats = document.querySelector('.hero-stats');
+                    if (heroStats) {
+                        heroStats.style.marginTop = '20px';
+                        heroStats.style.marginBottom = '20px';
+                    }
+                    
+                    // Fix horizontal overflow issues
+                    document.body.style.width = '100%';
+                    document.body.style.maxWidth = '100%';
+                    document.body.style.overflowX = 'hidden';
+                    
+                    document.querySelectorAll('.content, .smart-design, .simple-design, section, .container').forEach(el => {
+                        el.style.width = '100%';
+                        el.style.maxWidth = '100%';
+                        el.style.overflowX = 'hidden';
+                        el.style.boxSizing = 'border-box';
+                    });
+                    
+                    // Fix unwanted redirects to 2meetup
+                    document.querySelectorAll('a[href="https://2meetup.in/company/neuroimpuls"]').forEach(link => {
+                        // Remove existing event listeners
+                        const newLink = link.cloneNode(true);
+                        link.parentNode.replaceChild(newLink, link);
+                        
+                        // Add click-only functionality
+                        newLink.addEventListener('click', function(e) {
+                            window.location.href = this.getAttribute('href');
+                        });
+                        
+                        // Prevent touch events from triggering navigation
+                        newLink.addEventListener('touchstart', function(e) {
+                            e.stopPropagation();
+                        });
+                        
+                        newLink.addEventListener('touchend', function(e) {
+                            e.preventDefault();
+                            e.stopPropagation();
+                            // Only navigate on deliberate tap (not accidental)
+                            if (e.target === this || e.target.parentNode === this) {
+                                window.location.href = this.getAttribute('href');
+                            }
+                        });
+                    });
+                    
+                    // Fix for links not working on iOS
+                    const links = document.querySelectorAll('a:not([href="https://2meetup.in/company/neuroimpuls"])');
+                    links.forEach(link => {
+                        link.addEventListener('touchend', function(e) {
+                            e.preventDefault();
+                            const href = this.getAttribute('href');
+                            if (href && href !== '#') {
+                                window.location.href = href;
+                            }
+                        });
+                    });
+                }
+                
+                // Установка высоты при загрузке
+                setIOSHeight();
+                
+                // Обновление высоты при изменении размера или ориентации
+                window.addEventListener('resize', setIOSHeight);
+                window.addEventListener('orientationchange', function() {
+                    // Delay to ensure correct values after rotation
+                    setTimeout(setIOSHeight, 300);
+                });
+            }
+        });
+
+        // Telegram form submission handler
+        document.addEventListener('DOMContentLoaded', function() {
+            const consultationForm = document.getElementById('consultation-form');
+            if (consultationForm) {
+                consultationForm.addEventListener('submit', function(e) {
+                    e.preventDefault();
+                    
+                    const name = consultationForm.querySelector('input[name="name"]').value;
+                    const phone = consultationForm.querySelector('input[name="phone"]').value;
+                    const telegram = consultationForm.querySelector('input[name="telegram"]').value;
+                    
+                    // Replace with your actual Telegram bot token
+                    const botToken = '7672901413:AAHd0SfBJC3HmwwYxhU_Dwtjzch-cl8GwgE';
+                    
+                    // Replace with your channel username or ID (format: @channelname or -100xxxxxxxxxx)
+                    const chatId = '-1002568274832';
+                    
+                    // Format message for Telegram
+                    const message = `📝 Новая заявка на консультацию!\n\n👤 Имя: ${name}\n📱 Телефон: ${phone}\n💬 Telegram: ${telegram}`;
+                    
+                    // Send to Telegram
+                    fetch(`https://api.telegram.org/bot${botToken}/sendMessage`, {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/json',
+                        },
+                        body: JSON.stringify({
+                            chat_id: chatId,
+                            text: message,
+                            parse_mode: 'HTML'
+                        })
+                    })
+                    .then(response => response.json())
+                    .then(data => {
+                        if (data.ok) {
+                            // Show success message
+                            alert('Спасибо! Ваша заявка отправлена. Мы свяжемся с вами в ближайшее время.');
+                            consultationForm.reset();
+                        } else {
+                            // Show error message
+                            alert('Произошла ошибка при отправке заявки. Пожалуйста, попробуйте позже или свяжитесь с нами напрямую.');
+                            console.error('Telegram API error:', data);
+                        }
+                    })
+                    .catch(error => {
+                        alert('Произошла ошибка при отправке заявки. Пожалуйста, попробуйте позже или свяжитесь с нами напрямую.');
+                        console.error('Error sending to Telegram:', error);
+                    });
+                });
+            }
+        });
+
+        // Make article cards clickable
+        document.querySelectorAll('.article-card').forEach(card => {
+            const button = card.querySelector('.read-more');
+            const href = button ? button.getAttribute('href') : null;
+            
+            if (href) {
+                card.addEventListener('click', function(e) {
+                    // Prevent click if clicking on the button itself
+                    if (e.target !== button && !button.contains(e.target)) {
+                        window.open(href, '_blank');
+                    }
+                });
+            }
+        });
+        
+        // Make solution cards clickable
+        document.querySelectorAll('.solution-card, .solution-simple').forEach(card => {
+            const link = card.querySelector('.solution-link, .simple-button');
+            const href = link ? link.getAttribute('href') : null;
+            
+            if (href) {
+                card.addEventListener('click', function(e) {
+                    // Prevent click if clicking on the link itself
+                    if (e.target !== link && !link.contains(e.target)) {
+                        window.open(href, '_blank');
+                    }
+                });
+            }
+        });
+        
+        // Make case cards clickable
+        document.querySelectorAll('.case-card').forEach(card => {
+            // Get the href from the button inside the card instead of generating one
+            const button = card.querySelector('.read-more');
+            const href = button ? button.getAttribute('href') : null;
+            
+            if (href) {
+                card.addEventListener('click', function(e) {
+                    // Prevent click if clicking on the button itself
+                    if (e.target !== button && !button.contains(e.target)) {
+                        window.open(href, '_blank');
+                    }
+                });
+            }
+        });
+    </script>
 </body>
 </html>
 
