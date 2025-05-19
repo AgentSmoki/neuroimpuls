@@ -29,6 +29,108 @@
             border-radius: 20px;
         }
         
+        /* Styles for the founder block in smart design */
+        .founder-block-smart {
+            display: flex;
+            align-items: center;
+            margin-top: 2rem;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 15px;
+            padding: 15px;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            max-width: 400px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        /* Mobile header fix for all devices */
+        .business-header {
+            position: absolute !important;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            background: rgba(24, 28, 35, 0.9);
+            padding: 12px 16px;
+        }
+        
+        /* Add top margin to content to prevent overlap with header */
+        .content {
+            margin-top: 0 !important;
+            padding-top: 0 !important;
+        }
+        
+        /* Ensure hero section is positioned correctly */
+        .hero, .hero-with-photo, .simple-hero {
+            margin-top: 0 !important;
+            padding-top: 60px !important;
+        }
+        
+        /* iOS specific fixes */
+        @supports (padding-top: env(safe-area-inset-top)) {
+            .business-header {
+                padding-top: max(12px, env(safe-area-inset-top)) !important;
+            }
+            
+            .hero, .hero-with-photo, .simple-hero {
+                padding-top: calc(60px + env(safe-area-inset-top)) !important;
+            }
+        }
+        
+        /* Android specific fixes */
+        @media screen and (max-width: 767px) {
+            .business-header {
+                position: absolute !important;
+                background: rgba(24, 28, 35, 0.95);
+            }
+            
+            .hero-content {
+                padding-top: 30px;
+            }
+        }
+        
+        .founder-img-wrapper-smart {
+            width: 80px;
+            height: 80px;
+            overflow: hidden;
+            border-radius: 50%;
+            border: 3px solid #6366F1;
+            box-shadow: 0 0 20px rgba(99, 102, 241, 0.5);
+            margin-right: 15px;
+            flex-shrink: 0;
+        }
+        
+        .founder-img-smart {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        .founder-info-smart {
+            flex-grow: 1;
+        }
+        
+        .founder-info-smart h3 {
+            margin: 0 0 5px;
+            color: #fff;
+            font-size: 18px;
+            font-weight: 700;
+        }
+        
+        .founder-info-smart p {
+            margin: 0;
+            color: rgba(255, 255, 255, 0.8);
+            font-size: 14px;
+        }
+        
+        @media (max-width: 768px) {
+            .founder-block-smart {
+                max-width: 100%;
+            }
+        }
+        
         .business-nav a.active {
             color: #fff !important;
             background: linear-gradient(135deg, #6366F1, #8B5CF6) !important;
@@ -110,6 +212,493 @@
         .case-content .read-more {
             margin-top: auto;
         }
+
+        /* TG Subscription Styles */
+        .simple-design .tg-subscription {
+            padding: 40px 0;
+            background-color: #131a2d;
+            margin-bottom: 0;
+        }
+
+        .simple-design .tg-subscription h2 {
+            color: #fff;
+            font-size: 32px;
+            font-weight: 800;
+            text-align: center;
+            margin-bottom: 40px;
+            position: relative;
+            text-transform: uppercase;
+            text-shadow: 0 2px 15px rgba(255, 92, 92, 0.4);
+            letter-spacing: 1px;
+        }
+
+        .simple-design .tg-subscription h2:after {
+            content: '';
+            display: block;
+            width: 150px;
+            height: 3px;
+            background: linear-gradient(90deg, #FF5C5C, #FFA352);
+            margin: 15px auto 0;
+            border-radius: 3px;
+            box-shadow: 0 2px 10px rgba(255, 92, 92, 0.5);
+        }
+
+        .simple-design .tg-subscription .cases-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+        .simple-design .tg-subscription .case-card {
+            background-color: #1a2235;
+            border-radius: 12px;
+            padding: 25px;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+            transition: all 0.3s ease;
+            border: 1px solid rgba(255,255,255,0.05);
+            height: 100%;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .simple-design .tg-subscription .case-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.25);
+            border-color: rgba(255,92,92,0.3);
+            background-color: #202a45;
+        }
+        
+        .simple-design .tg-subscription .case-card:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 3px;
+            background: linear-gradient(90deg, #FF5C5C, #FFA352);
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: transform 0.3s ease;
+        }
+        
+        .simple-design .tg-subscription .case-card:hover:before {
+            transform: scaleX(1);
+        }
+
+        .simple-design .tg-subscription .case-card h3 {
+            color: #fff;
+            font-size: 20px;
+            margin-bottom: 15px;
+            line-height: 1.4;
+        }
+
+        .simple-design .tg-subscription .article-separator {
+            background: rgba(255,255,255,0.1);
+            margin: 20px 0;
+        }
+
+        .simple-design .tg-subscription .read-more {
+            display: inline-block;
+            background: linear-gradient(90deg, #FF5C5C, #FFA352);
+            color: #fff;
+            font-weight: 700;
+            padding: 12px 20px;
+            border-radius: 6px;
+            text-decoration: none;
+            text-transform: uppercase;
+            font-size: 14px;
+            transition: all 0.2s ease;
+            position: relative;
+            overflow: hidden;
+            z-index: 1;
+            box-shadow: 0 4px 15px rgba(255, 92, 92, 0.2);
+        }
+
+        .simple-design .tg-subscription .read-more:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 7px 15px rgba(255, 92, 92, 0.3);
+        }
+        
+        .simple-design .tg-subscription .read-more:after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, #FFA352, #FF5C5C);
+            z-index: -1;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+        
+        .simple-design .tg-subscription .read-more:hover:after {
+            opacity: 1;
+        }
+
+        @media (max-width: 768px) {
+            .simple-design .tg-subscription .cases-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .simple-design .tg-subscription h2 {
+                font-size: 28px;
+            }
+        }
+        
+        /* New styles for the updated CTA section */
+        .offer-title {
+          font-size: 1.5rem;
+          font-weight: 700;
+          color: #FFD700;
+          margin: 1rem 0;
+          text-transform: uppercase;
+          letter-spacing: 1px;
+        }
+        
+        .price-tag {
+          font-size: 1.4rem;
+          margin: 1.5rem 0;
+          font-weight: 600;
+        }
+        
+        .old-price {
+          text-decoration: line-through;
+          color: #ff6b6b;
+          margin-right: 0.5rem;
+        }
+        
+        .new-price {
+          color: #00ff7f;
+          font-weight: 800;
+          font-size: 1.6rem;
+          animation: pulse 2s infinite;
+        }
+        
+        @keyframes pulse {
+          0% { opacity: 1; }
+          50% { opacity: 0.7; }
+          100% { opacity: 1; }
+        }
+        
+        .limited-offer {
+          margin-top: 1.5rem;
+          font-style: italic;
+          color: #ffa500;
+        }
+        
+        .limited-offer i {
+          margin-right: 0.5rem;
+        }
+        
+        /* Case Studies Styles */
+        .simple-design .case-studies {
+            background: linear-gradient(135deg, #131a2d, #1d2942);
+            padding: 60px 0;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .simple-design .case-studies:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 5px;
+            background: linear-gradient(90deg, #FF5C5C, #FFA352);
+            z-index: 2;
+        }
+        
+        .simple-design .case-studies h2 {
+            color: #fff;
+            font-size: 32px;
+            font-weight: 800;
+            margin-bottom: 40px;
+            text-transform: uppercase;
+            position: relative;
+            text-shadow: 0 2px 10px rgba(255, 92, 92, 0.4);
+        }
+        
+        .simple-design .case-studies h2:after {
+            content: '';
+            display: block;
+            width: 100px;
+            height: 4px;
+            background: linear-gradient(90deg, #FF5C5C, #FFA352);
+            margin: 15px auto 0;
+            border-radius: 2px;
+            box-shadow: 0 2px 10px rgba(255, 92, 92, 0.4);
+        }
+        
+        .simple-design .case-studies .cases-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+            margin-bottom: 30px;
+        }
+        
+        .simple-design .case-studies .case-card {
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 12px;
+            padding: 30px;
+            transition: all 0.3s ease;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            position: relative;
+            overflow: hidden;
+            backdrop-filter: blur(5px);
+            box-shadow: 0 15px 25px rgba(0,0,0,0.2);
+        }
+        
+        .simple-design .case-studies .case-card:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 5px;
+            height: 100%;
+            background: linear-gradient(180deg, #FF5C5C, #FFA352);
+            transform: scaleY(0);
+            transform-origin: top;
+            transition: transform 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+        }
+        
+        .simple-design .case-studies .case-card:hover {
+            transform: translateY(-10px) scale(1.02);
+            border-color: rgba(255, 92, 92, 0.3);
+            background: rgba(255, 255, 255, 0.08);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+        }
+        
+        .simple-design .case-studies .case-card:hover:before {
+            transform: scaleY(1);
+        }
+        
+        .simple-design .case-studies .case-card h3 {
+            color: #fff;
+            font-size: 24px;
+            margin-bottom: 15px;
+            font-weight: 700;
+        }
+        
+        .simple-design .case-studies .case-card p {
+            color: rgba(255, 255, 255, 0.8);
+            font-size: 16px;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+        
+        .simple-design .case-studies .read-more {
+            background: linear-gradient(90deg, #FF5C5C, #FFA352);
+            color: #fff;
+            padding: 12px 25px;
+            border-radius: 30px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: all 0.3s ease;
+            display: inline-block;
+            box-shadow: 0 5px 15px rgba(255, 92, 92, 0.3);
+            border: none;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .simple-design .case-studies .read-more:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(255, 92, 92, 0.4);
+            background-position: right center;
+        }
+        
+        .simple-design .case-studies .read-more:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+            transition: all 0.6s ease;
+        }
+        
+        .simple-design .case-studies .read-more:hover:before {
+            left: 100%;
+        }
+        
+        .simple-design .case-studies .simple-button {
+            background: linear-gradient(90deg, #3a7bd5, #00d2ff);
+            padding: 15px 30px;
+            border-radius: 30px;
+            font-size: 18px;
+            font-weight: 700;
+            box-shadow: 0 10px 20px rgba(0, 210, 255, 0.3);
+            transition: all 0.3s ease;
+        }
+        
+        .simple-design .case-studies .simple-button:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(0, 210, 255, 0.4);
+        }
+        
+        .simple-design .case-studies .simple-button i {
+            margin-right: 8px;
+        }
+        
+        @media (max-width: 768px) {
+            .simple-design .case-studies .cases-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .simple-design .case-studies h2 {
+                font-size: 26px;
+            }
+        }
+        
+        /* Video Invite Circle in Simple Design */
+        .simple-design .video-invite {
+            margin: 50px 0;
+            position: relative;
+            background: rgba(19, 26, 45, 0.7);
+            padding: 40px 0;
+        }
+        
+        .simple-design .video-invite-content {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .simple-design .video-circle-wrapper {
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        
+        .simple-design .video-circle {
+            width: 280px;
+            height: 280px;
+            border-radius: 50%;
+            position: relative;
+            cursor: pointer;
+            overflow: hidden;
+            box-shadow: 0 15px 35px rgba(255, 92, 92, 0.5);
+            border: 5px solid #FF5C5C;
+            transition: all 0.3s ease;
+            margin: 0 auto 20px;
+            flex-shrink: 0;
+        }
+        
+        .simple-design .video-circle:hover {
+            transform: scale(1.05);
+            box-shadow: 0 20px 45px rgba(255, 92, 92, 0.7);
+        }
+        
+        .simple-design .video-text {
+            color: #fff;
+            text-align: center;
+            padding: 0 20px;
+            flex: 1;
+            min-width: 280px;
+        }
+        
+        .simple-design .video-text h3 {
+            font-size: 28px;
+            margin-bottom: 15px;
+            color: #fff;
+            text-transform: uppercase;
+            font-weight: 800;
+            position: relative;
+            display: inline-block;
+        }
+        
+        .simple-design .video-text h3:after {
+            content: '';
+            display: block;
+            width: 100px;
+            height: 3px;
+            background: linear-gradient(90deg, #FF5C5C, #FFA352);
+            margin: 10px auto 0;
+            border-radius: 2px;
+        }
+        
+        .simple-design .video-text p {
+            font-size: 18px;
+            line-height: 1.6;
+            margin-bottom: 15px;
+            color: rgba(255, 255, 255, 0.9);
+        }
+        
+        .simple-design .video-hint {
+            font-weight: 700;
+            color: #FFA352 !important;
+            font-size: 16px !important;
+        }
+        
+        .simple-design .video-play-icon {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 80px;
+            height: 80px;
+            background: rgba(255, 92, 92, 0.85);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 32px;
+            transition: all 0.3s ease;
+        }
+        
+        .simple-design .video-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.3);
+            border-radius: 50%;
+        }
+        
+        @media (min-width: 768px) {
+            .simple-design .video-circle-wrapper {
+                flex-direction: row;
+                justify-content: center;
+                gap: 40px;
+            }
+            
+            .simple-design .video-circle {
+                margin: 0;
+            }
+            
+            .simple-design .video-text {
+                text-align: left;
+                padding-left: 0;
+            }
+            
+            .simple-design .video-text h3:after {
+                margin-left: 0;
+                margin-right: auto;
+            }
+        }
+        
+        @media (max-width: 767px) {
+            .simple-design .video-circle {
+                width: 220px;
+                height: 220px;
+            }
+            
+            .simple-design .video-text h3 {
+                font-size: 24px;
+            }
+            
+            .simple-design .video-text {
+                display: none; /* Hide text on mobile devices */
+            }
+        }
     </style>
 </head>
 <body>
@@ -141,6 +730,16 @@
                         <div class="hero-badge">Новое поколение AI</div>
                         <h1>ДЛЯ ПРЕДПРИНИМАТЕЛЕЙ, КОТОРЫЕ ХОТЯТ ВЫЙТИ ИЗ ОПЕРАЦИОНКИ И СНИЗИТЬ СТОИМОСТЬ ЛИДА в 3-5 раз <br>за 2 месяца</h1>
                         <p>Подпишитесь на мой телеграм-канал и узнайте:</p>
+                         <div class="founder-block-smart">
+                            <div class="founder-img-wrapper-smart">
+                                <img src="../image/bogdan.jpg" alt="Богдан Neuroimpulse" class="founder-img-smart">
+                            </div>
+                            <div class="founder-info-smart">
+                                <h3>Богдан Neuroimpulse</h3>
+                                <p>Эксперт по AI-автоматизации бизнеса</p>
+                            </div>
+                        </div>
+                            
                         <p class="hero-subtitle"><b>«Как я снизил операционную нагрузку на 80% и помог клиентам заработать свыше 10 миллионов рублей с помощью виртуальных сотрудников на базе ИИ»</b></p>
                         <a href="#learn-section" class="cta cta-primary">ПОСМОТРЕТЬ КЕЙСЫ</a>
                         <div class="hero-stats">
@@ -157,7 +756,8 @@
                                 <span class="stat-label">Работает без выходных</span>
                             </div>
                         </div>
-                            
+                        
+                       
                     </div>
                 </div>
             </section>
@@ -421,7 +1021,8 @@
                     
                     <div class="cta-offer">
                         <div class="offer-badge">Ограниченное предложение</div>
-                        <p><b>Первым 5 клиентам — бесплатный аудит бизнес-процессов и персональная дорожная карта автоматизации <br><s>   (Стоимость 50 000₽)   </s><br>Бесплатно</b></p>
+                        <p><b>Первым 5 клиентам — бесплатный аудит бизнес-процессов и персональная дорожная карта автоматизации <br>    (Стоимость 50 000₽)   
+                        <br>Бесплатно</b></p>
                         
                         <a href="https://2meetup.in/company/neuroimpuls" class="cta cta-primary">ЗАБРОНИРОВАТЬ МЕСТО НА ЭКСКУРСИИ </a>
                         <div class="offer-timer">
@@ -584,7 +1185,7 @@
                     <h1>ДЛЯ ПРЕДПРИНИМАТЕЛЕЙ, КОТОРЫЕ ЗАЕБАЛИСЬ ТОНУТЬ В ОПЕРАЦИОНКЕ И СЛИВАТЬ БАБКИ НА ЛИДГЕН</h1>
                     <p>Залетай в мой телеграм-канал и узнай:</p>
                     <p class="hero-subtitle"><b>«Как я забил хуй на 80% рутины и помог клиентам срубить свыше 10 лямов с помощью виртуальных ботов на ИИ»</b></p>
-                    <a href="#operations-section" class="simple-button"><i class="fas fa-rocket"></i> ГЛЯНЬ КЕЙСЫ</a>
+                    <a href="#cases-section" class="simple-button"><i class="fas fa-rocket"></i> ГЛЯНЬ КЕЙСЫ</a>
                     
                     <div class="founder-block">
                         <div class="founder-img-wrapper">
@@ -593,6 +1194,64 @@
                         <div class="founder-info">
                             <h3>Богдан Neuroimpulse</h3>
                             <p>Чувак, который научил ИИ пахать за тебя</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- Video Invite Circle -->
+            <section class="video-invite">
+                <div class="container">
+                    <div class="video-invite-content">
+                        <div class="video-circle-wrapper">
+                            <div class="video-circle" id="tgVideoCircle" tabindex="0" aria-label="Смотреть видео приглашение">
+                                <video
+                                    id="tgVideo"
+                                    src="../image/bogdan-invite2.mp4"
+                                    muted
+                                    playsinline
+                                    style="width:100%;height:100%;object-fit:cover;border-radius:50%;display:block;"
+                                ></video>
+                                <span class="video-play-icon" id="tgPlayIcon" style="display:none;">▶</span>
+                                <div class="video-overlay" id="tgVideoOverlay" style="display:none;"></div>
+                            </div>
+                            <div class="video-text">
+                                <h3>СЛУШАЙ МЕНЯ СЮДА ТЫ ХУЙЛУША</h3>
+                                <p>Я расскажу, как мы делаем виртуальных сотрудников, которые работают круглосуточно и не выносят мозг</p>
+                                <p class="video-hint">👆 Нажми на видео, чтобы включить звук</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- TG Subscription Block -->
+            <section class="tg-subscription">
+                <div class="container">
+                    <div class="text-center">
+                        <h2>ПОДПИШИСЬ В TG, ЧТОБЫ ПОНЯТЬ: 🔥</h2>
+                    </div>
+                    <div class="cases-grid">
+                        <div class="case-card">
+                            <div class="case-content">
+                                <h3>Как ИИ в "Landal" остановил пиздец с лидгеном: лид упал с 800₽ до 400₽, ебать красиво, да? 🔥</h3>
+                                <div class="article-separator"></div>
+                                <a href="https://t.me/Bogdan_luamchik/300" class="read-more read-button" target="_blank">ОТКРЫТЬ КЕЙС →</a>
+                            </div>
+                        </div>
+                        <div class="case-card">
+                            <div class="case-content">
+                                <h3>Как юрфирма по банкротству подняла прибыль на 34%, пока юристы больше не ебут мозг на тупых первичных консультациях 🧠</h3>
+                                <div class="article-separator"></div>
+                                <a href="https://t.me/Bogdan_luamchik/308" class="read-more read-button" target="_blank">ОТКРЫТЬ КЕЙС →</a>
+                            </div>
+                        </div>
+                        <div class="case-card">
+                            <div class="case-content">
+                                <h3>Почему все экономят от 30% до 45% бабла на зарплатах уже в первый месяц, пока конкуренты всё ещё платят людям за то, что может делать бот 💸</h3>
+                                <div class="article-separator"></div>
+                                <a href="https://t.me/Bogdan_luamchik/315" class="read-more read-button" target="_blank">ОТКРЫТЬ КЕЙС →</a>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -733,6 +1392,44 @@
                 </div>
             </section>
 
+            <!-- Case Studies Block -->
+            <section class="case-studies" id="cases-section">
+                <div class="container">
+                    <div class="text-center">
+                        <h2>КЕЙСЫ ТРАНСФОРМАЦИИ БИЗНЕСА. СПОЙЛЕР — ОХУЕЕШЬ! 🚀</h2>
+                    </div>
+                    <div class="cases-grid">
+                        <div class="case-card">
+                            <div class="case-content">
+                                <h3>Landal: -50% к стоимости лида</h3>
+                                <p>ИИ сократил пиздец с лидами с 800₽ до 400₽.<br>Менеджеры больше не ебут себе мозг, а конверсия летит вверх.</p>
+                                <div class="article-separator"></div>
+                                <a href="https://t.me/neuroimpuls_reviews/33" class="read-more read-button" target="_blank">ГЛЯНУТЬ КЕЙС →</a>
+                            </div>
+                        </div>
+                        <div class="case-card">
+                            <div class="case-content">
+                                <h3>Инфобиз: сокращение расходов в 3 раза</h3>
+                                <p>Один ИИ-бот вместо 5 живых менеджеров.<br>Как тебе такая экономия, блять? Бот не ноет и работает 24/7.</p>
+                                <div class="article-separator"></div>
+                                <a href="https://t.me/neuroimpuls_reviews/37" class="read-more read-button" target="_blank">ГЛЯНУТЬ КЕЙС →</a>
+                            </div>
+                        </div>
+                        <div class="case-card">
+                            <div class="case-content">
+                                <h3>Юрфирма: +34% к прибыли</h3>
+                                <p>Автоматизация консультаций высвободила юристов<br>от скучного говнища и обеспечила клиентам поддержку круглосуточно.</p>
+                                <div class="article-separator"></div>
+                                <a href="https://t.me/neuroimpuls_reviews/26" class="read-more read-button" target="_blank">ГЛЯНУТЬ КЕЙС →</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="text-center" style="margin-top: 2rem;">
+                        <a href="https://t.me/neuroimpuls_reviews" class="simple-button" target="_blank"><i class="fas fa-fire"></i> ПОCМОТРЕТЬ ВСЕ КЕЙСЫ</a>
+                    </div>
+                </div>
+            </section>
+
             <section class="testimonial">
                 <div class="container">
                     <blockquote>
@@ -745,15 +1442,18 @@
             <section class="final-cta">
                 <div class="container">
                     <div class="text-center">
-                        <h2>ВЕРНИ СЕБЕ 37 ЧАСОВ В НЕДЕЛЮ. ХВАТИТ ЖИТЬ В ОПЕРАЦИОННОМ АДУ</h2>
-                        <p>Запишись на экскурсию и охуей от того, как виртуальные сотрудники уже сейчас меняют бизнес в твоей нише</p>
-                        <p><strong>Первым 5 клиентам — бесплатный аудит всего вашего бизнес-пиздеца и персональная дорожная карта автоматизации (стоимость 50 тыс.)</strong></p>
+                        <h2>ОСВОБОДИ НАХУЙ 37 ЧАСОВ В НЕДЕЛЮ. ЗАЕБАЛА ОПЕРАЦИОНКА? 🔥</h2>
+                        <p class="offer-title">АХУЕННОЕ ПРЕДЛОЖЕНИЕ</p>
+                        <p><strong>Первым 5 клиентам — БЕСПЛАТНЫЙ аудит всего вашего бизнес-пиздеца и персональная дорожная карта автоматизации</strong></p>
+                        <p class="price-tag"><span class="old-price">50 000₽</span> → <span class="new-price">НАХАЛЯВУ</span></p>
                         
-                        <a href="https://2meetup.in/company/neuroimpuls" class="simple-button"><i class="fas fa-bolt"></i> ЗАБИТЬ МЕСТО НА ЭКСКУРСИИ </a>
+                        <a href="https://2meetup.in/company/neuroimpuls" class="simple-button"><i class="fas fa-bolt"></i> ЗАБИТЬ МЕСТО НА ЭКСКУРСИИ (осталось 3)</a>
                         
-                        <p class="limited-offer"><i class="fas fa-clock"></i> Количество экскурсий ограничено: осталось 3 места на май, не тормози</p>
+                        <p class="limited-offer"><i class="fas fa-clock"></i> Количество экскурсий ограничено, братан. Осталось 10 мест на май. Не проеби шанс! 🎥</p>
                     </div>
-                    
+                  
+
+           
                     <div class="founder-sign">
                         <div class="founder-sign-content">
                             <div class="founder-img-wrapper">
@@ -866,6 +1566,39 @@
                     icon.classList.add('fa-bars');
                 }
             });
+            
+            // Видеокружок как в Telegram
+            const tgVideo = document.getElementById('tgVideo');
+            const tgVideoCircle = document.getElementById('tgVideoCircle');
+            const tgPlayIcon = document.getElementById('tgPlayIcon');
+            const tgVideoOverlay = document.getElementById('tgVideoOverlay');
+
+            if (tgVideo && tgVideoCircle) {
+                // Настройка видео для автоматического воспроизведения без звука
+                tgVideo.muted = true;
+                tgVideo.loop = true;
+                tgVideo.play();
+
+                // Скрываем иконку воспроизведения и оверлей, так как видео всегда играет
+                tgPlayIcon.style.display = 'none';
+                tgVideoOverlay.style.display = 'none';
+
+                tgVideoCircle.addEventListener('click', () => {
+                    // Воспроизводим видео один раз со звуком
+                    tgVideo.muted = false;
+                    tgVideo.loop = false;
+                    tgVideo.currentTime = 0;
+                    tgVideo.play();
+
+                    // После окончания видео возвращаемся к цикличному воспроизведению без звука
+                    tgVideo.addEventListener('ended', function handler() {
+                        tgVideo.muted = true;
+                        tgVideo.loop = true;
+                        tgVideo.play();
+                        tgVideo.removeEventListener('ended', handler);
+                    }, { once: true });
+                });
+            }
 
             // Определение iOS-устройств и добавление специального класса для стилизации
             const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream;

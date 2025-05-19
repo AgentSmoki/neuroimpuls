@@ -1,0 +1,31 @@
+            <!-- TG Subscription Block -->
+            <section class="tg-subscription">
+                <div class="container">
+                    <div class="text-center">
+                        <h2>ПОДПИШИСЬ В TG, ЧТОБЫ ПОНЯТЬ:</h2>
+                    </div>
+                    <div class="cases-grid">
+                        <div class="case-card">
+                            <div class="case-content">
+                                <h3>Как ИИ в "Landal" остановил пиздец с лидгеном: лид упал с 800₽ до 400₽, ебать красиво, да? 🔥</h3>
+                                <div class="article-separator"></div>
+                                <a href="https://t.me/Bogdan_luamchik/300" class="read-more read-button" target="_blank">ОТКРЫТЬ КЕЙС →</a>
+                            </div>
+                        </div>
+                        <div class="case-card">
+                            <div class="case-content">
+                                <h3>Как юрфирма по банкротству подняла прибыль на 34%, пока юристы больше не ебут мозг на тупых первичных консультациях 🧠</h3>
+                                <div class="article-separator"></div>
+                                <a href="https://t.me/Bogdan_luamchik/308" class="read-more read-button" target="_blank">ОТКРЫТЬ КЕЙС →</a>
+                            </div>
+                        </div>
+                        <div class="case-card">
+                            <div class="case-content">
+                                <h3>Почему все экономят от 30% до 45% бабла на зарплатах уже в первый месяц, пока конкуренты всё ещё платят людям за то, что может делать бот 💸</h3>
+                                <div class="article-separator"></div>
+                                <a href="https://t.me/Bogdan_luamchik/315" class="read-more read-button" target="_blank">ОТКРЫТЬ КЕЙС →</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
