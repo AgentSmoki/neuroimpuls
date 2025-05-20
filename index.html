@@ -1698,12 +1698,12 @@
             const mobileNavToggle = document.getElementById('mobileNavToggle');
             const businessNav = document.querySelector('.business-nav');
 
-            // Force smart design to be true if not previously set in localStorage
+            // Set simple design as default if not previously selected
             if (localStorage.getItem('isSmartDesign') === null) {
-                localStorage.setItem('isSmartDesign', 'true');
+                localStorage.setItem('isSmartDesign', 'false');
             }
             
-            let isSmart = localStorage.getItem('isSmartDesign') !== 'false';
+            let isSmart = localStorage.getItem('isSmartDesign') === 'true';
 
             function setDesign(smart) {
                 if (smart) {
@@ -1744,8 +1744,8 @@
                 });
             });
 
-            // Force smart design to be used initially
-            setDesign(true);
+            // Use simple design by default
+            setDesign(false);
 
             designSwitcher.addEventListener('click', function() {
                 isSmart = !isSmart;
@@ -1920,6 +1920,14 @@
                     setTimeout(setIOSHeight, 300);
                 });
             }
+            
+            // Force simple design to be default if not previously set in localStorage
+            if (localStorage.getItem('isSmartDesign') === null) {
+                localStorage.setItem('isSmartDesign', 'false');
+            }
+
+            // Force simple design to be used initially
+            setDesign(false);
         });
 
         // Telegram form submission handler
