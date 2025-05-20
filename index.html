@@ -79,6 +79,47 @@
             }
         }
         
+        /* Enhanced iOS specific fixes with more top padding */
+        @supports (padding-top: env(safe-area-inset-top)) {
+            .business-header {
+                padding-top: max(20px, env(safe-area-inset-top)) !important;
+            }
+            
+            .hero, .hero-with-photo, .simple-hero {
+                padding-top: calc(80px + env(safe-area-inset-top)) !important;
+            }
+            
+            /* Additional top padding for simple design on iOS */
+            .simple-design .simple-hero {
+                padding-top: calc(100px + env(safe-area-inset-top)) !important;
+            }
+            
+            /* Specific TG mini app adjustments */
+            .simple-design .container:first-child {
+                padding-top: calc(50px + env(safe-area-inset-top));
+            }
+        }
+        
+        /* iPhone specific adjustments */
+        @media screen and (max-width: 428px) {
+            .ios-device .simple-design .simple-hero {
+                padding-top: calc(120px + env(safe-area-inset-top)) !important;
+            }
+            
+            .ios-device .hero-content {
+                padding-top: 80px;
+            }
+            
+            /* TG mini app specific adjustments for iPhone */
+            html.ios-device {
+                --safe-area-inset-top: env(safe-area-inset-top, 44px);
+            }
+            
+            .ios-device body {
+                padding-top: var(--safe-area-inset-top);
+            }
+        }
+        
         /* Android specific fixes */
         @media screen and (max-width: 767px) {
             .business-header {
@@ -697,6 +738,165 @@
             
             .simple-design .video-text {
                 display: none; /* Hide text on mobile devices */
+            }
+        }
+
+        /* Increase spacing between sections */
+        section {
+            margin-bottom: 80px; /* Increased from default */
+        }
+
+        .smart-design section, .simple-design section {
+            margin-bottom: 100px; /* Even more spacing between sections */
+            padding-top: 40px;
+            padding-bottom: 60px;
+        }
+
+        /* Add more breathing room for container content */
+        .container {
+            padding: 30px 20px;
+        }
+
+        /* Increase vertical spacing in hero sections */
+        .hero-content {
+            padding: 60px 20px;
+        }
+
+        /* Add more space in card layouts */
+        .article-cards, .solutions-grid, .cases-grid, .benefits-grid, .steps-list, .reasons-list {
+            gap: 40px; /* Increase gap between grid items */
+        }
+
+        /* Increase spacing before and after headings */
+        .section-header {
+            margin-bottom: 60px;
+        }
+
+        .section-header h2 {
+            margin-top: 20px;
+            margin-bottom: 30px;
+        }
+
+        /* More spacing in the footer area */
+        .final-cta-section, .final-cta {
+            padding-top: 80px;
+            padding-bottom: 100px;
+        }
+
+        /* Add more space in simple design elements */
+        .simple-design .steps-simple, .simple-design .reasons-simple {
+            gap: 50px;
+        }
+
+        /* Extra spacing for testimonials */
+        .testimonial, .founder-quote-section {
+            padding: 80px 0;
+            margin: 100px 0;
+        }
+
+        /* Fix spacing around founder block */
+        .founder-block-smart {
+            margin: 40px auto;   /* Equal margin top and bottom */
+        }
+
+        .hero-subtitle {
+            margin-top: 40px;    /* Match the top margin of founder block */
+            margin-bottom: 40px; /* Keep consistent spacing */
+        }
+
+        /* Fix spacing around the founder block in simple design too */
+        .founder-block {
+            margin: 40px auto;
+        }
+
+        /* Adjust the spacing around the profile photo in header section */
+        .founder-img-wrapper-smart {
+            width: 80px;
+            height: 80px;
+            overflow: hidden;
+            border-radius: 50%;
+            border: 3px solid #6366F1;
+            box-shadow: 0 0 20px rgba(99, 102, 241, 0.5);
+            margin-right: 15px;
+            flex-shrink: 0;
+        }
+
+        /* Fix circular profile images for all devices, especially iPhone */
+        .founder-img-wrapper,
+        .founder-img-wrapper-smart,
+        .video-circle,
+        .simple-design .founder-img-wrapper {
+            position: relative;
+            overflow: hidden;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 0 auto;
+        }
+
+        .simple-design .founder-img-wrapper {
+            width: 170px;
+            height: 170px;
+            border: 5px solid #FF5C5C;
+            box-shadow: 0 0 30px rgba(255, 92, 92, 0.7);
+            margin: 30px auto;
+        }
+
+        .founder-img,
+        .founder-img-smart {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+            margin: 0;
+        }
+
+        /* Fix for profile image in simple design */
+        .simple-design .founder-block {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            margin: 60px auto;
+            background: rgba(0, 0, 0, 0.2);
+            border-radius: 20px;
+            padding: 30px;
+            max-width: 400px;
+            position: relative;
+        }
+
+        /* Add a corrected glow effect for the circular image */
+        .simple-design .founder-img-wrapper::after {
+            content: '';
+            position: absolute;
+            top: -2px;
+            left: -2px;
+            right: -2px;
+            bottom: -2px;
+            border-radius: 50%;
+            box-shadow: 0 0 20px 5px rgba(255, 92, 92, 0.6);
+            z-index: -1;
+        }
+
+        /* Make sure the iOS-specific fixes account for the profile image */
+        @media screen and (max-width: 428px) {
+            .ios-device .simple-design .founder-img-wrapper {
+                width: 150px;
+                height: 150px;
+                margin: 20px auto;
+            }
+        }
+
+        /* Android specific fixes */
+        @media screen and (max-width: 767px) {
+            .business-header {
+                position: absolute !important;
+                background: rgba(24, 28, 35, 0.95);
+            }
+            
+            .hero-content {
+                padding-top: 30px;
             }
         }
     </style>
