@@ -1710,13 +1710,13 @@
                     smartDiv.style.display = 'none';
                     simpleDiv.style.display = '';
                     designIcon.textContent = '🎨    ';
-                    designText.textContent = 'Что то на простом';
+                    designText.textContent = 'Что то на умном';
                     document.body.classList.remove('simple-design'); // Ensure the body doesn't have simple-design class
                 } else {
                     smartDiv.style.display = '';
                     simpleDiv.style.display = 'none';
-                    designIcon.textContent = '📝';
-                    designText.textContent = 'Что то на умном ';
+                    designIcon.textContent = '👺';
+                    designText.textContent = 'Что то на простом';
                     document.body.classList.add('simple-design'); // Add simple-design to body when in simple mode
                 }
                 localStorage.setItem('isSmartDesign', smart);
