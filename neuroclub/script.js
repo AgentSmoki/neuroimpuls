@@ -13,6 +13,87 @@ const hourlyRateValue = document.getElementById('hourly-rate-value');
 const businessSphere = document.getElementById('business-sphere');
 const finalCtaForm = document.getElementById('final-cta-form');
 
+// Calculator data for different business spheres
+const calculatorData = {
+    marketing: [
+        { id: 'content-creation', label: 'Создание контента для соцсетей', hours: 3 },
+        { id: 'analytics', label: 'Анализ рекламных кампаний', hours: 2 },
+        { id: 'reporting', label: 'Составление отчётов', hours: 2.5 },
+        { id: 'market-research', label: 'Исследование рынка и конкурентов', hours: 4 },
+        { id: 'email-campaigns', label: 'Email-маркетинг', hours: 1.5 }
+    ],
+    development: [
+        { id: 'code-review', label: 'Ревью кода и документация', hours: 2 },
+        { id: 'testing', label: 'Тестирование приложений', hours: 3 },
+        { id: 'debugging', label: 'Поиск и исправление ошибок', hours: 4 },
+        { id: 'api-integration', label: 'Интеграция API', hours: 2.5 },
+        { id: 'optimization', label: 'Оптимизация производительности', hours: 3 }
+    ],
+    design: [
+        { id: 'mockups', label: 'Создание макетов и wireframes', hours: 3 },
+        { id: 'graphics', label: 'Графические элементы', hours: 2.5 },
+        { id: 'presentations', label: 'Презентации для клиентов', hours: 2 },
+        { id: 'brand-assets', label: 'Брендинг и айдентика', hours: 4 },
+        { id: 'ui-elements', label: 'UI элементы и иконки', hours: 2 }
+    ],
+    video: [
+        { id: 'scriptwriting', label: 'Написание сценариев', hours: 3 },
+        { id: 'editing', label: 'Монтаж и обработка', hours: 4 },
+        { id: 'animations', label: 'Анимация и спецэффекты', hours: 3.5 },
+        { id: 'voiceover', label: 'Озвучка и саунд-дизайн', hours: 2 },
+        { id: 'thumbnails', label: 'Превью и обложки', hours: 1.5 }
+    ],
+    '3d': [
+        { id: 'modeling', label: '3D моделирование объектов', hours: 5 },
+        { id: 'texturing', label: 'Текстурирование и материалы', hours: 3 },
+        { id: 'rendering', label: 'Рендеринг сцен', hours: 2 },
+        { id: 'animation', label: '3D анимация', hours: 4 },
+        { id: 'optimization', label: 'Оптимизация моделей', hours: 2.5 }
+    ],
+    chatbots: [
+        { id: 'scenarios', label: 'Разработка сценариев диалогов', hours: 3 },
+        { id: 'integration', label: 'Интеграция с платформами', hours: 2.5 },
+        { id: 'testing', label: 'Тестирование и отладка', hours: 2 },
+        { id: 'analytics', label: 'Анализ эффективности', hours: 1.5 },
+        { id: 'training', label: 'Обучение и настройка ИИ', hours: 3 }
+    ],
+    construction: [
+        { id: 'estimates', label: 'Составление смет', hours: 3 },
+        { id: 'planning', label: 'Планирование проектов', hours: 2.5 },
+        { id: 'documentation', label: 'Техническая документация', hours: 2 },
+        { id: 'client-communication', label: 'Общение с клиентами', hours: 2 },
+        { id: 'quality-control', label: 'Контроль качества', hours: 1.5 }
+    ],
+    flowers: [
+        { id: 'design', label: 'Дизайн букетов и композиций', hours: 2 },
+        { id: 'inventory', label: 'Управление складом', hours: 1.5 },
+        { id: 'orders', label: 'Обработка заказов', hours: 2 },
+        { id: 'social-media', label: 'Ведение соцсетей', hours: 2.5 },
+        { id: 'photography', label: 'Фотосъёмка работ', hours: 1.5 }
+    ],
+    realestate: [
+        { id: 'property-analysis', label: 'Анализ объектов недвижимости', hours: 2.5 },
+        { id: 'client-matching', label: 'Подбор объектов для клиентов', hours: 3 },
+        { id: 'documentation', label: 'Оформление документов', hours: 2 },
+        { id: 'market-research', label: 'Исследование рынка', hours: 2 },
+        { id: 'presentations', label: 'Презентации объектов', hours: 1.5 }
+    ],
+    legal: [
+        { id: 'document-drafting', label: 'Составление документов', hours: 3 },
+        { id: 'research', label: 'Правовые исследования', hours: 2.5 },
+        { id: 'case-analysis', label: 'Анализ дел и прецедентов', hours: 3 },
+        { id: 'client-consultation', label: 'Консультации клиентов', hours: 2 },
+        { id: 'contract-review', label: 'Проверка договоров', hours: 2 }
+    ],
+    ecommerce: [
+        { id: 'product-descriptions', label: 'Описания товаров', hours: 2.5 },
+        { id: 'inventory-management', label: 'Управление товарами', hours: 2 },
+        { id: 'customer-service', label: 'Обслуживание клиентов', hours: 3 },
+        { id: 'analytics', label: 'Анализ продаж', hours: 2 },
+        { id: 'content-creation', label: 'Контент для площадок', hours: 2.5 }
+    ]
+};
+
 // Progress Bar
 function updateProgressBar() {
     const windowHeight = window.innerHeight;
@@ -109,9 +190,19 @@ function initTabs() {
 
 // Calculator Functionality
 function initCalculator() {
+    if (!businessSphere || !hourlyRateSlider) {
+        console.warn('Calculator elements not found');
+        return;
+    }
+
     // Update hourly rate display
     hourlyRateSlider.addEventListener('input', (e) => {
         hourlyRateValue.textContent = e.target.value;
+    });
+    
+    // Load tasks when sphere is selected
+    businessSphere.addEventListener('change', (e) => {
+        loadTasksForSphere(e.target.value);
     });
     
     // Calculate button click
@@ -120,19 +211,41 @@ function initCalculator() {
     });
 }
 
+function loadTasksForSphere(sphere) {
+    const tasksGroup = document.getElementById('tasks-group');
+    if (!tasksGroup || !sphere) {
+        tasksGroup.innerHTML = '';
+        return;
+    }
+    
+    const tasks = calculatorData[sphere] || [];
+    
+    tasksGroup.innerHTML = tasks.map(task => `
+        <div class="checkbox">
+            <input type="checkbox" id="${task.id}" data-hours="${task.hours}">
+            <div class="checkbox__box"></div>
+            <label for="${task.id}" class="checkbox__label">
+                ${task.label} <span style="color: var(--text-tertiary);">(~${task.hours}ч/день)</span>
+            </label>
+        </div>
+    `).join('');
+}
+
 function calculateSavings() {
     const hourlyRate = parseInt(hourlyRateSlider.value);
     const selectedTasks = document.querySelectorAll('.checkbox input:checked');
     
     if (selectedTasks.length === 0 || !businessSphere.value) {
-        alert('Пожалуйста, выберите сферу деятельности и хотя бы одну задачу');
+        showErrorMessage('Пожалуйста, выберите сферу деятельности и хотя бы одну задачу');
         return;
     }
     
     // Hide time usage ideas block if it was shown from previous calculation
     const timeUsageIdeas = document.getElementById('time-usage-ideas');
-    timeUsageIdeas.classList.remove('visible');
-    timeUsageIdeas.style.display = 'none';
+    if (timeUsageIdeas) {
+        timeUsageIdeas.classList.remove('visible');
+        timeUsageIdeas.style.display = 'none';
+    }
     
     // Calculate total hours saved per day
     let totalHoursSaved = 0;
@@ -141,36 +254,46 @@ function calculateSavings() {
         totalHoursSaved += hours * 0.7; // AI saves 70% of time
     });
     
-    // Calculate monthly savings
+    // Calculate 3-month savings (instead of monthly)
     const workDaysPerMonth = 22;
-    const monthlyHoursSaved = totalHoursSaved * workDaysPerMonth;
-    const monthlyMoneySaved = monthlyHoursSaved * hourlyRate;
-    const daysSaved = Math.floor(monthlyHoursSaved / 8);
-    const dailySavings = Math.floor(monthlyMoneySaved / 30);
-    const roiDays = Math.ceil(990 / dailySavings);
+    const monthsCount = 3;
+    const totalWorkDays = workDaysPerMonth * monthsCount;
+    const totalHoursSaved3Months = totalHoursSaved * totalWorkDays;
+    const totalMoneySaved = totalHoursSaved3Months * hourlyRate;
+    const daysSaved = Math.floor(totalHoursSaved3Months / 8);
+    const additionalIncome = totalMoneySaved * 0.5; // Potential additional income from freed time
+    
+    // ROI calculation (course price is 18,900₽)
+    const coursePrice = 18900;
+    const roiPercentage = Math.floor((totalMoneySaved / coursePrice) * 100);
+    const paybackDays = Math.ceil(coursePrice / (totalMoneySaved / (monthsCount * 30)));
     
     // Update results
-    document.getElementById('time-saved').textContent = Math.floor(monthlyHoursSaved);
-    document.getElementById('days-saved').textContent = daysSaved;
-    document.getElementById('money-saved').textContent = formatNumber(Math.floor(monthlyMoneySaved));
-    document.getElementById('roi-days').textContent = roiDays;
-    document.getElementById('daily-savings').textContent = formatNumber(dailySavings);
+    updateElementText('time-saved-3months', Math.floor(totalHoursSaved3Months));
+    updateElementText('days-saved', daysSaved);
+    updateElementText('money-saved', formatNumber(Math.floor(totalMoneySaved)));
+    updateElementText('additional-income', formatNumber(Math.floor(additionalIncome)));
+    updateElementText('roi-percentage', roiPercentage);
+    updateElementText('payback-days', paybackDays);
     
     // Update hours in time usage ideas block
-    document.getElementById('hours-per-month').textContent = Math.floor(monthlyHoursSaved);
+    updateElementText('hours-per-month', Math.floor(totalHoursSaved * workDaysPerMonth));
     
     // Show results with animation
     calculatorResults.classList.add('visible');
+    calculatorResults.style.display = 'block';
     
     // Show time usage ideas block with delay
     setTimeout(() => {
-        timeUsageIdeas.style.display = 'block';
-        // Force reflow to ensure the display change is applied before animation
-        timeUsageIdeas.offsetHeight;
-        
-        setTimeout(() => {
-            timeUsageIdeas.classList.add('visible');
-        }, 50);
+        if (timeUsageIdeas) {
+            timeUsageIdeas.style.display = 'block';
+            // Force reflow to ensure the display change is applied before animation
+            timeUsageIdeas.offsetHeight;
+            
+            setTimeout(() => {
+                timeUsageIdeas.classList.add('visible');
+            }, 50);
+        }
     }, 500);
     
     // Animate value cards one by one
@@ -192,6 +315,42 @@ function calculateSavings() {
     setTimeout(() => {
         calculatorResults.scrollIntoView({ behavior: 'smooth', block: 'center' });
     }, 300);
+}
+
+// Helper function to safely update element text
+function updateElementText(elementId, value) {
+    const element = document.getElementById(elementId);
+    if (element) {
+        element.textContent = value;
+    } else {
+        console.warn(`Element with id '${elementId}' not found`);
+    }
+}
+
+// Helper function to show error messages
+function showErrorMessage(message) {
+    // Create or update notification
+    let notification = document.querySelector('.error-notification');
+    if (!notification) {
+        notification = document.createElement('div');
+        notification.className = 'error-notification';
+        document.body.appendChild(notification);
+    }
+    
+    notification.innerHTML = `
+        <div class="notification-content">
+            <svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+            </svg>
+            <span>${message}</span>
+        </div>
+    `;
+    
+    notification.classList.add('show');
+    
+    setTimeout(() => {
+        notification.classList.remove('show');
+    }, 4000);
 }
 
 // Format numbers with spaces
@@ -287,33 +446,7 @@ function initSocialProof() {
     });
 }
 
-// Form Validation
-function initFormValidation() {
-    finalCtaForm.addEventListener('submit', (e) => {
-        e.preventDefault();
-        
-        const nameInput = finalCtaForm.querySelector('input[type="text"]');
-        const phoneInput = finalCtaForm.querySelector('input[type="tel"]');
-        
-        // Basic validation
-        if (nameInput.value.trim().length < 2) {
-            alert('Пожалуйста, введите ваше имя');
-            nameInput.focus();
-            return;
-        }
-        
-        const phoneRegex = /^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{4,6}$/;
-        if (!phoneRegex.test(phoneInput.value.replace(/\s/g, ''))) {
-            alert('Пожалуйста, введите корректный номер телефона');
-            phoneInput.focus();
-            return;
-        }
-        
-        // Success message
-        alert('Спасибо за заявку! Мы свяжемся с вами в течение 15 минут.');
-        finalCtaForm.reset();
-    });
-}
+// Form Validation - moved to scripts.js
 
 // Testimonials Slider
 function initTestimonialsSlider() {
@@ -465,7 +598,6 @@ document.addEventListener('DOMContentLoaded', () => {
     initCalculator();
     initCountdown();
     initSocialProof();
-    initFormValidation();
     initTestimonialsSlider();
     initScrollAnimations();
     initMobileMenu();

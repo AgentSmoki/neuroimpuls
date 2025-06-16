@@ -57,36 +57,23 @@ ${formData.additional || 'Нет дополнительной информаци
 }
 
 // ====================
-// НАВИГАЦИЯ
-// ====================
-
-function scrollToCalculator() {
-    const calculator = document.getElementById('calculator');
-    if (calculator) {
-        calculator.scrollIntoView({ behavior: 'smooth' });
-    }
-}
-
-function scrollToPricing() {
-    const pricing = document.getElementById('pricing');
-    if (pricing) {
-        pricing.scrollIntoView({ behavior: 'smooth' });
-    }
-}
-
-// ====================
 // ТАРИФЫ И ССЫЛКИ
 // ====================
 
 // Ссылки для тарифов (замените на свои)
 const TARIFF_LINKS = {
-    'profi': 'https://your-payment-link-profi.com',
-    'business': 'https://your-payment-link-business.com', 
-    'vip': 'https://your-payment-link-vip.com'
+    'profi': 'https://b2b.cbrpay.ru/AS2B001T8TUH2T2K8K988T994FJUS9UC',
+    'business': 'https://b2b.cbrpay.ru/AS2B007RIE4I17V096OPDNBEKS5F991R', 
+    'vip': 'https://b2b.cbrpay.ru/BS2B0010VV8CFSBQ8NOA0CDA82MJE7Q6'
 };
 
-// Обработка кликов по кнопкам тарифов
+// ====================
+// ОБРАБОТКА ФОРМ
+// ====================
+
+// Обработка основной формы
 document.addEventListener('DOMContentLoaded', function() {
+    // Обработка кликов по кнопкам тарифов
     const tariffButtons = document.querySelectorAll('[data-tariff]');
     
     tariffButtons.forEach(button => {
@@ -111,14 +98,7 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
     });
-});
 
-// ====================
-// ОБРАБОТКА ФОРМ
-// ====================
-
-// Обработка основной формы
-document.addEventListener('DOMContentLoaded', function() {
     const finalForm = document.getElementById('final-cta-form');
     
     if (finalForm) {
@@ -178,40 +158,6 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
     }
-    
-    // Обработка всех остальных кнопок "Вступить"
-    const ctaButtons = document.querySelectorAll('.btn--primary');
-    ctaButtons.forEach(button => {
-        if (button.type !== 'submit' && button.textContent.includes('Вступить') && !button.dataset.tariff) {
-            button.addEventListener('click', function() {
-                // Прокручиваем к форме
-                const finalForm = document.getElementById('final-cta-form');
-                if (finalForm) {
-                    finalForm.scrollIntoView({ behavior: 'smooth' });
-                    // Подсвечиваем форму
-                    finalForm.classList.add('highlight');
-                    setTimeout(() => {
-                        finalForm.classList.remove('highlight');
-                    }, 2000);
-                }
-            });
-        }
-    });
-    
-    // Обработка плавающей кнопки
-    const floatingCTA = document.getElementById('floatingCTA');
-    if (floatingCTA) {
-        floatingCTA.addEventListener('click', function() {
-            const finalForm = document.getElementById('final-cta-form');
-            if (finalForm) {
-                finalForm.scrollIntoView({ behavior: 'smooth' });
-                finalForm.classList.add('highlight');
-                setTimeout(() => {
-                    finalForm.classList.remove('highlight');
-                }, 2000);
-            }
-        });
-    }
 });
 
 // ====================
@@ -219,51 +165,71 @@ document.addEventListener('DOMContentLoaded', function() {
 // ====================
 
 function showSuccessMessage(message) {
-    const notification = document.createElement('div');
-    notification.className = 'success-notification';
+    // Create or update notification
+    let notification = document.querySelector('.success-notification');
+    if (!notification) {
+        notification = document.createElement('div');
+        notification.className = 'success-notification';
+        document.body.appendChild(notification);
+    }
+    
     notification.innerHTML = `
         <div class="notification-content">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-                <path d="M5 12L10 17L20 7" stroke="#10B981" stroke-width="2" stroke-linecap="round"/>
+            <svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
             </svg>
             <span>${message}</span>
         </div>
     `;
     
-    document.body.appendChild(notification);
+    notification.classList.add('show');
     
-    // Показываем уведомление
-    setTimeout(() => notification.classList.add('show'), 100);
-    
-    // Убираем через 5 секунд
     setTimeout(() => {
         notification.classList.remove('show');
-        setTimeout(() => document.body.removeChild(notification), 300);
-    }, 5000);
+    }, 4000);
 }
 
 function showErrorMessage(message) {
-    const notification = document.createElement('div');
-    notification.className = 'error-notification';
+    // Create or update notification
+    let notification = document.querySelector('.error-notification');
+    if (!notification) {
+        notification = document.createElement('div');
+        notification.className = 'error-notification';
+        document.body.appendChild(notification);
+    }
+    
     notification.innerHTML = `
         <div class="notification-content">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-                <path d="M6 6L18 18M6 18L18 6" stroke="#EF4444" stroke-width="2" stroke-linecap="round"/>
+            <svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/>
             </svg>
             <span>${message}</span>
         </div>
     `;
     
-    document.body.appendChild(notification);
+    notification.classList.add('show');
     
-    // Показываем уведомление
-    setTimeout(() => notification.classList.add('show'), 100);
-    
-    // Убираем через 5 секунд
     setTimeout(() => {
         notification.classList.remove('show');
-        setTimeout(() => document.body.removeChild(notification), 300);
-    }, 5000);
+    }, 4000);
+}
+
+// ====================
+// ВСПОМОГАТЕЛЬНЫЕ ФУНКЦИИ
+// ====================
+
+function scrollToCalculator() {
+    const calculator = document.getElementById('calculator');
+    if (calculator) {
+        calculator.scrollIntoView({ behavior: 'smooth' });
+    }
+}
+
+function scrollToPricing() {
+    const pricing = document.getElementById('pricing');
+    if (pricing) {
+        pricing.scrollIntoView({ behavior: 'smooth' });
+    }
 }
 
 // ====================
