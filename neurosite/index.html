@@ -428,48 +428,80 @@
         <div class="container">
             <h2 class="section-title">Сравните сами</h2>
             
-            <div class="comparison-table">
-                <table>
-                    <thead>
-                        <tr>
-                            <th></th>
-                            <th>Традиционная студия</th>
-                            <th>NeuroSite Express</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>Срок</td>
-                            <td class="negative">3-6 недель</td>
-                            <td class="positive">4-12 часов</td>
-                        </tr>
-                        <tr>
-                            <td>Стоимость</td>
-                            <td class="negative">от 80 000 ₽</td>
-                            <td class="positive">от 21 000 ₽</td>
-                        </tr>
-                        <tr>
-                            <td>Прозрачность</td>
-                            <td class="negative">"Мы вам покажем, когда будет готово"</td>
-                            <td class="positive">Вы видите каждый шаг</td>
-                        </tr>
-                        <tr>
-                            <td>Правки</td>
-                            <td class="negative">Каждая правка +3-5 дней</td>
-                            <td class="positive">Вносим в процессе работы</td>
-                        </tr>
-                        <tr>
-                            <td>Результат</td>
-                            <td class="negative">Может не понравиться</td>
-                            <td class="positive">Согласовываем по ходу</td>
-                        </tr>
-                        <tr>
-                            <td>Гарантия сроков</td>
-                            <td class="negative">"Ориентировочно"</td>
-                            <td class="positive">Фиксируем в договоре</td>
-                        </tr>
-                    </tbody>
-                </table>
+            <div class="comparison-cards">
+                <!-- Традиционная студия -->
+                <div class="comparison-card traditional">
+                    <div class="card-header">
+                        <h3>Традиционная студия</h3>
+                    </div>
+                    
+                    <div class="time-slots">
+                        <div class="time-slot negative">
+                            <div class="time-period">Неделя 1-2</div>
+                            <div class="activity">Бесконечные созвоны и ТЗ</div>
+                            <div class="cost">-15,000₽</div>
+                        </div>
+                        
+                        <div class="time-slot negative">
+                            <div class="time-period">Неделя 3-4</div>
+                            <div class="activity">Рисуют макеты в Figma</div>
+                            <div class="cost">-25,000₽</div>
+                        </div>
+                        
+                        <div class="time-slot negative">
+                            <div class="time-period">Неделя 5-6</div>
+                            <div class="activity">Верстка и программирование</div>
+                            <div class="cost">-40,000₽</div>
+                        </div>
+                        
+                        <div class="time-slot negative">
+                            <div class="time-period">Неделя 7+</div>
+                            <div class="activity">Правки и доработки</div>
+                            <div class="cost">-20,000₽</div>
+                        </div>
+                    </div>
+                    
+                    <div class="total-cost negative">
+                        Итого потерь: 100,000₽ за 2 месяца
+                    </div>
+                </div>
+                
+                <!-- NeuroSite Express -->
+                <div class="comparison-card neuro">
+                    <div class="card-header">
+                        <h3>NeuroSite Express</h3>
+                    </div>
+                    
+                    <div class="time-slots">
+                        <div class="time-slot positive">
+                            <div class="time-period">10:00-11:00</div>
+                            <div class="activity">Анализ бизнеса и структура</div>
+                            <div class="cost">+5,250₽</div>
+                        </div>
+                        
+                        <div class="time-slot positive">
+                            <div class="time-period">11:00-12:00</div>
+                            <div class="activity">Дизайн и контент</div>
+                            <div class="cost">+5,250₽</div>
+                        </div>
+                        
+                        <div class="time-slot positive">
+                            <div class="time-period">12:00-13:00</div>
+                            <div class="activity">Верстка и адаптивность</div>
+                            <div class="cost">+5,250₽</div>
+                        </div>
+                        
+                        <div class="time-slot positive">
+                            <div class="time-period">13:00-14:00</div>
+                            <div class="activity">Тестирование и запуск</div>
+                            <div class="cost">+5,250₽</div>
+                        </div>
+                    </div>
+                    
+                    <div class="total-cost positive">
+                        Экономия времени: 7 недель
+                    </div>
+                </div>
             </div>
             
             <p class="comparison-note">
