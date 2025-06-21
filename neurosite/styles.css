@@ -766,6 +766,13 @@ img {
     margin-bottom: 0.5rem;
 }
 
+.pricing-time {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
+}
+
 .pricing-desc {
     color: var(--text-light);
     margin-bottom: 2rem;
@@ -997,17 +1004,20 @@ img {
     line-height: 1.4;
 }
 
-.cost {
+.time-delivery {
     font-weight: 700;
     font-size: 1.25rem;
-}
-
-.time-slot.negative .cost {
-    color: #ff6b6b;
-}
-
-.time-slot.positive .cost {
     color: var(--primary-color);
+}
+
+.time-slot.special {
+    background: rgba(255, 107, 53, 0.08);
+    border-left-width: 6px;
+}
+
+.time-slot.special .time-delivery {
+    font-size: 1rem;
+    color: var(--text-light);
 }
 
 .total-cost {
@@ -1667,7 +1677,7 @@ img {
         font-size: 1rem;
     }
     
-    .cost {
+    .time-delivery {
         font-size: 1.125rem;
     }
     
