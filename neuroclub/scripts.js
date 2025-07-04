@@ -488,65 +488,7 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 
-// Социальные уведомления
-document.addEventListener('DOMContentLoaded', function() {
-    const socialProof = document.getElementById('socialProof');
-    const closeBtn = socialProof?.querySelector('.social-proof__close');
-    
-    const names = [
-        'Анна из Москвы', 'Сергей из СПб', 'Мария из Екатеринбурга',
-        'Алексей из Новосибирска', 'Елена из Казани', 'Дмитрий из Ростова',
-        'Ольга из Нижнего Новгорода', 'Игорь из Самары', 'Наталья из Омска'
-    ];
-    
-    const avatars = [
-        'image/user1.jpg', 'image/user2.jpg', 'image/user3.jpg',
-        'image/user4.jpg', 'image/user5.jpg', 'image/user6.jpg',
-        'image/user7.jpg', 'image/user8.jpg', 'image/user9.jpg'
-    ];
-    
-    const actions = [
-        'только что присоединился к НейроКлубу',
-        'получил доступ к базе промптов',
-        'начал экономить время с ИИ',
-        'увеличил доход на 40% за месяц'
-    ];
-    
-    function showSocialProof() {
-        if (!socialProof) return;
-        
-        const randomIndex = Math.floor(Math.random() * names.length);
-        const randomName = names[randomIndex];
-        const randomAvatar = avatars[randomIndex];
-        const randomAction = actions[Math.floor(Math.random() * actions.length)];
-        
-        const nameElement = socialProof.querySelector('strong');
-        const actionElement = socialProof.querySelector('span');
-        const avatarElement = socialProof.querySelector('.social-proof__avatar');
-        
-        if (nameElement && actionElement && avatarElement) {
-            nameElement.textContent = randomName;
-            actionElement.textContent = randomAction;
-            avatarElement.src = randomAvatar;
-        }
-        
-        socialProof.classList.add('show');
-        
-        setTimeout(() => {
-            socialProof.classList.remove('show');
-        }, 4000);
-    }
-    
-    // Показываем уведомления каждые 15-30 секунд
-    setInterval(showSocialProof, Math.random() * 15000 + 15000);
-    
-    // Закрытие уведомления
-    if (closeBtn) {
-        closeBtn.addEventListener('click', function() {
-            socialProof.classList.remove('show');
-        });
-    }
-});
+
 
 // Обратный отсчет
 document.addEventListener('DOMContentLoaded', function() {

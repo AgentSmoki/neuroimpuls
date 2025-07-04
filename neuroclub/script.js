@@ -27,72 +27,207 @@ const calculatorData = {
         { id: 'testing', label: 'Тестирование приложений', hours: 3 },
         { id: 'debugging', label: 'Поиск и исправление ошибок', hours: 4 },
         { id: 'api-integration', label: 'Интеграция API', hours: 2.5 },
-        { id: 'optimization', label: 'Оптимизация производительности', hours: 3 }
+        { id: 'deployment', label: 'Деплой и настройка серверов', hours: 1.5 }
+    ],
+    sales: [
+        { id: 'lead-generation', label: 'Поиск потенциальных клиентов', hours: 3 },
+        { id: 'cold-outreach', label: 'Холодные звонки и письма', hours: 4 },
+        { id: 'proposal-writing', label: 'Написание коммерческих предложений', hours: 2 },
+        { id: 'crm-management', label: 'Ведение CRM системы', hours: 1.5 },
+        { id: 'follow-up', label: 'Следящие звонки и письма', hours: 2.5 }
     ],
     design: [
-        { id: 'mockups', label: 'Создание макетов и wireframes', hours: 3 },
-        { id: 'graphics', label: 'Графические элементы', hours: 2.5 },
-        { id: 'presentations', label: 'Презентации для клиентов', hours: 2 },
-        { id: 'brand-assets', label: 'Брендинг и айдентика', hours: 4 },
-        { id: 'ui-elements', label: 'UI элементы и иконки', hours: 2 }
+        { id: 'concept-development', label: 'Разработка концепций дизайна', hours: 3 },
+        { id: 'mockup-creation', label: 'Создание макетов', hours: 4 },
+        { id: 'asset-optimization', label: 'Оптимизация графических материалов', hours: 2 },
+        { id: 'brand-guidelines', label: 'Создание брендбука', hours: 6 },
+        { id: 'ui-prototyping', label: 'Прототипирование интерфейсов', hours: 3.5 }
     ],
-    video: [
-        { id: 'scriptwriting', label: 'Написание сценариев', hours: 3 },
-        { id: 'editing', label: 'Монтаж и обработка', hours: 4 },
-        { id: 'animations', label: 'Анимация и спецэффекты', hours: 3.5 },
-        { id: 'voiceover', label: 'Озвучка и саунд-дизайн', hours: 2 },
-        { id: 'thumbnails', label: 'Превью и обложки', hours: 1.5 }
-    ],
-    '3d': [
-        { id: 'modeling', label: '3D моделирование объектов', hours: 5 },
-        { id: 'texturing', label: 'Текстурирование и материалы', hours: 3 },
-        { id: 'rendering', label: 'Рендеринг сцен', hours: 2 },
-        { id: 'animation', label: '3D анимация', hours: 4 },
-        { id: 'optimization', label: 'Оптимизация моделей', hours: 2.5 }
-    ],
-    chatbots: [
-        { id: 'scenarios', label: 'Разработка сценариев диалогов', hours: 3 },
-        { id: 'integration', label: 'Интеграция с платформами', hours: 2.5 },
-        { id: 'testing', label: 'Тестирование и отладка', hours: 2 },
-        { id: 'analytics', label: 'Анализ эффективности', hours: 1.5 },
-        { id: 'training', label: 'Обучение и настройка ИИ', hours: 3 }
-    ],
-    construction: [
-        { id: 'estimates', label: 'Составление смет', hours: 3 },
-        { id: 'planning', label: 'Планирование проектов', hours: 2.5 },
-        { id: 'documentation', label: 'Техническая документация', hours: 2 },
-        { id: 'client-communication', label: 'Общение с клиентами', hours: 2 },
-        { id: 'quality-control', label: 'Контроль качества', hours: 1.5 }
-    ],
-    flowers: [
-        { id: 'design', label: 'Дизайн букетов и композиций', hours: 2 },
-        { id: 'inventory', label: 'Управление складом', hours: 1.5 },
-        { id: 'orders', label: 'Обработка заказов', hours: 2 },
-        { id: 'social-media', label: 'Ведение соцсетей', hours: 2.5 },
-        { id: 'photography', label: 'Фотосъёмка работ', hours: 1.5 }
-    ],
-    realestate: [
-        { id: 'property-analysis', label: 'Анализ объектов недвижимости', hours: 2.5 },
-        { id: 'client-matching', label: 'Подбор объектов для клиентов', hours: 3 },
-        { id: 'documentation', label: 'Оформление документов', hours: 2 },
-        { id: 'market-research', label: 'Исследование рынка', hours: 2 },
-        { id: 'presentations', label: 'Презентации объектов', hours: 1.5 }
-    ],
-    legal: [
-        { id: 'document-drafting', label: 'Составление документов', hours: 3 },
-        { id: 'research', label: 'Правовые исследования', hours: 2.5 },
-        { id: 'case-analysis', label: 'Анализ дел и прецедентов', hours: 3 },
-        { id: 'client-consultation', label: 'Консультации клиентов', hours: 2 },
-        { id: 'contract-review', label: 'Проверка договоров', hours: 2 }
-    ],
-    ecommerce: [
-        { id: 'product-descriptions', label: 'Описания товаров', hours: 2.5 },
-        { id: 'inventory-management', label: 'Управление товарами', hours: 2 },
-        { id: 'customer-service', label: 'Обслуживание клиентов', hours: 3 },
-        { id: 'analytics', label: 'Анализ продаж', hours: 2 },
-        { id: 'content-creation', label: 'Контент для площадок', hours: 2.5 }
+    content: [
+        { id: 'blog-writing', label: 'Написание статей для блога', hours: 2.5 },
+        { id: 'social-media', label: 'Контент для социальных сетей', hours: 2 },
+        { id: 'video-scripts', label: 'Сценарии для видео', hours: 1.5 },
+        { id: 'copywriting', label: 'Рекламные тексты', hours: 3 },
+        { id: 'seo-content', label: 'SEO-оптимизированный контент', hours: 3.5 }
     ]
 };
+
+// Social Proof Notifications Data
+const notifications = [
+    // Маркетинг и аналитика
+    { 
+        name: 'Анна Козлова', 
+        city: 'Москва',
+        action: '💡 Контент-план на месяц создан за 15 минут', 
+        avatar: 'https://www.vokrug.tv/pic/person/c/0/a/5/c0a5cdb7c53cc2cd019e6b823f0ae6df.jpg',
+        delay: 3000 
+    },
+    { 
+        name: 'Дмитрий Петров', 
+        city: 'СПб',
+        action: '🎯 50 сайтов конкурентов проанализированы за час', 
+        avatar: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&h=150&fit=crop&crop=face&auto=format',
+        delay: 5000 
+    },
+    { 
+        name: 'Елена Смирнова', 
+        city: 'Казань',
+        action: '📊 Портрет ЦА готов за 10 минут вместо 3 часов', 
+        avatar: 'https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?w=150&h=150&fit=crop&crop=face&auto=format',
+        delay: 4000 
+    },
+    { 
+        name: 'Михаил Волков', 
+        city: 'Екатеринбург',
+        action: '✍️ 30 постов для соцсетей написаны за полчаса', 
+        avatar: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=150&h=150&fit=crop&crop=face&auto=format',
+        delay: 6000 
+    },
+    
+    // Дизайн и креативы
+    { 
+        name: 'София Иванова', 
+        city: 'Новосибирск',
+        action: '🎨 10 вариантов логотипа сгенерированы за минуту', 
+        avatar: 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=150&h=150&fit=crop&crop=face&auto=format',
+        delay: 4500 
+    },
+    { 
+        name: 'Александр Орлов', 
+        city: 'Самара',
+        action: '🖼 Рекламные баннеры готовы без дизайнера', 
+        avatar: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=150&h=150&fit=crop&crop=face&auto=format',
+        delay: 5500 
+    },
+    
+    // Продажи и коммуникации
+    { 
+        name: 'Марина Федорова', 
+        city: 'Красноярск',
+        action: '💬 Скрипт продаж написан за 5 минут', 
+        avatar: 'https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=150&h=150&fit=crop&crop=face&auto=format',
+        delay: 4000 
+    },
+    { 
+        name: 'Владимир Попов', 
+        city: 'Воронеж',
+        action: '📧 Составил текст Email-рассылки на 1000 человек за 10 минут', 
+        avatar: 'https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=150&h=150&fit=crop&crop=face&auto=format',
+        delay: 5000 
+    },
+    { 
+        name: 'Ольга Белова', 
+        city: 'Уфа',
+        action: '🤝 КП персонализировано под клиента за минуту', 
+        avatar: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=150&h=150&fit=crop&crop=face&auto=format',
+        delay: 6000 
+    },
+    
+    // Программирование
+    { 
+        name: 'Игорь Морозов', 
+        city: 'Челябинск',
+        action: '💻 Баг исправлен за 2 минуты с помощью AI', 
+        avatar: 'https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=150&h=150&fit=crop&crop=face&auto=format',
+        delay: 3500 
+    },
+    { 
+        name: 'Андрей Соколов', 
+        city: 'Омск',
+        action: '⚡️ Код оптимизирован и заработал в 3 раза быстрее', 
+        avatar: 'https://images.unsplash.com/photo-1507591064344-4c6ce005b128?w=150&h=150&fit=crop&crop=face&auto=format',
+        delay: 4500 
+    },
+    
+    // Видео и контент
+    { 
+        name: 'Татьяна Лебедева', 
+        city: 'Ростов-на-Дону',
+        action: '🎬 Сценарий ролика готов за 2 минуты', 
+        avatar: 'https://images.unsplash.com/photo-1508214751196-bcfd4ca60f91?w=150&h=150&fit=crop&crop=face&auto=format',
+        delay: 5500 
+    },
+    { 
+        name: 'Роман Зайцев', 
+        city: 'Пермь',
+        action: '📹 Монтажный лист создан автоматически', 
+        avatar: 'https://images.unsplash.com/photo-1506277886164-e25aa3f4ef7f?w=150&h=150&fit=crop&crop=face&auto=format',
+        delay: 4000 
+    },
+    
+    // E-commerce
+    { 
+        name: 'Виктор Иванов', 
+        city: 'Волгоград',
+        action: '🛍 50 товаров описаны для маркетплейса за час', 
+        avatar: 'https://images.unsplash.com/photo-1506919258185-6078bba55d2a?w=150&h=150&fit=crop&crop=face&auto=format',
+        delay: 5000 
+    },
+    { 
+        name: 'Максим Николаев', 
+        city: 'Саратов',
+        action: '⭐️ Ответы на отзывы генерируются за секунды', 
+        avatar: 'https://cdn5.vedomosti.ru/image/2022/a5/xy3e4/original-17zu.jpg',
+        delay: 4500 
+    },
+    
+    // Недвижимость
+    { 
+        name: 'Юлия Романова', 
+        city: 'Краснодар',
+        action: '🏠 Объявление о продаже написано за 3 минуты', 
+        avatar: 'https://images.unsplash.com/photo-1488716820095-cbe80883c496?w=150&h=150&fit=crop&crop=face&auto=format',
+        delay: 6000 
+    },
+    { 
+        name: 'Сергей Воробьев', 
+        city: 'Тюмень',
+        action: '📍 Анализ района выполнен за 5 минут', 
+        avatar: 'https://images.unsplash.com/photo-1556157382-97eda2d62296?w=150&h=150&fit=crop&crop=face&auto=format',
+        delay: 3500 
+    },
+    
+    // Юридические услуги
+    { 
+        name: 'Наталья Гусева', 
+        city: 'Барнаул',
+        action: '⚖️ Договор составлен AI за 2 минуты', 
+        avatar: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=150&h=150&fit=crop&crop=face&auto=format',
+        delay: 5500 
+    },
+    { 
+        name: 'Артем Киселев', 
+        city: 'Иркутск',
+        action: '📄 Шаблон иска подготовлен автоматически', 
+        avatar: 'https://images.unsplash.com/photo-1560250097-0b93528c311a?w=150&h=150&fit=crop&crop=face&auto=format',
+        delay: 4000 
+    },
+    
+    // Строительство
+    { 
+        name: 'Денис Макаров', 
+        city: 'Хабаровск',
+        action: '🏗 Смета рассчитана без ошибок за 10 минут', 
+        avatar: 'https://images.unsplash.com/photo-1492562080023-ab3db95bfbce?w=150&h=150&fit=crop&crop=face&auto=format',
+        delay: 4500 
+    },
+    { 
+        name: 'Алина Жукова', 
+        city: 'Владивосток',
+        action: '📐 Проект визуализирован за час', 
+        avatar: 'https://images.unsplash.com/photo-1580489944761-15a19d654956?w=150&h=150&fit=crop&crop=face&auto=format',
+        delay: 5000 
+    },
+    
+    // Общие достижения
+    { 
+        name: 'Павел Титов', 
+        city: 'Калининград',
+        action: '📈 Конверсия на сайте выросла на 35% с новыми промптами', 
+        avatar: 'https://images.unsplash.com/photo-1599566150163-29194dcaad36?w=150&h=150&fit=crop&crop=face&auto=format',
+        delay: 5000 
+    }
+];
 
 // Progress Bar
 function updateProgressBar() {
@@ -190,8 +325,25 @@ function initTabs() {
 
 // Calculator Functionality
 function initCalculator() {
-    if (!businessSphere || !hourlyRateSlider) {
-        console.warn('Calculator elements not found');
+    // Check if all required elements exist
+    const requiredElements = {
+        'businessSphere': businessSphere,
+        'hourlyRateSlider': hourlyRateSlider,
+        'hourlyRateValue': hourlyRateValue,
+        'calculateBtn': calculateBtn,
+        'calculatorResults': calculatorResults
+    };
+    
+    const missingElements = [];
+    for (const [name, element] of Object.entries(requiredElements)) {
+        if (!element) {
+            missingElements.push(name);
+        }
+    }
+    
+    if (missingElements.length > 0) {
+        console.warn('Missing calculator elements:', missingElements);
+        showErrorMessage(`Ошибка инициализации калькулятора. Обратитесь к администратору.`);
         return;
     }
 
@@ -209,6 +361,8 @@ function initCalculator() {
     calculateBtn.addEventListener('click', () => {
         calculateSavings();
     });
+    
+    console.log('✅ Calculator initialized successfully');
 }
 
 function loadTasksForSphere(sphere) {
@@ -235,6 +389,12 @@ function calculateSavings() {
     const hourlyRate = parseInt(hourlyRateSlider.value);
     const selectedTasks = document.querySelectorAll('.checkbox input:checked');
     
+    console.log('🔢 Calculating savings:', { 
+        hourlyRate, 
+        selectedTasksCount: selectedTasks.length, 
+        businessSphere: businessSphere.value 
+    });
+    
     if (selectedTasks.length === 0 || !businessSphere.value) {
         showErrorMessage('Пожалуйста, выберите сферу деятельности и хотя бы одну задачу');
         return;
@@ -252,6 +412,7 @@ function calculateSavings() {
     selectedTasks.forEach(task => {
         const hours = parseFloat(task.dataset.hours);
         totalHoursSaved += hours * 0.7; // AI saves 70% of time
+        console.log(`Task: ${task.id}, Hours: ${hours}, Saved: ${hours * 0.7}`);
     });
     
     // Calculate 3-month savings (instead of monthly)
@@ -268,6 +429,15 @@ function calculateSavings() {
     const roiPercentage = Math.floor((totalMoneySaved / coursePrice) * 100);
     const paybackDays = Math.ceil(coursePrice / (totalMoneySaved / (monthsCount * 30)));
     
+    console.log('📊 Calculation results:', {
+        totalHoursSaved3Months: Math.floor(totalHoursSaved3Months),
+        totalMoneySaved: Math.floor(totalMoneySaved),
+        daysSaved,
+        additionalIncome: Math.floor(additionalIncome),
+        roiPercentage,
+        paybackDays
+    });
+    
     // Update results
     updateElementText('time-saved-3months', Math.floor(totalHoursSaved3Months));
     updateElementText('days-saved', daysSaved);
@@ -283,6 +453,8 @@ function calculateSavings() {
     calculatorResults.classList.add('visible');
     calculatorResults.style.display = 'block';
     
+    console.log('✅ Results displayed successfully');
+    
     // Show time usage ideas block with delay
     setTimeout(() => {
         if (timeUsageIdeas) {
@@ -292,6 +464,7 @@ function calculateSavings() {
             
             setTimeout(() => {
                 timeUsageIdeas.classList.add('visible');
+                console.log('✅ Time usage ideas shown');
             }, 50);
         }
     }, 500);
@@ -322,13 +495,100 @@ function updateElementText(elementId, value) {
     const element = document.getElementById(elementId);
     if (element) {
         element.textContent = value;
+        console.log(`✅ Updated ${elementId}: ${value}`);
     } else {
-        console.warn(`Element with id '${elementId}' not found`);
+        console.warn(`❌ Element with id '${elementId}' not found`);
     }
 }
 
+// Test function for calculator (for debugging)
+function testCalculator() {
+    console.log('🧪 Testing calculator elements...');
+    
+    const testElements = [
+        'business-sphere',
+        'tasks-group', 
+        'hourly-rate',
+        'hourly-rate-value',
+        'calculate-btn',
+        'calculator-results',
+        'time-saved-3months',
+        'days-saved',
+        'money-saved',
+        'additional-income',
+        'roi-percentage',
+        'payback-days',
+        'hours-per-month'
+    ];
+    
+    const missing = [];
+    testElements.forEach(id => {
+        const element = document.getElementById(id);
+        if (element) {
+            console.log(`✅ Found: ${id}`);
+        } else {
+            console.warn(`❌ Missing: ${id}`);
+            missing.push(id);
+        }
+    });
+    
+    if (missing.length === 0) {
+        console.log('🎉 All calculator elements found!');
+        return true;
+    } else {
+        console.error(`❌ Missing elements: ${missing.join(', ')}`);
+        return false;
+    }
+}
+
+// Test function for social proof notifications
+function testSocialProof() {
+    console.log('🔔 Testing social proof system...');
+    
+    if (!socialProof) {
+        console.error('❌ Social proof element not found');
+        return;
+    }
+    
+    console.log('✅ Social proof element found');
+    console.log(`📊 Total notifications: ${notifications.length}`);
+    
+    // Force show a notification immediately
+    const randomNotification = notifications[Math.floor(Math.random() * notifications.length)];
+    console.log('🚀 Forcing notification display:', randomNotification.name);
+    
+    const textElement = socialProof.querySelector('.social-proof__text');
+    const avatarElement = socialProof.querySelector('.social-proof__avatar');
+    
+    if (textElement && avatarElement) {
+        textElement.innerHTML = `
+            <strong>${randomNotification.name} из г. ${randomNotification.city}</strong>
+            <span>${randomNotification.action}</span>
+        `;
+        
+        avatarElement.src = randomNotification.avatar;
+        avatarElement.alt = randomNotification.name;
+        
+        socialProof.classList.add('show');
+        
+        setTimeout(() => {
+            socialProof.classList.remove('show');
+        }, 6000);
+        
+        console.log('✅ Test notification displayed successfully!');
+    } else {
+        console.error('❌ Social proof text or avatar element not found');
+    }
+}
+
+// Global test function to call from console
+window.testNotifications = testSocialProof;
+window.testCalc = testCalculator;
+
 // Helper function to show error messages
 function showErrorMessage(message) {
+    console.error('❌ Error:', message);
+    
     // Create or update notification
     let notification = document.querySelector('.error-notification');
     if (!notification) {
@@ -340,7 +600,7 @@ function showErrorMessage(message) {
     notification.innerHTML = `
         <div class="notification-content">
             <svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
-                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/>
             </svg>
             <span>${message}</span>
         </div>
@@ -350,7 +610,7 @@ function showErrorMessage(message) {
     
     setTimeout(() => {
         notification.classList.remove('show');
-    }, 4000);
+    }, 5000);
 }
 
 // Format numbers with spaces
@@ -398,55 +658,53 @@ function initCountdown() {
 
 // Social Proof Notifications
 function initSocialProof() {
-    const names = [
-        { name: 'Анна из Москвы', action: 'только что присоединилась к НейроКлубу', avatar: 'image/user7.jpg' },
-        { name: 'Сергей из Санкт-Петербурга', action: 'начал изучать маркетинг с ИИ', avatar: 'image/user5.jpg' },
-        { name: 'Елена из Казани', action: 'увеличила доход на 150% за месяц', avatar: 'image/user6.jpg' },
-        { name: 'Михаил из Екатеринбурга', action: 'автоматизировал продажи с ChatGPT', avatar: 'image/user4.jpg' },
-        { name: 'Мария из Новосибирска', action: 'подняла стоимость услуг с 30 до 120 тыс. рублей', avatar: 'image/user8.jpg' }
-        
-    ];
-    
     let currentIndex = 0;
     
     function showNotification() {
-        const notification = names[currentIndex];
+        if (!socialProof) return;
+        
+        const notification = notifications[currentIndex];
         const textElement = socialProof.querySelector('.social-proof__text');
         const avatarElement = socialProof.querySelector('.social-proof__avatar');
         
         textElement.innerHTML = `
-            <strong>${notification.name}</strong>
+            <strong>${notification.name} из г. ${notification.city}</strong>
             <span>${notification.action}</span>
         `;
         
         if (avatarElement) {
             avatarElement.src = notification.avatar;
-            avatarElement.alt = notification.name.split(' ')[0];
+            avatarElement.alt = notification.name;
+            avatarElement.style.borderRadius = '50%';
+            avatarElement.style.objectFit = 'cover';
         }
         
         socialProof.classList.add('show');
         
         setTimeout(() => {
             socialProof.classList.remove('show');
-        }, 5000);
+        }, notification.delay || 5000);
         
-        currentIndex = (currentIndex + 1) % names.length;
+        currentIndex = (currentIndex + 1) % notifications.length;
     }
     
-    // Start showing notifications after 10 seconds
+    // Start showing notifications after 8 seconds
     setTimeout(() => {
         showNotification();
-        setInterval(showNotification, 20000); // Show every 20 seconds
-    }, 10000);
+        // Show next notification every 15 seconds (fixed interval)
+        setInterval(() => {
+            showNotification();
+        }, 15000);
+    }, 8000);
     
     // Close button
-    const closeBtn = socialProof.querySelector('.social-proof__close');
-    closeBtn.addEventListener('click', () => {
-        socialProof.classList.remove('show');
-    });
+    const closeBtn = socialProof?.querySelector('.social-proof__close');
+    if (closeBtn) {
+        closeBtn.addEventListener('click', () => {
+            socialProof.classList.remove('show');
+        });
+    }
 }
-
-// Form Validation - moved to scripts.js
 
 // Testimonials Slider
 function initTestimonialsSlider() {
@@ -592,6 +850,14 @@ function initCTAActions() {
 
 // Initialize everything when DOM is loaded
 document.addEventListener('DOMContentLoaded', () => {
+    // Test calculator elements first
+    console.log('🚀 Initializing NeuroClub website...');
+    
+    const calculatorTestPassed = testCalculator();
+    if (!calculatorTestPassed) {
+        showErrorMessage('Некоторые элементы калькулятора недоступны. Обновите страницу.');
+    }
+    
     initSmoothScroll();
     initFAQ();
     initTabs();
@@ -602,6 +868,8 @@ document.addEventListener('DOMContentLoaded', () => {
     initScrollAnimations();
     initMobileMenu();
     initCTAActions();
+    
+    console.log('✅ Website initialization complete');
 });
 
 // Window scroll events
