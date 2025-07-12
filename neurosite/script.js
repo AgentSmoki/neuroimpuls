@@ -13,6 +13,76 @@ const bookingForm = document.getElementById('bookingForm');
 const lossesCount = document.getElementById('lossesCount');
 
 // ==========================================================================
+// Функции безопасности
+// ==========================================================================
+
+// Функция для очистки пользовательского ввода
+function sanitizeInput(input) {
+    if (typeof input !== 'string') return '';
+    
+    return input
+        .replace(/[<>]/g, '') // Убираем HTML теги
+        .replace(/javascript:/gi, '') // Убираем javascript:
+        .replace(/on\w+\s*=/gi, '') // Убираем event handlers
+        .replace(/eval\s*\(/gi, '') // Убираем eval
+        .replace(/script/gi, '') // Убираем script
+        .replace(/java\.lang/gi, '') // Убираем java.lang
+        .replace(/getClass\(\)/gi, '') // Убираем getClass()
+        .replace(/ProcessBuilder/gi, '') // Убираем ProcessBuilder
+        .replace(/Socket/gi, '') // Убираем Socket
+        .trim()
+        .substring(0, 500); // Ограничиваем длину
+}
+
+// Функция для проверки на угрозы безопасности
+function isSecurityThreat(formData) {
+    const dangerousPatterns = [
+        /java\.lang/i,
+        /ProcessBuilder/i,
+        /getClass\(\)/i,
+        /Socket/i,
+        /eval\s*\(/i,
+        /script/i,
+        /javascript:/i,
+        /on\w+\s*=/i,
+        /exec\s*\(/i,
+        /system\s*\(/i,
+        /cmd\s*=/i,
+        /shell/i,
+        /bash/i,
+        /powershell/i,
+        /ScriptEngineManager/i,
+        /newInstance\(\)/i,
+        /getEngineByName/i,
+        /StringRefAddr/i,
+        /\.add\s*\(/i,
+        /var\s+host\s*=/i,
+        /var\s+port\s*=/i,
+        /new\s+java\./i
+    ];
+    
+    // Проверяем каждое поле формы
+    for (const [key, value] of Object.entries(formData)) {
+        if (typeof value === 'string') {
+            for (const pattern of dangerousPatterns) {
+                if (pattern.test(value)) {
+                    console.warn(`Security threat detected in field "${key}":`, value);
+                    return true;
+                }
+            }
+            
+            // Проверяем на подозрительно длинные строки
+            if (value.length > 1000) {
+                console.warn(`Suspicious long input in field "${key}":`, value.length);
+                return true;
+            }
+        }
+    }
+    
+    return false;
+}
+
+// ==========================================================================
 // 1. Мобильное меню
 // ==========================================================================
 let mobileMenuOpen = false;
@@ -396,26 +466,44 @@ async function sendToTelegram(formData) {
 // Функция для получения названия тарифа
 function getTariffName(tariff) {
     const tariffs = {
-        'express': 'ЭКСПРЕСС - 21 000 ₽',
-        'business': 'БИЗНЕС - 42 000 ₽',
-        'premium': 'ПРЕМИУМ - 65 000 ₽'
+        'simple': 'ПРОСТЫЕ САЙТЫ - За 1 день',
+        'medium': 'СРЕДНИЕ САЙТЫ - За 2 дня',
+        'complex': 'СЛОЖНЫЕ ПРОЕКТЫ - За 3-4 дня'
     };
     return tariffs[tariff] || tariff;
 }
+
+// Защита от спама
+let lastSubmitTime = 0;
+const SUBMIT_COOLDOWN = 60000; // 1 минута между отправками
 
 if (bookingForm) {
     bookingForm.addEventListener('submit', async (e) => {
         e.preventDefault();
         
+        // Проверяем время последней отправки
+        const currentTime = Date.now();
+        if (currentTime - lastSubmitTime < SUBMIT_COOLDOWN) {
+            const remainingTime = Math.ceil((SUBMIT_COOLDOWN - (currentTime - lastSubmitTime)) / 1000);
+            alert(`⏱️ Подождите ${remainingTime} секунд перед следующей отправкой.`);
+            return;
+        }
+        
         // Собираем данные формы
         const formData = {
-            name: document.getElementById('name').value,
-            phone: document.getElementById('phone').value,
-            email: document.getElementById('email').value,
+            name: sanitizeInput(document.getElementById('name').value),
+            phone: sanitizeInput(document.getElementById('phone').value),
+            email: sanitizeInput(document.getElementById('email').value),
             tariff: document.getElementById('tariff').value,
             date: document.getElementById('date').value,
-            message: document.getElementById('message').value
+            message: sanitizeInput(document.getElementById('message').value)
         };
+        
+        // Проверяем на подозрительный контент
+        if (isSecurityThreat(formData)) {
+            alert('⚠️ Обнаружен потенциально опасный контент в форме. Отправка заблокирована.');
+            return;
+        }
         
         // Показываем уведомление об отправке
         const submitButton = bookingForm.querySelector('button[type="submit"]');
@@ -427,6 +515,9 @@ if (bookingForm) {
             const success = await sendToTelegram(formData);
             
             if (success) {
+                // Обновляем время последней отправки
+                lastSubmitTime = Date.now();
+                
                 // Показываем успешное сообщение
                 alert('✅ Спасибо за заявку! Мы получили ваши данные и свяжемся с вами в течение 15 минут.');
                 
